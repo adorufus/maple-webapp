@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
-import {ScrollToModule} from "@nicky-lenaers/ngx-scroll-to";
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {FeatherModule} from "angular-feather";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
@@ -19,7 +18,6 @@ import {allIcons} from "angular-feather/icons";
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ScrollToModule.forRoot(),
     CarouselModule,
     FeatherModule.pick(allIcons),
     NgbModule,
