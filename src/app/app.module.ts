@@ -9,6 +9,7 @@ import {FeatherModule} from "angular-feather";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {allIcons} from "angular-feather/icons";
+import {CoreModule} from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import {allIcons} from "angular-feather/icons";
     CarouselModule,
     FeatherModule.pick(allIcons),
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]
