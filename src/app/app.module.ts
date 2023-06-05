@@ -11,18 +11,17 @@ import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {allIcons} from "angular-feather/icons";
 import { LoginComponent } from './core/auth/login/login.component';
 import { SignupHpComponent } from './core/auth/signup-hp/signup-hp.component';
-import { BaseComponent } from './core/auth/login/components/base/base.component';
+import { LoginBaseComponent } from './core/auth/login/components/base/login-base.component';
 import { SignupVerifComponent } from './core/auth/signup-verif/signup-verif.component';
 import {CoreModule} from "./core/core.module";
+import {HomeModule} from "./core/home/home.module";
+import {LayoutsModule} from "./layouts/layouts.module";
+import { NotfoundComponent } from './shared/notfound/notfound.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent,
-    LoginComponent,
-    SignupHpComponent,
-    BaseComponent,
-    SignupVerifComponent
+    NotfoundComponent
   ],
   imports: [
     BrowserModule,
@@ -31,7 +30,8 @@ import {CoreModule} from "./core/core.module";
     FeatherModule.pick(allIcons),
     NgbModule,
     BrowserAnimationsModule,
-    CoreModule
+    CoreModule,
+    LayoutsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

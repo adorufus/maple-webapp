@@ -1,11 +1,11 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-base',
-  templateUrl: './base.component.html',
-  styleUrls: ['./base.component.scss']
+  selector: 'app-login-base',
+  templateUrl: './login-base.component.html',
+  styleUrls: ['./login-base.component.scss']
 })
-export class BaseComponent {
+export class LoginBaseComponent {
 
   @Input() title: string = ""
   @Input() submitButtonTitle: string = ""

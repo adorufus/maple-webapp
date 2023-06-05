@@ -13,18 +13,21 @@
       <ul class="navbar-nav mx-auto navbar-center mt-lg-0 mt-2">
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{'active':currentSection === 'home'}"
-             href="javascript: void(0);">VIDEO</a>
+             href="javascript: void(0);" (click)="onNavClick('home')">HOME</a>
+        </li><li class="nav-item">
+          <a class="nav-link" [ngClass]="{'active':currentSection === 'video'}"
+             href="javascript: void(0);" (click)="onNavClick('video')">VIDEO</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'services'}"
-             href="javascript: void(0);">ARTICLE</a>
+          <a class="nav-link" [ngClass]="{'active':currentSection === 'articles'}"
+             href="javascript: void(0);" (click)="onNavClick('articles')">ARTICLE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'feature'}"
-             (click)="onnavclick('/store')">DEPT.STORE</a>
+          <a class="nav-link" [ngClass]="{'active':currentSection === 'store'}"
+             (click)="onNavClick('store')">DEPT.STORE</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'review'}"
+          <a class="nav-link" [ngClass]="{'active':currentSection === 'activation'}"
              href="javascript: void(0);">ACTIVATION</a>
         </li>
       </ul>
