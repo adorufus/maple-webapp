@@ -9,12 +9,20 @@ import {FeatherModule} from "angular-feather";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {allIcons} from "angular-feather/icons";
+import { LoginComponent } from './core/auth/login/login.component';
+import { SignupHpComponent } from './core/auth/signup-hp/signup-hp.component';
+import { BaseComponent } from './core/auth/login/components/base/base.component';
+import { SignupVerifComponent } from './core/auth/signup-verif/signup-verif.component';
 import {CoreModule} from "./core/core.module";
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavbarComponent
+    NavbarComponent,
+    LoginComponent,
+    SignupHpComponent,
+    BaseComponent,
+    SignupVerifComponent
   ],
   imports: [
     BrowserModule,
