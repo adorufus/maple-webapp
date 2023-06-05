@@ -20,7 +20,7 @@ import { NewsHomeComponent } from './components/news-home/news-home.component';
     CategoriesComponent,
     ScrollerMenuTitleComponent,
     VideoListComponent,
-    NewsHomeComponent
+    NewsHomeComponent,
   ],
     exports: [
         VideosComponent,
