@@ -101,8 +101,9 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  onnavclick(routeName: string){
-    this.router.navigate([routeName])
+  onNavClick(routeName: string){
+    this.router.navigate([`/${routeName}`])
+    this.currentSection = routeName
   }
 
 }
