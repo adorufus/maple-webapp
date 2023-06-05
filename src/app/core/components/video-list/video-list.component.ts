@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, Input} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 
 interface content {
@@ -6,27 +6,31 @@ interface content {
 }
 
 @Component({
-  selector: 'app-categories',
-  templateUrl: './categories.component.html',
-  styleUrls: ['./categories.component.scss']
+  selector: 'app-video-list',
+  templateUrl: './video-list.component.html',
+  styleUrls: ['./video-list.component.scss']
 })
-export class CategoriesComponent {
+export class VideoListComponent {
+
+  @Input() title: string = ""
+
   customOptions: OwlOptions = {
     loop: true,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: false,
+    dots: true,
+    center: true,
     navText: ['<', '>'],
     responsive: {
       0: {
-        items: 3
+        items: 1
       },
       600: {
-        items: 3
+        items: 2
       },
       900: {
-        items: 5
+        items: 3
       }
     },
     nav: false
@@ -48,7 +52,4 @@ export class CategoriesComponent {
       title: 'WANDER',
     }
   ];
-
-  ngOnInit(): void {
-  }
 }

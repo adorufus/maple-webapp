@@ -1,9 +1,17 @@
 .sequel-font {
-  font-size: 128px;
+  font-size: 12vh;
   font-family: "Sequel Sans Heavy Disp", sans-serif;
   font-weight: bold;
 }
 
 .container {
-  margin-left: 178px;
+  margin-left: 17vw;
+}
+
+@media (max-width: 576px) {
+  .sequel-font {
+    font-size: 5vh;
+    font-family: "Sequel Sans Heavy Disp", sans-serif;
+    font-weight: bold;
+  }
 }

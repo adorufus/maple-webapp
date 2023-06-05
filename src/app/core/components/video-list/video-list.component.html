@@ -1,17 +1,18 @@
 <!--what client says -->
 <section class="section" id="review">
   <div class="container">
+    <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
     <!-- end row -->
-    <app-scroller-menu-title title="VIDEO CATEGORIES"></app-scroller-menu-title>
     <div class="row">
       <div class="col-12 mt-4 pt-2">
         <div class="client-slider-one">
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
             <ng-template carouselSlide *ngFor='let value of contentData'>
-              <div class="border d-flex client-box justify-content-center align-items-center">
-                <div class="align-middle name-box">
-                  <h5 class="text-dark fs-18 mt-2" style="font-weight: bold !important;">{{value.title}}</h5>
+              <div class="client-box">
+                <div style="height: 80%; padding-bottom: 1vh">
+                  <img style="height: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8MTYlM0E5fGVufDB8fDB8fHww&w=1000&q=80" alt="">
                 </div>
+                <h6>Rewind: Arif brata ketemu siapa</h6>
               </div>
             </ng-template>
           </owl-carousel-o>

@@ -9,16 +9,23 @@ import { BannerComponent } from './components/banner/banner.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {FeatherModule} from "angular-feather";
+import { ScrollerMenuTitleComponent } from './components/scroller-menu-title/scroller-menu-title.component';
+import { VideoListComponent } from './components/video-list/video-list.component';
+import { NewsHomeComponent } from './components/news-home/news-home.component';
 
 @NgModule({
   declarations: [
     VideosComponent,
     BannerComponent,
-    CategoriesComponent
+    CategoriesComponent,
+    ScrollerMenuTitleComponent,
+    VideoListComponent,
+    NewsHomeComponent
   ],
-  exports: [
-    VideosComponent
-  ],
+    exports: [
+        VideosComponent,
+        NewsHomeComponent
+    ],
   imports: [
     CommonModule,
     BrowserModule,

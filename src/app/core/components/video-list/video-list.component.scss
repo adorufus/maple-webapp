@@ -1,0 +1,18 @@
+.client-box {
+  height: 21vh !important;
+}
+
+.client-slider-one .client-box {
+  text-align: start;
+  font-size: 14pt;
+}
+
+.section {
+  padding: 0;
+}
+
+@media (max-width: 768px) {
+  .client-slider-one .client-box {
+    text-align: start
+  }
+}
