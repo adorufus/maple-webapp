@@ -17,9 +17,13 @@ import {LoginComponent} from "./auth/login/login.component";
 import {LoginBaseComponent} from "./auth/login/components/base/login-base.component";
 import {SignupVerifComponent} from "./auth/signup-verif/signup-verif.component";
 import { ArticlesComponent } from './articles/articles.component';
+import {PageTitleComponent} from "../shared/page-title/page-title.component";
+import {VideosPageComponent} from "./videos/videos-page.component";
+import {RunningTextComponent} from "../shared/running-text/running-text.component";
 
 @NgModule({
   declarations: [
+    VideosPageComponent,
     VideosComponent,
     BannerComponent,
     CategoriesComponent,
@@ -30,7 +34,9 @@ import { ArticlesComponent } from './articles/articles.component';
     SignupVerifComponent,
     LoginComponent,
     LoginBaseComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    PageTitleComponent,
+    RunningTextComponent,
   ],
   exports: [
     NewsHomeComponent,

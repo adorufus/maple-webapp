@@ -7,6 +7,7 @@ import {BaseComponent} from "./layouts/base/base.component";
 import {LoginComponent} from "./core/auth/login/login.component";
 import {NotfoundComponent} from "./shared/notfound/notfound.component";
 import {ArticlesComponent} from "./core/articles/articles.component";
+import {VideosPageComponent} from "./core/videos/videos-page.component";
 
 const routes: Routes = [
   {
@@ -27,6 +28,9 @@ const routes: Routes = [
     children: [
       {
         path: "home", component: HomeComponent,
+      },
+      {
+        path: "videos", component: VideosPageComponent,
       },
       {
         path: "articles", component: ArticlesComponent

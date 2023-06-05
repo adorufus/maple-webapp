@@ -17,11 +17,12 @@ import {CoreModule} from "./core/core.module";
 import {HomeModule} from "./core/home/home.module";
 import {LayoutsModule} from "./layouts/layouts.module";
 import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { RunningTextComponent } from './shared/running-text/running-text.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotfoundComponent
+    NotfoundComponent,
   ],
   imports: [
     BrowserModule,

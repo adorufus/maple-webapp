@@ -1,0 +1,21 @@
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  height: 2vh;
+}
+
+.marquee-wrapper {
+  position: absolute;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+.marquee-text {
+  display: inline-block;
+  padding-right: 10px; /* Adjust the padding as per your requirements */
+}
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
