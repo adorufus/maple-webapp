@@ -16,7 +16,7 @@
 .service-box-one a,
 .service-box-two .icon-box .service-icon,
 .accordion .accordion-item .accordion-header .accordion-button:before {
-  color: #6d62fd !important;
+  color: #6123B5 !important;
 }
 
 
@@ -45,20 +45,20 @@
 .accordion .accordion-item .accordion-collapse .accordion-body:before,
 .owl-theme .owl-dots .owl-dot.active span,
 .accordion .card-body:before {
-  background-color: #6d62fd !important;
+  background-color: #6123B5 !important;
 }
 
 /* border */
 .btn-primary,
 .btn-outline-primary,
 .nav-sticky .nav-btn {
-  border: 1px solid #6d62fd !important;
+  border: 1px solid #6123B5 !important;
 }
 
 /* border-color */
 .hero-one-1 .form-card form .form-control:focus,
 .form-control:focus {
-  border-color: #6d62fd !important;
+  border-color: #6123B5 !important;
 }
 
 /* rgba */

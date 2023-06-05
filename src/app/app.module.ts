@@ -13,6 +13,7 @@ import { LoginComponent } from './core/auth/login/login.component';
 import { SignupHpComponent } from './core/auth/signup-hp/signup-hp.component';
 import { BaseComponent } from './core/auth/login/components/base/base.component';
 import { SignupVerifComponent } from './core/auth/signup-verif/signup-verif.component';
+import {CoreModule} from "./core/core.module";
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { SignupVerifComponent } from './core/auth/signup-verif/signup-verif.comp
     CarouselModule,
     FeatherModule.pick(allIcons),
     NgbModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CoreModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,27 @@
+<!--what client says -->
+<section class="section" id="review">
+  <div class="container">
+    <!-- end row -->
+    <div style="font-size: 24px; font-weight: bold; letter-spacing: 0px">
+      VIDEO CATEGORIES
+    </div>
+    <hr/>
+    <div class="row">
+      <div class="col-12 mt-4 pt-2">
+        <div class="client-slider-one">
+          <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+            <ng-template carouselSlide *ngFor='let value of contentData'>
+              <div class="border d-flex client-box justify-content-center align-items-center">
+                <div class="align-middle name-box">
+                  <h5 class="text-dark fs-18 mt-2" style="font-weight: bold !important;">{{value.title}}</h5>
+                </div>
+              </div>
+            </ng-template>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end container -->
+</section>
+<!-- end what client says -->
