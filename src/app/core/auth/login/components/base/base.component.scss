@@ -58,12 +58,13 @@ h3 {
     border-radius: 30px;
 }
 
-.btn:focus, .btn:active {
-    background-color:  #D9D9D9;
+.btn:focus,
+.btn:active {
+    background-color: #D9D9D9;
 }
 
 .img-google {
-   margin-right: 80px;
+    margin-right: 80px;
 }
 
 .or {
@@ -95,7 +96,8 @@ h3 {
     border-radius: 30px;
 }
 
-.btn-google:focus, .btn:active{
+.btn-google:focus,
+.btn:active {
     border: #9CA6B9;
 }
 
@@ -154,26 +156,26 @@ a {
     color: #9CA6B9;
 }
 
-@media  (max-width: 992px) {
+@media (max-width: 992px) {
     .box {
         left: calc(50% - 234px);
-    }           
+    }
 
     .logo-mapple {
         left: calc(60% - 169px);
     }
 }
 
-@media  (max-width: 762px) {
+@media (max-width: 768px) {
     .box {
         left: calc(50% - 183px);
-    width: 354px;
-    height: 354px;
-    }           
+        width: 354px;
+        height: 354px;
+    }
 
     h3 {
         font-size: 26px;
-    left: 139px;
+        left: 139px;
     }
 
     .logo-mapple {
@@ -181,34 +183,34 @@ a {
     }
 
     .btn-google {
-     
+
         width: 263px;
-       
+
     }
 
     .img-google {
         margin-right: 30px;
-     }
+    }
 
-     a {
+    a {
         left: 221px;
-     }
+    }
 }
 
-@media  (max-width: 415px) {
+@media (min-width: 577px) {
     .box {
-        left: calc(50% - 177px);
+        left: calc(50% - 112px);
         width: 292px;
         height: 292px;
-        
-    }           
+
+    }
 
     .logo-mapple {
-        left: calc(60% - 180px);
+        left: calc(60% - 122px);
     }
 
     .btn-google {
-     
+
         width: 247px;
         height: 46px;
         left: 21px;
@@ -216,7 +218,7 @@ a {
 
     a {
         left: 175px;
-    font-size: 12px;
+        font-size: 12px;
     }
 
     .have {
@@ -225,30 +227,30 @@ a {
 
     h3 {
         font-size: 26px;
-    left: 106px;
+        left: 106px;
     }
 
     .img-google {
         margin-right: 30px;
-     }
+    }
 
 
 }
 
-@media  (max-width: 376px) {
+@media (max-width: 576px) {
     .box {
         left: calc(50% - 153px);
         width: 292px;
         height: 292px;
-        
-    }           
+
+    }
 
     .logo-mapple {
         left: calc(60% - 171px);
     }
 
     .btn-google {
-     
+
         width: 247px;
         height: 46px;
         left: 21px;
@@ -256,7 +258,7 @@ a {
 
     a {
         left: 175px;
-    font-size: 12px;
+        font-size: 12px;
     }
 
     .have {
@@ -265,13 +267,12 @@ a {
 
     h3 {
         font-size: 26px;
-    left: 106px;
+        left: 106px;
     }
 
     .img-google {
         margin-right: 30px;
-     }
+    }
 
 
 }
-
