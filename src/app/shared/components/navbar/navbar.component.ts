@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
+import { Router } from '@angular/router';
 
 interface content {
   title: string;
@@ -14,7 +15,7 @@ interface content {
 })
 export class NavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   currentSection = 'home';
 
@@ -98,6 +99,10 @@ export class NavbarComponent implements OnInit {
     if (nav !== null) {
       nav.classList.toggle('show');
     }
+  }
+
+  onnavclick(routeName: string){
+    this.router.navigate([routeName])
   }
 
 }

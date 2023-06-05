@@ -21,7 +21,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{'active':currentSection === 'feature'}"
-             href="javascript: void(0);">DEPT.STORE</a>
+             (click)="onnavclick('/store')">DEPT.STORE</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{'active':currentSection === 'review'}"
