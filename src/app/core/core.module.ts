@@ -4,7 +4,7 @@ import {BrowserModule} from "@angular/platform-browser";
 import {AppRoutingModule} from "../app-routing.module";
 import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
-import { VideosComponent } from './videos/videos.component';
+import { VideosComponent } from './components/videos/videos.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
@@ -12,6 +12,7 @@ import {FeatherModule} from "angular-feather";
 import { ScrollerMenuTitleComponent } from './components/scroller-menu-title/scroller-menu-title.component';
 import { VideoListComponent } from './components/video-list/video-list.component';
 import { NewsHomeComponent } from './components/news-home/news-home.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +22,13 @@ import { NewsHomeComponent } from './components/news-home/news-home.component';
     ScrollerMenuTitleComponent,
     VideoListComponent,
     NewsHomeComponent,
+    HomeComponent
   ],
-    exports: [
-        VideosComponent,
-        NewsHomeComponent
-    ],
+  exports: [
+    VideosComponent,
+    NewsHomeComponent,
+    HomeComponent
+  ],
   imports: [
     CommonModule,
     BrowserModule,
