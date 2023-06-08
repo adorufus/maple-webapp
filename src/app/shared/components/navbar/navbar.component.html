@@ -15,8 +15,8 @@
           <a class="nav-link" [ngClass]="{'active':currentSection === 'home'}"
              href="javascript: void(0);" (click)="onNavClick('home')">HOME</a>
         </li><li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'video'}"
-             href="javascript: void(0);" (click)="onNavClick('video')">VIDEO</a>
+          <a class="nav-link" [ngClass]="{'active':currentSection === 'videos'}"
+             href="javascript: void(0);" (click)="onNavClick('videos')">VIDEO</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" [ngClass]="{'active':currentSection === 'articles'}"
@@ -31,7 +31,7 @@
              href="javascript: void(0);"(click)="onNavClick('activation')">ACTIVATION</a>
         </li>
       </ul>
-      <a href="javascript:void(0);" class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in
+      <a href="javascript:void(0);" (click)="onLoginClick()" class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in
       </a>
     </div>
   </div>

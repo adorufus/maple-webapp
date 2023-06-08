@@ -7,12 +7,12 @@
       <div class="col-12 mt-4 pt-2">
         <div class="client-slider-one">
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-            <ng-template carouselSlide *ngFor='let value of contentData'>
+            <ng-template carouselSlide *ngFor='let value of videos | async'>
               <div class="client-box">
                 <div style="height: 80%; padding-bottom: 1vh">
-                  <img style="height: 100%; object-fit: cover;" src="https://images.unsplash.com/photo-1580757468214-c73f7062a5cb?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8MTYlM0E5fGVufDB8fDB8fHww&w=1000&q=80" alt="">
+                  <img style="height: 100%; object-fit: cover;" src="{{value.thumbnails.standard.url}}" alt="">
                 </div>
-                <h6>Rewind: Arif brata ketemu siapa</h6>
+                <h6>{{value.title}}</h6>
               </div>
             </ng-template>
           </owl-carousel-o>

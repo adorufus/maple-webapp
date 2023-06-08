@@ -17,6 +17,12 @@ import {CoreModule} from "./core/core.module";
 import {HomeModule} from "./core/home/home.module";
 import {LayoutsModule} from "./layouts/layouts.module";
 import { NotfoundComponent } from './shared/notfound/notfound.component';
+import { RunningTextComponent } from './shared/running-text/running-text.component';
+import {AngularFireModule} from "@angular/fire/compat";
+import {environment} from "../environments/environment";
+import {AngularFireAuthModule} from "@angular/fire/compat/auth";
+import {AuthService} from "./services/auth.service";
+import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 
 @NgModule({
   declarations: [
@@ -31,9 +37,12 @@ import { NotfoundComponent } from './shared/notfound/notfound.component';
     NgbModule,
     BrowserAnimationsModule,
     CoreModule,
-    LayoutsModule
+    LayoutsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
+    AngularFirestoreModule
   ],
-  providers: [],
+  providers: [AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

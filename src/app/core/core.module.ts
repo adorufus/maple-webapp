@@ -28,9 +28,13 @@ import { NewquizzesComponent } from './auth/activation/components/newquizzes/new
 import { QuizzesListComponent } from './auth/activation/components/quizzes-list/quizzes-list.component';
 import { GamesListComponent } from './auth/activation/components/games-list/games-list.component';
 
+import {PageTitleComponent} from "../shared/page-title/page-title.component";
+import {VideosPageComponent} from "./videos/videos-page.component";
+import {RunningTextComponent} from "../shared/running-text/running-text.component";
 
 @NgModule({
   declarations: [
+    VideosPageComponent,
     VideosComponent,
     BannerComponent,
     CategoriesComponent,
@@ -50,7 +54,9 @@ import { GamesListComponent } from './auth/activation/components/games-list/game
     ActivationComponent,
     NewquizzesComponent,
     QuizzesListComponent,
-    GamesListComponent
+    GamesListComponent,
+    PageTitleComponent,
+    RunningTextComponent,
   ],
   exports: [
     NewsHomeComponent,
@@ -64,6 +70,7 @@ import { GamesListComponent } from './auth/activation/components/games-list/game
     AppRoutingModule,
     CarouselModule,
     FeatherModule,
-  ]
+  ],
+  providers: [CategoriesComponent]
 })
 export class CoreModule { }

@@ -9,6 +9,7 @@ import {NotfoundComponent} from "./shared/notfound/notfound.component";
 import {ArticlesComponent} from "./core/articles/articles.component";
 import { DetailComponent } from './core/components/deptstore/detail/detail.component';
 import { ActivationComponent } from './core/auth/activation/activation.component';
+import {VideosPageComponent} from "./core/videos/videos-page.component";
 
 const routes: Routes = [
   {
@@ -30,6 +31,9 @@ const routes: Routes = [
     children: [
       {
         path: "home", component: HomeComponent,
+      },
+      {
+        path: "videos", component: VideosPageComponent,
       },
       {
         path: "articles", component: ArticlesComponent

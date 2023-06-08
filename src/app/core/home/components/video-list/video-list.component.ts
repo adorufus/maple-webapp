@@ -1,5 +1,7 @@
-import {Component, Input} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
+import {map, Observable} from "rxjs";
+import {FirestoreService} from "../../../../services/firestore.service";
 
 interface content {
   title: string;
@@ -10,9 +12,28 @@ interface content {
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.scss']
 })
-export class VideoListComponent {
+export class VideoListComponent implements OnInit {
 
   @Input() title: string = ""
+
+  videos?: Observable<any[]>
+
+  constructor(private firestoreService: FirestoreService) {
+
+  }
+
+  ngOnInit() {
+    console.log(this.title)
+    let temp = this.title == 'Latest Video' ? this.firestoreService.getCollection("media", (ref) => ref.orderBy("upload_date", "desc").limit(5)) : this.firestoreService.getCollection("media", (ref) => ref.where('type', '==', this.title).orderBy("upload_date", "desc").limit(5))
+
+    if(temp instanceof Observable<any>) {
+      this.videos = temp
+
+      this.videos.subscribe(test => {
+        console.log(test)
+      })
+    }
+  }
 
   customOptions: OwlOptions = {
     loop: true,
@@ -20,7 +41,7 @@ export class VideoListComponent {
     touchDrag: true,
     pullDrag: false,
     dots: true,
-    center: true,
+    center: false,
     navText: ['<', '>'],
     responsive: {
       0: {

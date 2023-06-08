@@ -1,13 +1,13 @@
-import {Component, OnInit} from '@angular/core';
+import { Component } from '@angular/core';
 import {Observable} from "rxjs";
-import {FirestoreService} from "../../../../services/firestore.service";
+import {FirestoreService} from "../../services/firestore.service";
 
 @Component({
-  selector: 'app-videos',
-  templateUrl: './videos.component.html',
-  styleUrls: ['./videos.component.scss']
+  selector: 'app-videos-page',
+  templateUrl: './videos-page.component.html',
+  styleUrls: ['./videos-page.component.scss']
 })
-export class VideosComponent implements OnInit{
+export class VideosPageComponent {
   public segments?: Observable<any[]>
 
   constructor(private firestoreService: FirestoreService) {
