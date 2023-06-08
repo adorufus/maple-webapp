@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component} from '@angular/core';
+import {AuthService} from "../../../services/auth.service";
 
 @Component({
   selector: 'app-login',
@@ -6,7 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./login.component.scss']
 })
 export class LoginComponent {
-onsignup() { 
 
-}
+  constructor(public authService: AuthService) {
+  }
+
+  onSignup() {
+    this.authService.GoogleLogin().then(m => {
+      console.log("message: ", m)
+    }).catch(e => {
+      console.log(e)
+    })
+  }
 }

@@ -106,4 +106,8 @@ export class NavbarComponent implements OnInit {
     this.currentSection = routeName
   }
 
+  onLoginClick() {
+    this.router.navigate(['/auth'])
+  }
+
 }

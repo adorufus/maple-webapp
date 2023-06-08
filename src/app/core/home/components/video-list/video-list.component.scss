@@ -1,5 +1,6 @@
 .client-box {
-  height: 21vh !important;
+  width: 17.7vw;
+  height: 25vh !important;
 }
 
 .client-slider-one .client-box {
@@ -14,5 +15,9 @@
 @media (max-width: 768px) {
   .client-slider-one .client-box {
     text-align: start
+  }
+
+  .client-box {
+    width: 100%
   }
 }

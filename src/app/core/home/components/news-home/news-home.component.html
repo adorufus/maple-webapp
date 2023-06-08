@@ -1,89 +1,65 @@
 <div class="container">
-  <div class="row no-gutters">
+  <div *ngIf="indexZeroArticle" class="row no-gutters">
     <div class="col-lg-6 col-md-6 col-sm-12">
       <img class="image" src="../../../../../assets/layout/images/hero-one-1-img.jpg" alt="Image">
     </div>
     <div class="col-lg-6 col-md-6 col-sm-12 right-column">
-      <h2>Title</h2>
-      <p>Description</p>
+      <p style="font-size: 14px; font-weight: bold">{{indexZeroArticle.title}}</p>
+      <p [innerHTML]="indexZeroArticle.short_content"></p>
       <p>Author: Author Name</p>
       <p>Post Date: June 1, 2023</p>
       <a href="#">Read more</a>
     </div>
   </div>
 
-  <div class="row no-gutters">
-    <div class="col-lg-4 col-md-6 col-sm-12">
+  <div class="row pt-3">
+    <div *ngFor="let article of articles | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
       <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/feature.jpg" alt="Image 1">
+        <img style="height: 35.3vh; object-fit: contain; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
         <div class="content">
-          <h2>Title 1</h2>
-          <p>Description 1</p>
+          <div style="font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div>
+          <div [innerHTML]="article.short_content"></div>
           <p>Author: Author Name 1</p>
           <p>Post Date: June 1, 2023</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/hero-one-2-img.png" alt="Image 2">
-        <div class="content">
-          <h2>Title 2</h2>
-          <p>Description 2</p>
-          <p>Author: Author Name 2</p>
-          <p>Post Date: June 2, 2023</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/feature.jpg" alt="Image 3">
-        <div class="content">
-          <h2>Title 3</h2>
-          <p>Description 3</p>
-          <p>Author: Author Name 3</p>
-          <p>Post Date: June 3, 2023</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/hero-one-2-img.png" alt="Image 1">
-        <div class="content">
-          <h2>Title 1</h2>
-          <p>Description 1</p>
-          <p>Author: Author Name 1</p>
-          <p>Post Date: June 1, 2023</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/feature.jpg" alt="Image 2">
-        <div class="content">
-          <h2>Title 2</h2>
-          <p>Description 2</p>
-          <p>Author: Author Name 2</p>
-          <p>Post Date: June 2, 2023</p>
-          <a href="#">Read more</a>
-        </div>
-      </div>
-    </div>
-    <div class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container">
-        <img class="image" src="../../../../../assets/layout/images/hero-one-2-img.png" alt="Image 3">
-        <div class="content">
-          <h2>Title 3</h2>
-          <p>Description 3</p>
-          <p>Author: Author Name 3</p>
-          <p>Post Date: June 3, 2023</p>
           <a href="#">Read more</a>
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!--<div class="container">-->
+
+<!--  <div *ngFor="let article of articles | async; let i = index">-->
+<!--    <div *ngIf="i == 0" class="row no-gutters">-->
+<!--      <div class="col-lg-6 col-md-6 col-sm-12">-->
+<!--        <img class="image" src="../../../../../assets/layout/images/hero-one-1-img.jpg" alt="Image">-->
+<!--      </div>-->
+<!--      <div class="col-lg-6 col-md-6 col-sm-12 right-column">-->
+<!--        <h2>Title</h2>-->
+<!--        <p>Description</p>-->
+<!--        <p>Author: Author Name</p>-->
+<!--        <p>Post Date: June 1, 2023</p>-->
+<!--        <a href="#">Read more</a>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+
+<!--  <div *ngFor="let article of articles | async; let i = index">-->
+<!--    <div *ngIf="i > 0" class="row no-gutters">-->
+<!--      <div class="col-lg-4 col-md-6 col-sm-12">-->
+<!--        <div class="vertical-container">-->
+<!--          <img class="image" src="../../../../../assets/layout/images/feature.jpg" alt="Image 1">-->
+<!--          <div class="content">-->
+<!--            <h2>Title 1</h2>-->
+<!--            <p>Description 1</p>-->
+<!--            <p>Author: Author Name 1</p>-->
+<!--            <p>Post Date: June 1, 2023</p>-->
+<!--            <a href="#">Read more</a>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->
+

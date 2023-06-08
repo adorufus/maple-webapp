@@ -49,6 +49,7 @@ import {RunningTextComponent} from "../shared/running-text/running-text.componen
     AppRoutingModule,
     CarouselModule,
     FeatherModule,
-  ]
+  ],
+  providers: [CategoriesComponent]
 })
 export class CoreModule { }
