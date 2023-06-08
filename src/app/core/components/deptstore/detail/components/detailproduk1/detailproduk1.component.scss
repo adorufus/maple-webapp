@@ -1,0 +1,114 @@
+.col-lg-6, .col-lg-5{
+    padding-top: 80px;
+    
+}
+
+.namecard{
+    font-family: 'sequel sans', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 27px;
+}
+
+.description{
+    font-family: 'sequel sans', sans-serif;
+    font-size: 20px;
+    font-weight: 400px;
+    margin-top: 30px;
+    margin-left: 27px;
+    margin-right: 20px;
+}
+
+.col-lg-1{
+    width: 0px;
+    height: 865px;
+    border-left: 1px solid #E8E8E8;
+    margin-top: 80px;
+}
+
+.name-produk{
+    font-family: 'Sequel Sans',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 32px;
+line-height: 38px;
+}
+
+.harga-produk {
+    font-family: 'Sequel Sans',sans-serif;
+    font-style: normal;
+    font-weight: 360;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.square-1, .square-2, .square-3{
+    width: 36px;
+height: 36px;
+    border: 1px solid #E8E8E8;
+
+    font-family: "Sequel Sans", sans-serif;
+    font-style: normal;
+    font-weight: 365;
+    font-size: 18px;
+
+    padding: 5px 0px 0px 8px;
+}
+
+.square-2{
+    margin-top: -36px;
+    margin-left: 60px;
+    padding-left: 12px;
+}
+
+.square-3{
+    margin-top: -36px;
+    margin-left: 120px;
+}
+
+.buy{
+    background: #000000;
+    color: white;
+    font-family: 'Sequel Sans',sans-serif;
+    font-style: normal;
+    font-weight: 365;
+    font-size: 16px;
+    outline-color: transparent;
+    border-color: transparent;
+    width: 373px;
+    height: 51px;
+    margin-top: 20px;
+}
+
+.buy:focus, .buy:active {
+    background-color: #6123B5;
+    
+}
+
+
+.row.no-gutters {
+  margin-left: 0;
+  margin-right: 0;
+}
+@media (max-width: 1023px) {
+    .col-md-6 {
+        flex: 0 0 auto;
+        width: 48%;
+}
+}
+
+@media screen and (max-width: 767px) {
+    .col-sm-12 {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .card-line {
+        border: 0px solid #E8E8E8;
+}
+    .col-lg-1{
+        height: 0px;
+        padding-top: 0px;
+    }
+}

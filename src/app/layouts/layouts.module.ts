@@ -5,11 +5,12 @@ import {RouterModule} from "@angular/router";
 import {NavbarComponent} from "../shared/components/navbar/navbar.component";
 import {FeatherModule} from "angular-feather";
 import {allIcons} from "angular-feather/icons";
+import { FooterComponent } from './footer/footer.component';
 
 
 
 @NgModule({
-  declarations: [BaseComponent, NavbarComponent],
+  declarations: [BaseComponent, NavbarComponent, FooterComponent],
   imports: [
     CommonModule,
     RouterModule,

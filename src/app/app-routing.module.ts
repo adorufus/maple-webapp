@@ -7,12 +7,15 @@ import {BaseComponent} from "./layouts/base/base.component";
 import {LoginComponent} from "./core/auth/login/login.component";
 import {NotfoundComponent} from "./shared/notfound/notfound.component";
 import {ArticlesComponent} from "./core/articles/articles.component";
+import { DetailComponent } from './core/components/deptstore/detail/detail.component';
+import { ActivationComponent } from './core/auth/activation/activation.component';
 
 const routes: Routes = [
   {
     path: 'auth',
     component: LoginComponent
   },
+  
   // {
   //   path: 'kesasar',
   //   component: NotfoundComponent
@@ -35,12 +38,21 @@ const routes: Routes = [
         path: "store", component: DeptstoreComponent,
       },
       {
+        path: 'detail',
+        component: DetailComponent
+      },
+      {
+        path: 'activation',
+        component: ActivationComponent
+      },
+      
+      {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
       }
     ]
-
+    
   }
 ];
 

@@ -15,7 +15,7 @@ const routes: Routes = [
   declarations: [HomeComponent],
   imports: [
     CommonModule,
-    CoreModule,
+    CoreModule, 
     RouterModule.forChild(routes)
   ],
 })

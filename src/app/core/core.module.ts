@@ -17,6 +17,17 @@ import {LoginComponent} from "./auth/login/login.component";
 import {LoginBaseComponent} from "./auth/login/components/base/login-base.component";
 import {SignupVerifComponent} from "./auth/signup-verif/signup-verif.component";
 import { ArticlesComponent } from './articles/articles.component';
+import { ProdukComponent } from './components/deptstore/components/produk/produk.component';
+import { DeptstoreComponent } from './components/deptstore/deptstore.component';
+import { PromoComponent } from './components/deptstore/components/promo/promo.component';
+import { DetailComponent } from './components/deptstore/detail/detail.component';
+import { ComponentsComponent } from './components/deptstore/detail/components/components.component';
+import { Detailproduk1Component } from './components/deptstore/detail/components/detailproduk1/detailproduk1.component';
+import { ActivationComponent } from './auth/activation/activation.component';
+import { NewquizzesComponent } from './auth/activation/components/newquizzes/newquizzes.component';
+import { QuizzesListComponent } from './auth/activation/components/quizzes-list/quizzes-list.component';
+import { GamesListComponent } from './auth/activation/components/games-list/games-list.component';
+
 
 @NgModule({
   declarations: [
@@ -30,11 +41,21 @@ import { ArticlesComponent } from './articles/articles.component';
     SignupVerifComponent,
     LoginComponent,
     LoginBaseComponent,
-    ArticlesComponent
+    ArticlesComponent,
+    ProdukComponent,
+    DeptstoreComponent,
+    PromoComponent,
+    DetailComponent,
+    Detailproduk1Component,
+    ActivationComponent,
+    NewquizzesComponent,
+    QuizzesListComponent,
+    GamesListComponent
   ],
   exports: [
     NewsHomeComponent,
-    VideosComponent
+    VideosComponent,
+    ProdukComponent
   ],
   imports: [
     CommonModule,
