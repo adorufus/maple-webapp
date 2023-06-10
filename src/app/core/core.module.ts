@@ -31,6 +31,7 @@ import { GamesListComponent } from './auth/activation/components/games-list/game
 import {PageTitleComponent} from "../shared/page-title/page-title.component";
 import {VideosPageComponent} from "./videos/videos-page.component";
 import {RunningTextComponent} from "../shared/running-text/running-text.component";
+import { LatestVideoComponent } from './auth/latest-video/latest-video.component';
 
 @NgModule({
   declarations: [
@@ -57,6 +58,7 @@ import {RunningTextComponent} from "../shared/running-text/running-text.componen
     GamesListComponent,
     PageTitleComponent,
     RunningTextComponent,
+    LatestVideoComponent,
   ],
   exports: [
     NewsHomeComponent,

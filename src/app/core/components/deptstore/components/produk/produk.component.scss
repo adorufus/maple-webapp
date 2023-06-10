@@ -1,524 +1,139 @@
-.row {
-    display: flex;
-    flex-wrap: wrap;
-  }
+.col-lg-6{
+    padding-top: 80px;
+    
+}
+
+.size{
+    margin-bottom: 30px;
+    margin-left: 27px;
+    margin-right: 20px;
+}
+// .row {
+//     display: flex;
+//     flex-wrap: wrap;
+//   }
   
-  .col {
-    flex: 0 0 50%;
-    max-width: 50%;
-  }
+//   .col {
+//     flex: 0 0 50%;
+//     max-width: 50%;
+//   }
   
   .row.no-gutters {
     margin-left: 0;
     margin-right: 0;
   }
   
-  .no-gutters .col,
-  .no-gutters [class^="col-"] {
-    padding-right: 0;
-    padding-top: 8%;
+  .name-produk-1, .name-produk-2, .name-produk-3{
+
+    font-family: 'sequel sans',sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 27px;
+
   }
-  
-  .image {
-    width: 100%;
-    height: auto;
+
+  .harga-1, .harga-2, .harga-3{
+    font-family: 'Sequel Sans',sans-serif;
+    font-style: normal;
+    font-weight: 360;
+    font-size: 20px;
+    line-height: 24px;
+    padding-left: 30px;
+    padding-top: 27px;
   }
-  
-  
-  .vertical-container {
-    display: flex;
-    flex-direction: column;
-    height: 100%;
-  }
-  
-  
-  
-.box-store-1 {
-    box-sizing: border-box;
-    position: relative;
-    width: 464px;
-    height: 682px;
+
+  .size-1-1, .size-1-2, .size-1-3, .size-2-1, .size-2-2, .size-2-3{
+    width: 36px;
+height: 36px;
+width: 36px;
+height: 36px;
     border: 1px solid #E8E8E8;
-    background-color: transparent;
-}
 
-.img1{
-    width: 452px;
-    height: 467px; 
-    margin-bottom: 210px;}
-
-.name-produk-1 {
-
-    position: absolute;
-    left: 36px;
-    right: 33px;
-    top: 495px;
-    bottom: 52.55%;
     font-family: "Sequel Sans", sans-serif;
     font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    color: #000000;
+    font-weight: 365;
+    font-size: 18px;
+    margin-top: 30px;
+    padding: 5px 0px 0px 8px;
+  }
+
+  .size-1-2, .size-2-2 {
+    margin-top: -36px;
+    margin-left: 60px;
+    padding-left: 12px;
+
+  }
+
+  .size-1-3, .size-2-3 {
+    margin-top: -36px;
+    margin-left: 120px;
+  }
+
+  .card:hover {
+    border-color: #6123B5;
+    
 }
 
-.harga-1 {
-    position: absolute;
-    left: 36px;
-    right: 311px;
-    top: 545px;
-    bottom: 113px;
-    font-family: "Sequel Sans",sans-serif;
+  @media screen and (max-width: 767px){
+    .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+
+    .name-produk-1, .name-produk-2, .name-produk-3{
+
+    font-family: 'sequel sans',sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 27px;
+
+  }
+
+  .harga-1, .harga-2, .harga-3{
+    font-family: 'Sequel Sans',sans-serif;
     font-style: normal;
-    font-weight: 400;
+    font-weight: 360;
     font-size: 20px;
     line-height: 24px;
-    color: #000000;
-}
+    padding-left: 30px;
+    padding-top: 27px;
+  }
 
-.size-1-1 {
-    box-sizing: border-box;
-    padding-top: 5px;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 36px;
-    top: 620px;
-    background-color: transparent;
-    border: 1px solid #E8E8E8;
-    font-family: 'Sequel Sans',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-}
-
-.size-1-2 {
-    box-sizing: border-box;
-    padding-top: 5px;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 72px;
-    top: 620px;
-    border: 1px solid #E8E8E8;
-    font-family: 'Sequel Sans',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    background: transparent;
-}
-
-.size-1-3 {
-    box-sizing: border-box;
-    padding-top: 5px;
-    position: absolute;
-    width: 26px;
-    height: 26px;
-    left: 108px;
-    top: 620px;
-    border: 1px solid #E8E8E8;
-    font-family: 'Sequel Sans',sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 12px;
-    line-height: 14px;
-    background: transparent;
-}
-
- .box-store-2 {
-     box-sizing: border-box;
-     position: relative;
-     width: 464px;
-     height: 682px;
-     border: 1px solid #E8E8E8;
-     background-color: transparent;
- }
-
- .img2 {
-    width: 452px;
-     height: 467px; 
-     margin-bottom: 210px;
- }
- .name-produk-2 {
-
-     position: absolute;
-     left: -7px;
-    right: 33px;
-     top: 495px;
-     bottom: 52.55%;
-     font-family: "Sequel Sans", sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 24px;
-     line-height: 28px;
-     color: #000000;
- }
-
- .harga-2 {
-    position: absolute;
-    left: 36px;
-     right: 311px;
-     top: 545px;
-     bottom: 113px;
-     font-family: "Sequel Sans",sans-serif;
-     font-style: normal;
-     font-weight: 400;
-     font-size: 20px;
-     line-height: 24px;
-     color: #000000;
- }
-
- .size-2-1 {
-     box-sizing: border-box;
-     padding-top: 5px;
-     position: absolute;
-     width: 26px;
-     height: 26px;
-     left: 36px;
-    top: 620px;
-    background-color: transparent;
-     border: 1px solid #E8E8E8;
-     font-family: 'Sequel Sans',sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 12px;
-     line-height: 14px;
- }
-
- .size-2-2 {
-     box-sizing: border-box;
-     padding-top: 5px;
-     position: absolute;
-     width: 26px;
-     height: 26px;
-     left: 72px;
-    top: 620px;
-    border: 1px solid #E8E8E8;
-    font-family: 'Sequel Sans',sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 12px;
-     line-height: 14px;
-     background: transparent;
- }
-
- .size-2-3 {
-     box-sizing: border-box;
-     padding-top: 5px;
-     position: absolute;
-     width: 26px;
-     height: 26px;
-     left: 108px;
-     top: 620px;
-     border: 1px solid #E8E8E8;
-     font-family: 'Sequel Sans',sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 12px;
-     line-height: 14px;
-     background: transparent;
- }
-
- .box-store-3{
-     box-sizing: border-box;
-     position: relative;
-     width: 464px;
-     height: 682px;
-     border: 1px solid #E8E8E8;
-     background-color: transparent;
- }
-
- .img3{
-     width: 452px;
-     height: 467px; 
-     margin-bottom: 210px;
- }
- .name-produk-3 {
-
-     position: absolute;
-     left: -7px;
-     right: 33px;
-     top: 495px;
-     bottom: 52.55%;
-     font-family: "Sequel Sans", sans-serif;
-     font-style: normal;
-     font-weight: bold;
-     font-size: 24px;
-     line-height: 28px;
-     color: #000000;
- }
-
-.harga-3 {
-    position: absolute;
-    left: 36px;
-    right: 311px;
-    top: 545px;
-    bottom: 113px;
-    font-family: "Sequel Sans",sans-serif;
-    font-style: normal;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 24px;
-    color: #000000;
-} 
-
-// @media only screen and (min-width: 320px) and (max-width: 767px){
-//   .col {
-//     flex: 0 0 100%;
-//     max-width: 100%;
-//   }
-// }
-
-@media (max-width: 1024px) {
-    .box-store-1{
-    left: -16px;
-}   
-    .box-store-3 {
-    left: -16px;;
-    }
-}
-
-@media (max-width: 992px) {
-    .box-store-1{
-    left: 12px;
-}   
-    .box-store-2 {
-    left: 89px;
-}
-    .box-store-3 {
-    left: 12px;
-    top: 762px;
-    }
-    }
-
-
-@media (max-width: 768px) {
-
-    .box-store-1{
-        margin-left: 86px;
-    }
-
-    .box-store-2 {
-        margin-left: -337px;
-        top: 749px;
-    }
-
-    .name-produk-2 {
-        left: -1px;
-    }
-
-    .box-store-3 {
-      margin-bottom: 700px;
-      margin-left: 87px;
-    }
-
-    .name-produk-3 {
-        left: -19px;
-    }
-
-    .harga-3 {
-        left: 22px;
-    }
-}
-
-@media (max-width: 576px) {
-    .box-store-1{
-        left: 67px;
-    }
-
-    .box-store-3{
-        left: 67px;
-    }
-}
-
-@media (max-width: 426px) {
-    .box-store-1{
-      margin-left: -29px; ;
-      width: 316px;
-      height: 534px;
-      
-  } 
+  .size-1-1, .size-1-2, .size-1-3, .size-2-1, .size-2-2, .size-2-3{
+height: 26px;
+width: 26px;
+font-size: 14px;
+    padding: 1px 0px 0px 4px;
     
+  }
 
-    .img1{
-        width: 280px;
-    height: 295px;
-    margin-bottom: 249px;
-    }
 
-    .name-produk-1 {
-        font-size: 22px;
-        left: 0px;
-        top: 315px;
-    }
-
-    .harga-1 {
-        top: 414px;
-        right: 0px;
-        left: -170px;
-    }
-
-    .size-1-1 {
-        top: 470px;
-        left: 19px;
-    }
-
-    .size-1-2 {
-        top: 470px;
-        left: 56px;
-    }
-        
-    .size-1-3 {
-        top: 470px;
-        left: 95px;
-    }
-
-    .box-store-2{
-
-      width: 316px;
-      height: 534px;
-      left: -121px;
-      top: -4px; 
-      margin-left: 158px;
-    margin-right: -74px;
-        }
-
-    .img2 {
-        width: 280px;
-    height: 295px;
-    margin-bottom: 249px;
-    }
-
-    .name-produk-2 {
-        font-size: 22px;
-        left: 0px;
-        top: 315px;
-    }
-
-    .harga-2 {
-        top: 414px;
-        right: 0px;
-        left: -170px;
-    }
-
-    .size-2-1 {
-        top: 470px;
-        left: 19px;
-    }
-
-    .size-2-2 {
-        top: 470px;
-        left: 56px;
-    }
-
-    .size-2-3 {
-        top: 470px;
-        left: 95px;
-    }
-
-    .box-store-3{
-
-      width: 316px;
-      height: 534px;
-      margin-left: -32px;
-      top: -21px;
-      margin-bottom: 0;
-        }
-
-    .img3 {
-        width: 280px;
-    height: 295px;
-    margin-bottom: 249px;
-    }
-
-    .name-produk-3 {
-        font-size: 22px;
-        left: 0px;
-        top: 315px;
-    }
-
-    .harga-3 {
-        top: 414px;
-        right: 0px;
-        left: -170px;
-    }
-
-    
+.size-1-1, .size-2-1{
+    margin-top: -9px;
+    margin-bottom: 15px;
+    padding-left: 6px;
 }
-@media (max-width:415px) {
-    .box-store-1 {
-        left: 54px;
-    }
 
-    .box-store-3 {
-        left: 54px;
-    }
+.size-1-2, .size-2-2{
+    margin-top: -41px;
+    margin-left: 42px;
+    padding-left: 8px;
+}
+
+.size-1-3, .size-2-3{
+    margin-top: -26px;
+    margin-left: 85px;
+}
+
+.size{
+    margin-top: 20px;
+}
+
+.card:hover {
+    border-color: #6123B5;
     
 }
 
-@media (max-width:391px) {
-    .box-store-1{
-        left: 45px;
-    }
-
-    .box-store-3{
-        left: 45px;
-    }
-    
-}
-
-@media (max-width:376px) {
-    .box-store-1{
-      width: 240px;
-      height: 458px;
-      margin-left: -29px;
-    }
-
-    .name-produk-1{
-      font-size: 20px;
-    left: 24px;
-    top: 254px;
-    }
-
-    .harga-1{
-      top: 340px;
-    right: 0px;
-    left: -89px;
-    }
-
-    .size-1-1, .size-1-2{
-        top: 395px;
-        left: 19px;
-    
-    }
-
-    
-
-    .img1, .img2, .img3{
-      width: 225px;
-    height: 240px;
-    margin-bottom: 249px;
-    }
-
-    .box-store-2{
-      width: 240px;
-      height: 458px;
-      margin-left: 80px;
-      left: -96px;
-      top: -14px;
-    }
-
-    
-
-
-    .box-store-3{
-      width: 240px;
-      height: 458px;
-        left: 16px;
-    }
-
-    
-    
 }

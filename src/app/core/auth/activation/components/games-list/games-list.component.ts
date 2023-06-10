@@ -20,7 +20,7 @@ export class GamesListComponent {
     pullDrag: false,
     dots: true,
     center: true,
-    navText: ['<', '>'],
+    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
     responsive: {
       0: {
         items: 1
@@ -32,7 +32,7 @@ export class GamesListComponent {
         items: 3
       }
     },
-    nav: false
+    nav: true
   }
   contentData: content[] = [
     {
