@@ -1,0 +1,58 @@
+<!--what client says -->
+<div *ngIf="title != 'Latest Video'">
+  <app-banner-videos [textImage]="title" [runnerText]="title"
+                     [bannerImage]="checkForImage()" [runnerColor]="checkForColor()"></app-banner-videos>
+</div>
+<section class="section" id="review">
+  <div class="container">
+    <div class="row">
+      <div class="col-4 mt-4 pt-2">
+        <div *ngIf="title.split(' ').length  == 2 && title != 'Latest Video'; else singleText ">
+          <span class="text">{{title.split(' ')[0]}} <br/> {{title.split(' ')[1]}} <br/> Videos</span>
+        </div>
+        <ng-template #singleText><span class="text">{{title}} <br/> Videos</span></ng-template>
+      </div>
+      <div class="col-8 mt-4 pt-2">
+        <hr class="mt-auto"
+            style="height: 4px; margin: 1rem 0rem 1rem -8rem; background-color: black; border: none; opacity: 1;">
+      </div>
+    </div>
+
+    <div *ngIf="indexZeroVideo" class="row no-gutters pb-5">
+      <div class="col-6 mt-12 pt-2">
+        <div style="height: 100%; ">
+          <img (click)="onVideo()" style="height: 100%; width: 100%; object-fit: contain;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
+        </div>
+      </div>
+
+      <div class="col-6 mt-12 pt-2">
+        <table class="text-justify">
+          <h2>{{indexZeroVideo.title}}</h2>
+          <p style="font-weight: 500">{{indexZeroVideo.description}}
+          </p>
+          <br><br>
+          <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
+        </table>
+      </div>
+    </div>
+
+    <hr/>
+
+    <!-- end row -->
+    <div class="row no-gutters pt" >
+      <div *ngFor="let video of videos | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
+        <div class="client-box">
+          <div style="height: 80%;">
+            <img style="height: 100%; width: 100%; object-fit: cover;" [src]="video.thumbnails.high.url" alt="">
+          </div>
+          <div class="client-box-2">
+            <h6 class="text-center">{{video.title}}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- end container -->
+</section>
+<!-- end what client says -->

@@ -1,0 +1,65 @@
+.client-box {
+  height: 70% !important;
+  width: 100% !important;
+}
+
+.client-box-2 {
+  background-color: black;
+  color: white;
+  height: 30%
+}
+
+.text-center {
+  padding-top: 2%;
+}
+
+.pt {
+  padding-top: 5%;
+}
+
+.bp {
+  margin-bottom: 0;
+}
+
+.client-slider-one .client-box {
+  text-align: start;
+  font-size: 14pt;
+}
+
+.section {
+  padding: 0;
+}
+
+.text {
+  font-family: 'Sequel Sans', sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+}
+
+.col-8 {
+  padding-top: 137px !important;
+}
+
+.owl-items {
+  height: 362px;
+}
+
+.credit {
+  font-family: 'Sequel Sans', sans-serif;
+  font-style: normal;
+  font-weight: 355;
+  font-size: 12px;
+  color: #7E7E7E;
+
+}
+
+@media (max-width: 768px) {
+  .client-slider-one .client-box {
+    text-align: start
+  }
+
+  .text {
+    font-size: 32px;
+  }
+}

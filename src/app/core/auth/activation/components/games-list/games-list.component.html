@@ -1,0 +1,28 @@
+<!--what client says -->
+<section class="section" id="review">
+    <div class="container">
+      <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
+      <!-- end row -->
+      <div class="row">
+        <div class="col-12 mt-4 pt-2">
+          <div class="client-slider-one">
+            <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+              <ng-template carouselSlide *ngFor='let value of contentData'>
+                <div class="client-box">
+                  <div style="height: 80%;">
+                    <img style="height: 100%; object-fit: cover;" src="assets/images/puzzle.png" alt="">
+                  </div>
+                  <div class="client-box-2">
+                  <h6>Quiz: Yang jawabannya bener dapet saldo dana 500rb </h6>
+                </div>
+                </div>
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- end container -->
+  </section>
+  <!-- end what client says -->
+  

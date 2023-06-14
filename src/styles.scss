@@ -5,3 +5,58 @@
 .owl-dots {
   margin-top: 20px !important;
 }
+
+
+.section .owl-next div {
+  color: black !important;
+  font-size: 58px !important;
+  position:absolute !important;
+  top: 30px !important;
+  right: -60px !important;
+}
+
+.section .owl-next div:hover, .section .owl-prev div:hover{
+color: #6123B5 !important;
+}
+
+.section .owl-prev div {
+  color: black !important;
+  font-size: 58px !important;
+  position:absolute !important;
+  top: 30px !important;
+  left: -65px !important;
+
+}
+
+.owl-theme .owl-nav [class*=owl-]:hover {
+  background: transparent;
+  color: #FFF;
+  text-decoration: none;
+}
+
+.owl-theme .owl-nav [class*=owl-] {
+  font-size: 14px;
+  margin: 5px;
+  padding: 4px 7px;
+  background: transparent;
+  // display: block;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.owl-theme:active .owl-nav:hover {
+  background: white !important;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
+  
+
+  .section .owl-next div {
+    color: transparent !important;
+    font-size: 1px !important;
+    position:absolute !important;
+    top: 30px !important;
+    right: 0px !important;
+  }
+
+}

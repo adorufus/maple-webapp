@@ -3,6 +3,7 @@ import {OwlOptions} from "ngx-owl-carousel-o";
 import {map, Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
 
+
 interface content {
   title: string;
 }
@@ -12,8 +13,11 @@ interface content {
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.scss']
 })
+
+
 export class VideoListComponent implements OnInit {
 
+ 
   @Input() title: string = ""
 
   videos?: Observable<any[]>
@@ -21,6 +25,8 @@ export class VideoListComponent implements OnInit {
   constructor(private firestoreService: FirestoreService) {
 
   }
+
+  
 
   ngOnInit() {
     console.log(this.title)
@@ -42,7 +48,7 @@ export class VideoListComponent implements OnInit {
     pullDrag: false,
     dots: true,
     center: false,
-    navText: ['<', '>'],
+    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
     responsive: {
       0: {
         items: 1
@@ -54,7 +60,7 @@ export class VideoListComponent implements OnInit {
         items: 3
       }
     },
-    nav: false
+    nav: true
   }
   contentData: content[] = [
     {
@@ -73,4 +79,9 @@ export class VideoListComponent implements OnInit {
       title: 'WANDER',
     }
   ];
+
+  
 }
+
+
+

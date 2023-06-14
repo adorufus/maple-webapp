@@ -11,8 +11,27 @@
 .section {
   padding: 0;
 }
+.owl-prev .owl-next {
+  color: #000000;
+  font-size: 55px;
+  margin: 10px;
+  padding: 4px 7px;
+  background: transparent;
+  /* display: inline-block; */
+  cursor: pointer;
+  border-radius: 3px;
+}
 
-@media (max-width: 768px) {
+.text{
+ text-align: right;
+ margin-top: -60px;
+}
+
+.text:hover{
+  color: #6123B5;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 768px) {
   .client-slider-one .client-box {
     text-align: start
   }
@@ -20,4 +39,5 @@
   .client-box {
     width: 100%
   }
+
 }

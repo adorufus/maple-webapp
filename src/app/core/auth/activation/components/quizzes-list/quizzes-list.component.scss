@@ -1,0 +1,28 @@
+.client-box {
+    height: 231px !important;
+  }
+  
+  .client-box-2 {
+    background-color: black;
+    color: white;
+    padding-bottom: 20px;
+  }
+
+  .client-slider-one .client-box {
+    text-align: start;
+    font-size: 14pt;
+  }
+  
+  .section {
+    padding: 0;
+  }
+
+  @media (max-width: 768px) {
+    .client-slider-one .client-box {
+      text-align: start
+    }
+
+    .allvideo{
+     }
+  }
+  

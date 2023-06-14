@@ -1,0 +1,30 @@
+<section class="hero-one-1 position-relative"
+         style="background-image: url(../../../../../{{bannerImage}});" id="home">
+  <!--  <div class="bg-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
+  <!--  <div class="bg-hero-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
+  <div *ngIf="textImage == 'Rewind'">
+    <app-text-rewind></app-text-rewind>
+  </div>
+
+  <div *ngIf="textImage == 'CAN!'">
+    <app-text-can></app-text-can>
+  </div>
+
+  <div *ngIf="textImage == 'All'">
+    <div style="line-height: 1; padding: 2vh 5vw 5vh">
+      <span class="text-white sequel-font">WE </span>
+      <span class="text fw-lighter hero-title">ARE</span> <br/>
+      <span class="text fw-lighter hero-title"> THE </span>
+      <span class="text-white sequel-font">MAPPLE MEDIA </span> <br/>
+      <span class="text fw-lighter hero-title">LET'S </span>
+      <span class="text-white sequel-font">CONNECT </span> <br/>
+      <span class="text-white sequel-font">THE </span>
+      <span class="text fw-lighter hero-title">DOT'S </span>
+      <br><br><br><br>
+      <span class="text-white description">The Maple Media • May, 12 2023</span>
+    </div>
+  </div>
+  
+  <!-- end container -->
+</section>
+<app-run-purple [runningText]="runnerText" [backgroundColor]="runnerColor"></app-run-purple>

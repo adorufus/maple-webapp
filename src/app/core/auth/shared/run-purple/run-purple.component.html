@@ -1,0 +1,71 @@
+<div class="marquee-container" [style.background-color]="backgroundColor">
+  <div class="marquee-wrapper">
+    <div *ngIf="runningText == 'Rewind'">
+      <app-run-cyan></app-run-cyan>
+    </div>
+    <div *ngIf="runningText == 'All'">
+      <div class="marquee">
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      
+      </div>
+      
+      <div class="marquee marquee2">
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      
+        <span class="text-white hero-title">"BE </span>
+        <span class="text-purple fw-lighter">THE &nbsp;</span>
+        <span class="text-white">MAPLE TO </span>
+        <span class="text-purple fw-lighter"> MY&nbsp;</span>
+        <span class="text-white"> WAFFLE"</span>
+      </div>
+    </div>
+
+    <div *ngIf="runningText == 'Unscene'">
+      <app-run-unscene></app-run-unscene>
+    </div>
+
+    <div *ngIf="runningText == 'Wander'">
+      <app-run-wander></app-run-wander>
+    </div>
+
+    <div *ngIf="runningText == 'TrickRoom'">
+      <app-run-trick></app-run-trick>
+    </div>
+
+    <div *ngIf="runningText == 'Dixi'">
+      <app-run-dixi></app-run-dixi>
+    </div>
+
+    <div *ngIf="runningText == 'Playroom'">
+      <app-run-play></app-run-play>
+    </div>
+
+  </div>
+</div>
+
