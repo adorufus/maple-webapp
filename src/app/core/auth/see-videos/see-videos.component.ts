@@ -20,6 +20,7 @@ export class SeeVideosComponent implements OnInit {
     this.router.navigate([`/media`], {
       queryParams: {segment: this.segmentId}
     })
+    window.scroll(0, 0)
   }
 
 }

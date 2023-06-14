@@ -4,7 +4,6 @@ import { Router } from '@angular/router';
 import {Observable} from "rxjs";
 import { FirestoreService } from 'src/app/services/firestore.service';
 
-
 interface content {
   title: string;
 }
@@ -16,21 +15,12 @@ interface content {
 })
 export class DaftarVideoComponent implements OnInit {
 
-  public videos?: Observable<any[]>
+  public segments?: Observable<any[]>
 
   constructor(private router: Router, private firestoreService: FirestoreService) {}
 
   ngOnInit() {
-    console.log(this.title)
-    let temp = this.title == 'Latest Video' ? this.firestoreService.getCollection("media", (ref) => ref.orderBy("upload_date", "desc").limit(5)) : this.firestoreService.getCollection("media", (ref) => ref.where('type', '==', this.title).orderBy("upload_date", "desc").limit(5))
-
-    if(temp instanceof Observable<any>) {
-      this.videos = temp
-
-      this.videos.subscribe(test => {
-        console.log(test)
-      })
-    }
+    
   }
 
   @Input() title: string = ""

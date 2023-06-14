@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import { Router } from '@angular/router';
 
+
 interface content {
   title: string;
   sub_title: string;

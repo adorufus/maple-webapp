@@ -12,13 +12,16 @@ export class ProdukComponent {
 
   onClick() {
     this.router.navigate(['/detail'])
+    window.scroll(0, 0)
   }
 
   twoClick() {
     this.router.navigate(['/detailproduk2'])
+    window.scroll(0, 0)
   }
 
   threeClick(){
     this.router.navigate(['/detailproduk3'])
+    window.scroll(0, 0)
   }
 }
