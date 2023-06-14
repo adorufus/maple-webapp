@@ -17,25 +17,27 @@ interface content {
 export class DaftarVideoComponent implements OnInit {
 
   public videos?: Observable<any[]>
+  public indexZeroVideo?: any
 
   constructor(private router: Router, private firestoreService: FirestoreService) {}
 
   ngOnInit() {
     console.log(this.title)
-    let temp = this.title == 'Latest Video' ? this.firestoreService.getCollection("media", (ref) => ref.orderBy("upload_date", "desc").limit(5)) : this.firestoreService.getCollection("media", (ref) => ref.where('type', '==', this.title).orderBy("upload_date", "desc").limit(5))
+    let temp = this.title == 'Latest Video' ? this.firestoreService.getCollection("media", (ref) => ref.orderBy("upload_date", "desc").limit(5)) : this.firestoreService.getCollection("media", (ref) => ref.where('type', '==', this.title).orderBy("upload_date", "desc").limit(9))
 
     if(temp instanceof Observable<any>) {
       this.videos = temp
 
       this.videos.subscribe(test => {
         console.log(test)
+        this.indexZeroVideo = test[0]
       })
     }
   }
 
   @Input() title: string = ""
 
-  
+
   onVideo() {
     this.router.navigate(['/play-video'])
   }
@@ -95,8 +97,8 @@ export class DaftarVideoComponent implements OnInit {
       color = '#FFE800'
     } else if(this.title.toLowerCase() == 'all') {
       color = '#6123AD'
-    } 
-    
+    }
+
     else {
       color = 'default color'
     }
@@ -123,8 +125,8 @@ export class DaftarVideoComponent implements OnInit {
       image = 'assets/images/banner-videos.png'
     } else if(this.title.toLowerCase() == 'can!') {
       image = 'assets/images/banner-videos.png'
-    } 
-    
+    }
+
     else {
       image = 'default image'
     }
@@ -140,7 +142,7 @@ export class DaftarVideoComponent implements OnInit {
   //     text = 'Rewind'
   //   } else if(this.title.toLowerCase() == 'trick room') {
   //     text = ''
-  //   } 
+  //   }
   //   else {
   //     text = 'default runtext'
   //   }
