@@ -1,11 +1,24 @@
 .client-box {
-  height: 231px !important;
+  height: 70% !important;
+  width: 100% !important;
 }
 
 .client-box-2 {
   background-color: black;
   color: white;
-  padding-bottom: 20px;
+  height: 30%
+}
+
+.text-center {
+  padding-top: 2%;
+}
+
+.pt {
+  padding-top: 5%;
+}
+
+.bp {
+  margin-bottom: 0;
 }
 
 .client-slider-one .client-box {
@@ -36,7 +49,7 @@
   font-family: 'Sequel Sans', sans-serif;
   font-style: normal;
   font-weight: 355;
-  font-size: 10px;
+  font-size: 12px;
   color: #7E7E7E;
 
 }
