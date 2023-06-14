@@ -1,17 +1,22 @@
 .sequel-font {
-  font-size: 12vh;
+  font-size: 154px;
   font-family: "Sequel Sans Heavy Disp", sans-serif;
   font-weight: bold;
+  text-shadow: 0 0 10px white;
 }
 
 .container {
   margin-left: 17vw;
 }
 
+.hero-title{
+ font-size: 154px;
+ font-family: "bebas neue", sans-serif;
+ text-shadow: 0 0 10px white;
+}
+
 @media (max-width: 576px) {
-  .sequel-font {
-    font-size: 5vh;
-    font-family: "Sequel Sans Heavy Disp", sans-serif;
-    font-weight: bold;
+  .sequel-font, .hero-title {
+    font-size: 8vh;
   }
 }

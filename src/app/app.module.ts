@@ -24,10 +24,13 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {AuthService} from "./services/auth.service";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 
+
+
 @NgModule({
   declarations: [
     AppComponent,
     NotfoundComponent,
+    
   ],
   imports: [
     BrowserModule,

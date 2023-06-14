@@ -1,0 +1,76 @@
+<app-running-text></app-running-text>
+<app-banner-play></app-banner-play>
+
+<div class="container">
+<div class="row">
+    <div class="col-4 mt-4 pt-2">
+      <span class="text">Just <br> For You!</span>
+    </div>
+    <div class="col-8 mt-4 pt-2">
+      <hr class="mt-auto" style="height: 4px; margin: 1rem 0rem 1rem -8rem; background-color: black; border: none; opacity: 1;">
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-12 mt-4 pt-2">
+      
+      <div class="client-slider-one">
+        <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+          <ng-template carouselSlide *ngFor='let value of contentData'>
+            <div class="client-box">
+              <div style="height: 80%;">
+                <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
+              </div>
+              <div class="client-box-2">
+              <h6 class="text-center">Ini video </h6>
+            </div>
+            </div>
+            
+          </ng-template>
+        </owl-carousel-o>
+      </div>
+      </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12 mt-4 pt-2">
+          
+          <div class="client-slider-one">
+            <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+              <ng-template carouselSlide *ngFor='let value of contentData'>
+                <div class="client-box">
+                  <div style="height: 80%;">
+                    <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
+                  </div>
+                  <div class="client-box-2">
+                  <h6 class="text-center">Ini video </h6>
+                </div>
+                </div>
+                
+              </ng-template>
+            </owl-carousel-o>
+          </div>
+          </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 mt-4 pt-2">
+              
+              <div class="client-slider-one">
+                <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
+                  <ng-template carouselSlide *ngFor='let value of contentData'>
+                    <div class="client-box">
+                      <div style="height: 80%;">
+                        <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
+                      </div>
+                      <div class="client-box-2">
+                      <h6 class="text-center">Ini video </h6>
+                    </div>
+                    </div>
+                    
+                  </ng-template>
+                </owl-carousel-o>
+              </div>
+              </div>
+            </div>
+</div>

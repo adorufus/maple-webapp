@@ -2,7 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {map, Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
-import { Router } from '@angular/router';
+
 
 interface content {
   title: string;
@@ -13,6 +13,8 @@ interface content {
   templateUrl: './video-list.component.html',
   styleUrls: ['./video-list.component.scss']
 })
+
+
 export class VideoListComponent implements OnInit {
 
  

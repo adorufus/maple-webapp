@@ -1,0 +1,72 @@
+.lingkaran-left{
+    width: 26px;
+height: 26px;
+background: black;
+border-radius: 100%;
+}
+
+.card{
+    margin-top: 46px;
+    padding: 20px;
+}
+
+h1{
+    font-family: 'Sequel San',sans-serif;
+font-style: normal;
+font-weight: bold;
+font-size: 56px;
+}
+
+h6{
+    padding-top: 82px;
+}
+
+h5{
+    font-weight: bold;
+    font-size: 14px;
+}
+
+p{
+    font-family: 'Sequel Sans',sans-serif;
+font-style: normal;
+font-weight: 360;
+font-size: 20px;
+line-height: 160%;
+}
+
+.text-white{
+    font-size: 16px;
+}
+
+.text-right{
+    font-size: 16px;
+    padding-left: 46px;
+    margin-top: -23px;
+    margin-bottom: 22px;
+}
+
+.right-column{
+    padding-top: 22px;
+}
+
+.art-right{
+    font-size: 14px;
+}
+
+@media screen and (max-width:768px) {
+    h5, .art-right{
+        font-size: 10px;
+    }
+
+    h1{
+        font-size: 28px;
+    }
+
+    p{
+        font-size: 14px;
+    }
+
+    .text-right{
+        font-size: 12px;
+    }
+}

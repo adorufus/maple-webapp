@@ -27,11 +27,26 @@ import { ActivationComponent } from './auth/activation/activation.component';
 import { NewquizzesComponent } from './auth/activation/components/newquizzes/newquizzes.component';
 import { QuizzesListComponent } from './auth/activation/components/quizzes-list/quizzes-list.component';
 import { GamesListComponent } from './auth/activation/components/games-list/games-list.component';
-
 import {PageTitleComponent} from "../shared/page-title/page-title.component";
 import {VideosPageComponent} from "./videos/videos-page.component";
 import {RunningTextComponent} from "../shared/running-text/running-text.component";
-import { LatestVideoComponent } from './auth/latest-video/latest-video.component';
+import { SeeVideosComponent } from './auth/see-videos/see-videos.component';
+import { LatestComponent } from './auth/see-videos/components/latest/latest.component';
+import { BannerVideosComponent } from './auth/see-videos/components/banner-videos/banner-videos.component';
+import { RunPurpleComponent } from './auth/shared/run-purple/run-purple.component';
+import { DaftarVideoComponent } from './auth/see-videos/components/latest/component/daftar-video/daftar-video.component';
+import { PlayVideoComponent } from './auth/play-video/play-video.component';
+import { BannerPlayComponent } from './auth/play-video/components/banner-play/banner-play.component';
+import { ReadArticlesComponent } from './auth/read-articles/read-articles.component';
+import { RunCyanComponent } from './auth/shared/run-cyan/run-cyan.component';
+import { RunWanderComponent } from './auth/shared/run-wander/run-wander.component';
+import { RunTrickComponent } from './auth/shared/run-trick/run-trick.component';
+import { RunUnsceneComponent } from './auth/shared/run-unscene/run-unscene.component';
+import { RunDixiComponent } from './auth/shared/run-dixi/run-dixi.component';
+import { RunPlayComponent } from './auth/shared/run-play/run-play.component';
+import { Detailproduk3Component } from './components/deptstore/detail/components/detailproduk3/detailproduk3.component';
+import { TextRewindComponent } from './auth/shared/text-rewind/text-rewind.component';
+import { TextCanComponent } from './auth/shared/text-can/text-can.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +73,25 @@ import { LatestVideoComponent } from './auth/latest-video/latest-video.component
     GamesListComponent,
     PageTitleComponent,
     RunningTextComponent,
-    LatestVideoComponent,
+    SeeVideosComponent,
+    LatestComponent,
+    BannerVideosComponent,
+    RunPurpleComponent,
+    DaftarVideoComponent,
+    PlayVideoComponent,
+    BannerPlayComponent,
+    ReadArticlesComponent,
+    RunCyanComponent,
+    RunWanderComponent,
+    RunTrickComponent,
+    RunUnsceneComponent,
+    RunDixiComponent,
+    RunPlayComponent,
+    Detailproduk3Component,
+    TextRewindComponent,
+    TextCanComponent,
+ 
+    
   ],
   exports: [
     NewsHomeComponent,
