@@ -6,7 +6,7 @@ import { AppComponent } from './app.component';
 import { NavbarComponent } from './shared/components/navbar/navbar.component';
 import {CarouselModule} from "ngx-owl-carousel-o";
 import {FeatherModule} from "angular-feather";
-import {NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import {NgbDropdownModule, NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import {BrowserAnimationsModule} from "@angular/platform-browser/animations";
 import {allIcons} from "angular-feather/icons";
 import { LoginComponent } from './core/auth/login/login.component';
@@ -30,7 +30,7 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
   declarations: [
     AppComponent,
     NotfoundComponent,
-    
+
   ],
   imports: [
     BrowserModule,
@@ -43,7 +43,8 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
     LayoutsModule,
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
-    AngularFirestoreModule
+    AngularFirestoreModule,
+    NgbDropdownModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]
