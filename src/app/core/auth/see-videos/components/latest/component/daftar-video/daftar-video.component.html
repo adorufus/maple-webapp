@@ -19,13 +19,13 @@
     </div>
 
     <div *ngIf="indexZeroVideo" class="row no-gutters pb-5">
-      <div class="col-6 mt-12 pt-2">
+      <div class="col-lg-6 mt-12 pt-2 col-sm-12">
         <div style="height: 100%; ">
           <img (click)="onVideo()" style="height: 100%; width: 100%; object-fit: contain;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
         </div>
       </div>
 
-      <div class="col-6 mt-12 pt-2">
+      <div class="col-lg-6 mt-12 pt-2 col-sm-12">
         <table class="text-justify">
           <h2>{{indexZeroVideo.title}}</h2>
           <p style="font-weight: 500">{{indexZeroVideo.description}}
@@ -46,13 +46,36 @@
             <img style="height: 100%; width: 100%; object-fit: cover;" [src]="video.thumbnails.high.url" alt="">
           </div>
           <div class="client-box-2">
-            <h6 class="text-center">{{video.title}}</h6>
+            <h6 class="title fw-bold">{{video.title}}</h6>
+            <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
+    <div class="row no-gutters">
+      <div class="col-lg-5 col-md-6 col-sm-12">
+        <div class="pagination-right pt-3">
+          <p class="text-next">Previous</p>
+        </div>
+      </div>
+    
+
+    <div class="col-lg-2 col-md-6 col-sm-12">
+      <p class="text-center fw-bold">1</p>
+      <hr class="mt-auto" style="height: 1px; margin: 0rem 4rem 0rem 4rem; background-color: black; border: none; opacity: 1;">
+      <p class="text-center fw-bold">999</p>
+    </div>
+
+    <div class="col-lg-5 col-md-6 col-sm-12">
+      <div class="pagination pt-3">
+        <p class="text-next fw-bold">Next</p>
+      </div>
+    </div>
+
+  </div>
+  
+</div>
   <!-- end container -->
 </section>
 <!-- end what client says -->

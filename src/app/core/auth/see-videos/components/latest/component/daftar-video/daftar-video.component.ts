@@ -1,5 +1,4 @@
 import { Component, Input, OnInit } from '@angular/core';
-import {OwlOptions} from "ngx-owl-carousel-o";
 import { Router } from '@angular/router';
 import {Observable} from "rxjs";
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -39,42 +38,8 @@ export class DaftarVideoComponent implements OnInit {
 
   onVideo() {
     this.router.navigate(['/play-video'])
+    window.screen
   }
-  customOptions: OwlOptions = {
-    loop: false,
-    mouseDrag: false,
-    touchDrag: false,
-    pullDrag: false,
-    dots: false,
-    autoplay: false,
-    navText: ["<div class='nav-button owl-prev'>‹</div>", "<div class='nav-button owl-next'>›</div>"],
-    responsive: {
-      0: {
-        items: 1
-      },
-      600: {
-        items: 2
-      },
-      900: {
-        items:3
-      }
-    },
-    nav: false
-  }
-  contentData: content[] = [
-    {
-      title: '',
-    },
-    {
-      title: '',
-    },
-    {
-      title: '',
-    },
-    {
-      title: '',
-    }
-  ];
 
 
   checkForColor(): string {
@@ -133,19 +98,4 @@ export class DaftarVideoComponent implements OnInit {
     return image
 
   }
-
-  // checkForRunText(): string {
-  //   let text: string
-
-  //   if(this.title.toLowerCase() == 'rewind') {
-  //     text = 'Rewind'
-  //   } else if(this.title.toLowerCase() == 'trick room') {
-  //     text = ''
-  //   }
-  //   else {
-  //     text = 'default runtext'
-  //   }
-
-  //   return text
-  // }
 }
