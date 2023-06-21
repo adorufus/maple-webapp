@@ -11,7 +11,7 @@ export class FirestoreService {
 
   getDoc(path: string): any {
     try {
-      return this.db.doc(path).valueChanges()
+      return this.db.doc(path).valueChanges({idField: 'id'})
     } catch (e) {
       return e
     }
@@ -39,7 +39,7 @@ export class FirestoreService {
 
   getCollection(path: string, param?: QueryFn): any {
     try {
-      return this.db.collection(path, param).valueChanges()
+      return this.db.collection(path, param).valueChanges({idField: 'id'})
     } catch (e) {
       console.log(e)
       return e

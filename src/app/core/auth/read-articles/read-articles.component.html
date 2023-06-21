@@ -1,30 +1,30 @@
 <div class="container">
-    <div *ngIf="indexZeroArticle" class="row">
+    <div *ngIf="article" class="row">
         <div class="col-lg-12 md-6 sm-12">
-          <a href=""> <h6  style="text-decoration: underline 1.5px;">Back</h6> </a> 
+          <a href=""> <h6  style="text-decoration: underline 1.5px;">Back</h6> </a>
         </div>
         <div class="col-lg-7 md-6 sm-12">
             <div class="card">
-                <h1>{{indexZeroArticle.title}}</h1>
-                <p [innerHTML]="indexZeroArticle.short_content"></p>
+                <h1>{{(article | async)?.title}}</h1>
+                <p [innerHTML]="(article | async)?.short_content"></p>
                     <br><br>
                 <div class="lingkaran-left">
                 <p class="text-white text-center">A</p>
             </div>
-            <p class="text-right">by Author • {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
+            <p class="text-right">by Author • {{(article | async)?.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
             <hr>
 
-                <img src="{{indexZeroArticle.content_image}}" alt="img">
+                <img src="{{(article | async)?.content_image}}" alt="img">
                 <br> <br>
                <table class="text-justify">
-                <p [innerHTML]="indexZeroArticle.content"></p>
+                <p [innerHTML]="(article | async)?.content"></p>
                </table>
             </div>
         </div>
 
         <div  class="col-lg-3 md-6 sm-12">
             <div class="card">
-                <img src="{{indexZeroArticle.content_image}}" alt="img">
+                <img src="assets/images/article.jpg" alt="img">
                 <h6 class="right-column" style="text-decoration: underline 1.5px;">read</h6>
                 <h5>Misteri Kota Gaib Saranjana di Kalimantan</h5>
                 <p class="art-right">"Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana."</p>
@@ -62,7 +62,7 @@
         <a (click)="readClick()" >Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%;"></a>
       </div>
     </div>
-  
+
     <div class="row pt-3">
       <div *ngFor="let article of articles | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
         <div class="vertical-container">

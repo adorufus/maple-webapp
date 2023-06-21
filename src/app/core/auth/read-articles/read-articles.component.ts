@@ -9,17 +9,12 @@ import { FirestoreService } from 'src/app/services/firestore.service';
   styleUrls: ['./read-articles.component.scss']
 })
 export class ReadArticlesComponent implements OnInit {
-  public articles?: Observable<any[]>
+  public article?: Observable<any>
   public indexZeroArticle?: any
   articleId: string = ""
 
   constructor(private firestoreService: FirestoreService, private router: Router, private activeRouter: ActivatedRoute) {}
 
-
-
-  readClick() {
-    this.router.navigate(['/read-articles'])
-  }
 
   ngOnInit() {
 
@@ -27,15 +22,13 @@ export class ReadArticlesComponent implements OnInit {
       this.articleId = paths["id"]
     })
 
-    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(9))
+    let temp = this.firestoreService.getDoc(`articles/${this.articleId}`)
 
-    if(temp instanceof Observable<any>) {
-      this.articles = temp
+    console.log(temp)
+    this.article = temp
 
-      this.articles.subscribe(test => {
-        console.log("test: ", test)
-        this.indexZeroArticle = test[0]
-      })
-    }
+    this.article?.subscribe((v) => {
+      console.log(v)
+    })
   }
 }

@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {Observable} from "rxjs";
+import {map, Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
 import { Router } from '@angular/router';
 
@@ -12,14 +12,13 @@ export class NewsHomeComponent implements OnInit {
 
   public articles?: Observable<any[]>
   public indexZeroArticle?: any
-  articleId: string = ""
 
   constructor(private firestoreService: FirestoreService, private router: Router) {}
 
-  readClick() {
+  readClick(articleId: string) {
     this.router.navigate(['/read-articles'], {
       queryParams: {
-        id: this.articleId
+        id: articleId
       }
     })
   }

@@ -8,7 +8,7 @@
       <p [innerHTML]="indexZeroArticle.short_content"></p>
       <p>Author: Author Name</p>
       <p>Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br><br><br>
-      <a (click)="readClick()" >Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%;"></a>
+      <a (click)="readClick(indexZeroArticle.id)" >Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%;"></a>
     </div>
   </div>
 
@@ -21,7 +21,7 @@
           <div [innerHTML]="article.short_content"></div>
           <p>Author: Author Name 1</p>
           <p>Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
-          <a (click)="readClick()">Read more</a>
+          <a (click)="readClick(article.id)">Read more</a>
         </div>
       </div>
     </div>
