@@ -3,7 +3,7 @@
   <div class="container">
     
     <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
-    <app-see-videos [segmentId]="title"></app-see-videos>
+    <!-- <app-see-videos [segmentId]="title"></app-see-videos> -->
     <!-- end row -->
     <div class="row">
       <div class="col-12 mt-4 pt-2">
@@ -12,7 +12,7 @@
             <ng-template carouselSlide *ngFor='let value of videos | async'>
               <div class="client-box">
                 <div style="height: 80%; padding-bottom: 1vh">
-                  <img style="height: 100%; object-fit: cover;" src="{{value.thumbnails.standard.url}}" alt="">
+                  <img (click)="onVideo(value.vidID)" style="height: 100%; object-fit: cover;" src="{{value.thumbnails.standard.url}}" alt="">
                 </div>
                 <h6>{{value.title}}</h6>
               </div>

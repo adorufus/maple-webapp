@@ -10,7 +10,7 @@ interface content {
 @Component({
   selector: 'app-daftar-video',
   templateUrl: './daftar-video.component.html',
-  styleUrls: ['./daftar-video.component.scss']
+  styleUrls: ['./daftar-video.component.scss'],
 })
 export class DaftarVideoComponent implements OnInit {
 
@@ -30,15 +30,18 @@ export class DaftarVideoComponent implements OnInit {
         console.log(test)
         this.indexZeroVideo = test[0]
       })
+      
     }
   }
 
   @Input() title: string = ""
 
 
-  onVideo() {
-    this.router.navigate(['/play-video'])
-    window.screen
+  onVideo(title:string) {
+    this.router.navigate(['/play-video'],{
+      queryParams: {id: title}
+    })
+    window.scroll (0,0)
   }
 
 
@@ -88,7 +91,7 @@ export class DaftarVideoComponent implements OnInit {
     } else if(this.title.toLowerCase() == 'wander') {
       image = 'assets/images/banner-videos.png'
     } else if(this.title.toLowerCase() == 'can!') {
-      image = 'assets/images/banner-videos.png'
+      image = 'assets/images/banner-can.png'
     }
 
     else {

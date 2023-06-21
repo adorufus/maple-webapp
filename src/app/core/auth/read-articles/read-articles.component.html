@@ -1,44 +1,30 @@
 <div class="container">
-    <div class="row">
+    <div *ngIf="indexZeroArticle" class="row">
         <div class="col-lg-12 md-6 sm-12">
           <a href=""> <h6  style="text-decoration: underline 1.5px;">Back</h6> </a> 
         </div>
         <div class="col-lg-7 md-6 sm-12">
             <div class="card">
-                <h1>Misteri Kota Gaib Saranjana di Kalimantan</h1>
-                <p>Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana.</p>
+                <h1>{{indexZeroArticle.title}}</h1>
+                <p [innerHTML]="indexZeroArticle.short_content"></p>
                     <br><br>
                 <div class="lingkaran-left">
                 <p class="text-white text-center">A</p>
             </div>
-            <p class="text-right">by Author • 11 Jun, 2023</p>
+            <p class="text-right">by Author • {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
             <hr>
 
-                <img src="assets/images/article.jpg" alt="img">
+                <img src="{{indexZeroArticle.content_image}}" alt="img">
                 <br> <br>
                <table class="text-justify">
-                <p>Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana. Kota Saranjana, berada di Kalimantan Selatan viral yang konon katanya Kota gaib. Disebut-sebut sebagai kota modern serba canggih dan bangunan futuristik. <br> <br> Nama Sambu Ranjana inilah yang digunakan untuk nama Kota Saranjana. Dipercaya bahwa Kota Saranjana ini adalah kota tidak terlihat dengan peradaban konon sudah super canggih. 
-<br><br>
-                    Siapa pun yang tinggal dan berada di Saranjana itu adalah makhluk dengan peradaban yang jauh lebih maju dari pada peradaban kita saat ini.
-                    
-                    Pada tahun 1845, ada seorang naturalis berkebangsaan Jerman bernama Salomon Muller sedang meneliti flora dan fauna di Indonesia. Muller ini membuat sebuah peta di mana dia menaruh satu area di Indonesia dengan nama Saranjana.
-                    <br><br>
-                    Namun, sejak peta itu ada sampai sekarang, tidak ada yang tahu dimana itu Saranjana. Peta ini dia beri judul “Peta Wilayah Pesisir dan Pedalaman Borne”. 
-                    
-                    Dalam peta, dia mendiskripsikan wilayah dengan nama Tandjoeng Serandjana di sebelah selatan Pulau Laut tepatnya berbatasan dengan wilayah Pulau Kijang dan Pulau Kerumputan.
-                    <br><br>
-                    Sebagian berpendapat bahwa Muller mengada-ada. Tapi kemampuan Salomon Muller dalam membuat peta tidak bisa diragukan lagi. 
-                    
-                    Karena dia juga adalah anggota Dinas Kehutanan Hindia Belanda yang sudah mendapatkan pelatihan advance untuk membuat peta, bahkan dari museum Leiden, Belanda.
-                    
-                    Namun, saat dia sudah sampai di mobil, dia sadar bahwa rasanya tadi penontonnya itu ada 12.000 orang. Tapi kenapa tiba-tiba stadionnya terasa kosong.</p>
+                <p [innerHTML]="indexZeroArticle.content"></p>
                </table>
             </div>
         </div>
 
-        <div class="col-lg-3 md-6 sm-12">
+        <div  class="col-lg-3 md-6 sm-12">
             <div class="card">
-                <img src="assets/images/article.jpg" alt="img">
+                <img src="{{indexZeroArticle.content_image}}" alt="img">
                 <h6 class="right-column" style="text-decoration: underline 1.5px;">read</h6>
                 <h5>Misteri Kota Gaib Saranjana di Kalimantan</h5>
                 <p class="art-right">"Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana."</p>
@@ -62,3 +48,33 @@
         </div>
     </div>
 </div>
+
+<!-- <div class="container">
+    <div *ngIf="indexZeroArticle" class="row no-gutters">
+      <div class="col-lg-6 col-md-6 col-sm-12">
+        <img class="image" src="../../../../../assets/layout/images/hero-one-1-img.jpg" alt="Image">
+      </div>
+      <div class="col-lg-6 col-md-6 col-sm-12 right-column">
+        <p style="font-size: 20px; font-weight: bold; font-family: 'Sequel Sans Heavy Disp', sans-serif">{{indexZeroArticle.title}}</p>
+        <p [innerHTML]="indexZeroArticle.short_content"></p>
+        <p>Author: Author Name</p>
+        <p>Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br><br><br>
+        <a (click)="readClick()" >Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%;"></a>
+      </div>
+    </div>
+  
+    <div class="row pt-3">
+      <div *ngFor="let article of articles | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
+        <div class="vertical-container">
+          <img style="height: 35.3vh; object-fit: contain; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
+          <div class="content">
+            <div style="font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div>
+            <div [innerHTML]="article.short_content"></div>
+            <p>Author: Author Name 1</p>
+            <p>Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
+            <a href="#">Read more</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   -->

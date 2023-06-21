@@ -2,6 +2,7 @@ import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {map, Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
+import { Router } from '@angular/router';
 
 
 interface content {
@@ -22,7 +23,7 @@ export class VideoListComponent implements OnInit {
 
   videos?: Observable<any[]>
 
-  constructor(private firestoreService: FirestoreService) {
+  constructor(private firestoreService: FirestoreService, private router: Router) {
 
   }
 
@@ -39,6 +40,13 @@ export class VideoListComponent implements OnInit {
         console.log(test)
       })
     }
+  }
+
+  onVideo(title:String) {
+    this.router.navigate(['/play-video'],{
+      queryParams: {id: title}
+    })
+    window.scroll (0,0)
   }
 
   customOptions: OwlOptions = {

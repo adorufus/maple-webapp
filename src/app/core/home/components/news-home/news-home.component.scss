@@ -3,6 +3,14 @@
   flex-wrap: wrap;
 }
 
+a{
+  cursor: pointer;
+}
+
+p{
+  cursor: default;
+}
+
 .col {
   flex: 0 0 50%;
   max-width: 50%;

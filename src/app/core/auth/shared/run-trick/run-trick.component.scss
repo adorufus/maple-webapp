@@ -15,7 +15,8 @@
   
   .marquee {
     display: inline-block;
-    padding-right: 434px; /* Adjust the padding as per your requirements */
+    padding-right: 520px; /* Adjust the padding as per your requirements */
+    padding-top: 6px;
     animation: marquee 20s linear infinite;
     animation-delay: 0.5s;
     
@@ -26,9 +27,9 @@
   }
   
   .hero-title{
-    font-family: 'sequel sans', sans-serif;
+    font-family: 'Sequel Sans Heavy Disp', sans-serif;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 36px;
     line-height: 36px;
 
     margin-left: 2%;
@@ -36,7 +37,7 @@
   
   .fw-lighter{
     font-family: 'bebas neue', sans-serif;
-    font-size: 30px;
+    font-size: 36px;
   }
   
   @keyframes marquee {

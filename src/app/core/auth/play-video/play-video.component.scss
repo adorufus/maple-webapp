@@ -6,5 +6,10 @@ font-size: 48px;
 }
 
 .col-8{
-    padding-top: 137px !important;
-  }
+    padding-left: 0px;
+    margin-left: -42px;
+}
+
+.row {
+    --bs-gutter-x: 3.5rem;
+}

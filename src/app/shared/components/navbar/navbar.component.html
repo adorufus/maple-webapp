@@ -29,12 +29,12 @@
 
         <li class="nav-item">
           <button type="button" class="btn btn-primary" [ngClass]="{'active':currentSection === 'home'}"
-            href="javascript: void(0);" (click)="onNavClick('home')">APP"</button>
+            href="javascript: void(0);" (click)="onNavClick('home')">APP</button>
           <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
             <button type="button" class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
             <div class="dropdown-menu" ngbDropdownMenu>
               <button ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-                (click)="onNavClick('videos')">Video</button>
+                (click)="onNavClick('media')">Video</button>
               <button ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
                 (click)="onNavClick('articles')">Article</button>
               <button ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"

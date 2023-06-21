@@ -1,7 +1,8 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import {Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
+import { Router } from '@angular/router';
 
 interface content {
   title: string;
@@ -14,9 +15,11 @@ interface content {
 })
 export class CategoriesComponent implements OnInit{
 
+
+
   public segments?: Observable<any[]>
 
-  constructor(private firestoreService: FirestoreService) {
+  constructor(private firestoreService: FirestoreService, private router:Router) {
 
   }
 
@@ -30,6 +33,16 @@ export class CategoriesComponent implements OnInit{
         console.log(test)
       })
     }
+
+
+    
+  }
+
+  onClick(title:string) {
+    this.router.navigate([`/media`], {
+      queryParams: {segment: title}
+    })
+    window.scroll(0, 0)
   }
 
   customOptions: OwlOptions = {
@@ -37,8 +50,8 @@ export class CategoriesComponent implements OnInit{
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: false,
-    navText: ['<', '>'],
+    dots: true,
+    navText:  ["<div class='nav-button owl-prev1'>‹</div>", "<div class='nav-button owl-next1'>›</div>"],
     center: false,
     responsive: {
       0: {

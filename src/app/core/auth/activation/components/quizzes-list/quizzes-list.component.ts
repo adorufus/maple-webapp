@@ -1,4 +1,5 @@
 import { Component, Input } from '@angular/core';
+import { Router } from '@angular/router';
 import {OwlOptions} from "ngx-owl-carousel-o";
 
 interface content {
@@ -12,6 +13,14 @@ interface content {
 })
 export class QuizzesListComponent {
   @Input() title: string = ""
+
+
+  constructor(private router: Router) {}
+
+  onClick() {
+    this.router.navigate(['/detail-activation'])
+    window.scroll(0, 0)
+  }
 
   customOptions: OwlOptions = {
     loop: true,

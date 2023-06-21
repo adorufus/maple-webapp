@@ -1,0 +1,49 @@
+.marquee-container {
+    overflow: hidden;
+    position: relative;
+    height: 7vh;
+    background-color: #00EDFF;
+  }
+  
+  .marquee-wrapper {
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    
+  }
+  
+  .marquee {
+    display: inline-block;
+    padding-right: 304px; /* Adjust the padding as per your requirements */
+    animation: marquee 10s linear infinite ;
+    animation-delay: 0s;
+    padding-top: 6px;
+    
+  }
+  
+  .marquee2 {
+    
+    animation-delay: 0s;
+  }
+  
+  .hero-title{
+    font-family: 'Sequel Sans Heavy Disp', arial, sans-serif;
+    font-weight: bold;
+    font-size: 36px;
+    line-height: 36px;
+
+    margin-left: 2%;
+  }
+  
+  .text-purple{
+    font-family: 'bebas neue', sans-serif;
+    font-size: 36px;
+    color:  #6123B5;
+  }
+  
+  @keyframes marquee {
+    0% { transform: translateX(0%); }
+    100% { transform: translateX(-100%); }
+  }  
+
+  

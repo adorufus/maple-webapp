@@ -10,16 +10,32 @@
     <app-text-can></app-text-can>
   </div>
 
+  <div *ngIf="textImage == 'Unscene'">
+    <app-text-unscene></app-text-unscene>
+  </div>
+
+  <div *ngIf="textImage == 'Wander'">
+    <app-text-wander></app-text-wander>
+  </div>
+
+  <div *ngIf="textImage == 'Trick Room'">
+    <app-text-trick></app-text-trick>
+  </div>
+
+  <div *ngIf="textImage == 'Dixi'">
+    <app-text-dixi></app-text-dixi>
+  </div>
+
   <div *ngIf="textImage == 'All'">
     <div style="line-height: 1; padding: 2vh 5vw 5vh">
       <span class="text-white sequel-font">WE </span>
       <span class="text fw-lighter hero-title">ARE</span> <br/>
       <span class="text fw-lighter hero-title"> THE </span>
       <span class="text-white sequel-font">MAPPLE MEDIA </span> <br/>
-      <span class="text fw-lighter hero-title">LET'S </span>
+      <span class="text fw-lighter hero-title">LET&rsquo;S </span>
       <span class="text-white sequel-font">CONNECT </span> <br/>
       <span class="text-white sequel-font">THE </span>
-      <span class="text fw-lighter hero-title">DOT'S </span>
+      <span class="text fw-lighter hero-title">DOTS! </span>
       <br><br><br><br>
       <span class="text-white description">The Maple Media • May, 12 2023</span>
     </div>

@@ -89,6 +89,28 @@ background: #000000;
     color: blueviolet;
 }
 
+.rotating-image {
+    width: 200px; /* Sesuaikan lebar gambar sesuai kebutuhan */
+    height: 200px; /* Sesuaikan tinggi gambar sesuai kebutuhan */
+    
+  }
+  
+ 
+
+  .run{
+    margin-left: -102px;
+    animation: rotate 15s linear infinite;
+  }
+  
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+
 @media (max-width: 1024px) {
     .left-column{
         margin-left: 336px;

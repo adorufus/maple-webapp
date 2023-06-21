@@ -16,6 +16,7 @@ import { PlayVideoComponent } from './core/auth/play-video/play-video.component'
 import { ReadArticlesComponent } from './core/auth/read-articles/read-articles.component';
 import { Detailproduk2Component } from './core/components/deptstore/detail/components/detailproduk2/detailproduk2.component';
 import { Detailproduk3Component } from './core/components/deptstore/detail/components/detailproduk3/detailproduk3.component';
+import { DetailActivationComponent } from './core/auth/activation/detail-activation/detail-activation.component';
 
 const routes: Routes = [
   {
@@ -74,6 +75,10 @@ const routes: Routes = [
       {
         path: 'read-articles',
         component: ReadArticlesComponent
+      },
+      {
+        path: 'detail-activation',
+        component: DetailActivationComponent
       },
       
       {

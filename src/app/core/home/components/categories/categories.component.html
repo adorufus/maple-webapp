@@ -8,9 +8,9 @@
         <div class="client-slider-one">
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
             <ng-template carouselSlide *ngFor='let value of segments | async; let i = index'>
-              <div class="border d-flex client-box justify-content-center align-items-center">
+              <div  class="border d-flex client-box justify-content-center align-items-center">
                 <div class="align-middle name-box">
-                  <h5 class="text-dark fs-18 mt-2" style="font-weight: bold !important;">{{value.name}}</h5>
+                  <h5 (click)="onClick(value.name)" class="text-dark fs-18 mt-2" style="font-weight: bold !important;">{{value.name}}</h5>
                 </div>
               </div>
             </ng-template>

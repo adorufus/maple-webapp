@@ -15,7 +15,7 @@
   
   .marquee {
     display: inline-block;
-    padding-right: 227px; /* Adjust the padding as per your requirements */
+    padding-right: 210px; /* Adjust the padding as per your requirements */
     animation: marquee 20s linear infinite;
     animation-delay: 0.5s;
     
@@ -26,21 +26,26 @@
   }
   
   .hero-title{
-    font-family: 'sequel sans', sans-serif;
-    font-weight: bold;
-    font-size: 30px;
-    line-height: 36px;
+    font-family: 'bebas neue bold', sans-serif;
+    
+    font-size: 36px;
   }
   
   .fw-lighter{
+    font-family: 'bebas neue book', sans-serif;
+    font-size: 36px;
+  }
+
+  .fw-lighter-2{
     font-family: 'bebas neue', sans-serif;
-    font-size: 30px;
+    font-size: 36px;
   }
 
   .fw-lighter-1{
     margin-left: 2%;
-    font-family: 'bebas neue', sans-serif;
-    font-size: 30px;
+    font-family: "bebas neue book",sans-serif;
+    
+    font-size: 36px;
   }
   
   @keyframes marquee {

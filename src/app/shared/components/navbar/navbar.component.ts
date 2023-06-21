@@ -103,7 +103,9 @@ export class NavbarComponent implements OnInit {
   }
 
   onNavClick(routeName: string){
-    this.router.navigate([`/${routeName}`])
+    routeName == "media" ? this.router.navigate([`/${routeName}`], {
+      queryParams: {segment: "Latest Video"}
+    }) : this.router.navigate([`/${routeName}`])
     this.currentSection = routeName
   }
 

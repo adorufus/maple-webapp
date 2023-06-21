@@ -47,6 +47,13 @@ import { RunPlayComponent } from './auth/shared/run-play/run-play.component';
 import { Detailproduk3Component } from './components/deptstore/detail/components/detailproduk3/detailproduk3.component';
 import { TextRewindComponent } from './auth/shared/text-rewind/text-rewind.component';
 import { TextCanComponent } from './auth/shared/text-can/text-can.component';
+import { DetailActivationComponent } from './auth/activation/detail-activation/detail-activation.component';
+import { RunCanComponent } from './auth/shared/run-can/run-can.component';
+import { YouTubePlayerModule } from '@angular/youtube-player';
+import { TextUnsceneComponent } from './auth/shared/text-unscene/text-unscene.component';
+import { TextWanderComponent } from './auth/shared/text-wander/text-wander.component';
+import { TextTrickComponent } from './auth/shared/text-trick/text-trick.component';
+import { TextDixiComponent } from './auth/shared/text-dixi/text-dixi.component';
 
 @NgModule({
   declarations: [
@@ -90,6 +97,12 @@ import { TextCanComponent } from './auth/shared/text-can/text-can.component';
     Detailproduk3Component,
     TextRewindComponent,
     TextCanComponent,
+    DetailActivationComponent,
+    RunCanComponent,
+    TextUnsceneComponent,
+    TextWanderComponent,
+    TextTrickComponent,
+    TextDixiComponent,
  
     
   ],
@@ -105,6 +118,7 @@ import { TextCanComponent } from './auth/shared/text-can/text-can.component';
     AppRoutingModule,
     CarouselModule,
     FeatherModule,
+    YouTubePlayerModule
   ],
   providers: [CategoriesComponent]
 })

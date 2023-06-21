@@ -21,7 +21,7 @@
     <div *ngIf="indexZeroVideo" class="row no-gutters pb-5">
       <div class="col-lg-6 mt-12 pt-2 col-sm-12">
         <div style="height: 100%; ">
-          <img (click)="onVideo()" style="height: 100%; width: 100%; object-fit: contain;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
+          <img (click)="onVideo(indexZeroVideo.vidID)" style="height: 100%; width: 100%; object-fit: contain; cursor: pointer;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
         </div>
       </div>
 
@@ -42,8 +42,8 @@
     <div class="row no-gutters pt" >
       <div *ngFor="let video of videos | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
         <div class="client-box">
-          <div style="height: 80%;">
-            <img style="height: 100%; width: 100%; object-fit: cover;" [src]="video.thumbnails.high.url" alt="">
+          <div style="height: 80%; ">
+            <img (click)="onVideo(video.vidID)" style="height: 100%; width: 100%; object-fit: cover; cursor: pointer;" [src]="video.thumbnails.high.url" alt="">
           </div>
           <div class="client-box-2">
             <h6 class="title fw-bold">{{video.title}}</h6>
