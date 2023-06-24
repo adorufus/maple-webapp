@@ -7,7 +7,7 @@
     
 <div class="container">
       <div class="row no-gutters">
-        <div class="col-8 mt-12 pt-2">
+        <div class="col-9 mt-12 pt-2">
           <div class="client-slider-one">
                 <div style="height: 100%;">
                   <youtube-player [videoId]="vidID" suggestedQuality="highres" [height]="443" [width]="788" [playerVars]="playerConfig" >
@@ -16,18 +16,13 @@
           </div>
         </div>
 
-        <div class="col-4 mt-12 pt-2">
-          <table class="text-white">
-            <h2>#REWIND with Laze: Hip Hop Bukan Cuma Musik Orang Kaya (Part 2)</h2>
-            <p>Kalo nyari “rekomendasi artis hip hop Indonesia” di Google, ada aja nama Laze yang muncul. Makanya Maple
-              ajak ke Rewind buat lebih kenal sama rapper yang satu ini. Untuk membuat karya yang dianggap keren di
-              Indonesia dengan lagu-lagu berbahasa Indonesia ternyata jadi tantangan tersendiri buat para rapper,
-              termasuk Laze. Yuk simak ceritanya dan dapetin insights soal definisi sukses dan berproses dari Laze.
-              <br><br>Saksikan penampilan Laze secara langsung di The Other Festival tanggal 13-14 Mei 2023, di JIExpo
-              Kemayoran, Jakarta
-            </p>
+        <div class="col-3 mt-12 pt-2">
+          <table class="text-white">  
+            <h2>{{(indexZeroVideo | async)?.title}}</h2>
+            <p>{{(indexZeroVideo | async)?.description}}
+            
             <br><br>
-            <p class="credit">The Maple Media • </p>
+            The Maple Media • {{(indexZeroVideo | async)?.upload_date.toDate() | date:'EEEE, MM yyyy'}} </p>
           </table>
         </div>
       </div>
@@ -37,78 +32,4 @@
   <!-- end container -->
 </section>
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-4 mt-4 pt-2">
-      <span class="text"><br><br>Just <br> For You!</span>
-    </div>
-    <div class="col-8 mt-4 pt-2"><br><br><br><br><br><br>
-      <hr class="mt-auto"
-        style="height: 4px; margin: 1rem 0rem 1rem -8rem; background-color: black; border: none; opacity: 1;">
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 mt-4 pt-2">
-
-      <div class="client-slider-one">
-        <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-          <ng-template carouselSlide *ngFor='let value of contentData'>
-            <div class="client-box">
-              <div style="height: 80%;">
-                <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
-              </div>
-              <div class="client-box-2">
-                <h6 class="text-center">Ini video </h6>
-              </div>
-            </div>
-
-          </ng-template>
-        </owl-carousel-o>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 mt-4 pt-2">
-
-      <div class="client-slider-one">
-        <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-          <ng-template carouselSlide *ngFor='let value of contentData'>
-            <div class="client-box">
-              <div style="height: 80%;">
-                <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
-              </div>
-              <div class="client-box-2">
-                <h6 class="text-center">Ini video </h6>
-              </div>
-            </div>
-
-          </ng-template>
-        </owl-carousel-o>
-      </div>
-    </div>
-  </div>
-
-  <div class="row">
-    <div class="col-12 mt-4 pt-2">
-
-      <div class="client-slider-one">
-        <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-          <ng-template carouselSlide *ngFor='let value of contentData'>
-            <div class="client-box">
-              <div style="height: 80%;">
-                <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
-              </div>
-              <div class="client-box-2">
-                <h6 class="text-center">Ini video </h6>
-              </div>
-            </div>
-
-          </ng-template>
-        </owl-carousel-o>
-      </div>
-    </div>
-  </div>
-</div>
+<app-banner-play title="All"></app-banner-play>

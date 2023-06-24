@@ -24,7 +24,7 @@ export class CategoriesComponent implements OnInit{
   }
 
   ngOnInit() {
-    let temp = this.firestoreService.getCollection("media-type")
+    let temp = this.firestoreService.getCollection("media-type", ref => ref.where("name", "!=", 'All'))
 
     if(temp instanceof Observable<any>) {
       this.segments = temp
@@ -51,6 +51,7 @@ export class CategoriesComponent implements OnInit{
     touchDrag: true,
     pullDrag: false,
     dots: true,
+    autoplay: true,
     navText:  ["<div class='nav-button owl-prev1'>‹</div>", "<div class='nav-button owl-next1'>›</div>"],
     center: false,
     responsive: {

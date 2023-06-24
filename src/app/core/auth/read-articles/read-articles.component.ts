@@ -9,12 +9,16 @@ import { FirestoreService } from 'src/app/services/firestore.service';
   styleUrls: ['./read-articles.component.scss']
 })
 export class ReadArticlesComponent implements OnInit {
+  public articles?: Observable<any[]>
   public article?: Observable<any>
-  public indexZeroArticle?: any
   articleId: string = ""
 
   constructor(private firestoreService: FirestoreService, private router: Router, private activeRouter: ActivatedRoute) {}
 
+  backClick() {
+    this.router.navigate(['/article'])
+    window.scroll(0,0)
+  }
 
   ngOnInit() {
 

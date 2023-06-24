@@ -23,6 +23,7 @@ import {environment} from "../environments/environment";
 import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {AuthService} from "./services/auth.service";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 
 
 
@@ -45,6 +46,7 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
     AngularFireAuthModule,
     AngularFirestoreModule,
     NgbDropdownModule,
+    MatSlideToggleModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

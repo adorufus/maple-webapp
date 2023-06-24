@@ -1,12 +1,12 @@
 <div class="container">
     <div *ngIf="article" class="row">
         <div class="col-lg-12 md-6 sm-12">
-          <a href=""> <h6  style="text-decoration: underline 1.5px;">Back</h6> </a>
+          <a (click)="backClick()"> <h6  style="text-decoration: underline 1.5px; cursor: pointer;">Back</h6> </a>
         </div>
-        <div class="col-lg-7 md-6 sm-12">
+        <div class="col-lg-9 md-6 sm-12">
             <div class="card">
                 <h1>{{(article | async)?.title}}</h1>
-                <p [innerHTML]="(article | async)?.short_content"></p>
+                <p class="short_content" [innerHTML]="(article | async)?.short_content"></p>
                     <br><br>
                 <div class="lingkaran-left">
                 <p class="text-white text-center">A</p>
@@ -22,29 +22,8 @@
             </div>
         </div>
 
-        <div  class="col-lg-3 md-6 sm-12">
-            <div class="card">
-                <img src="assets/images/article.jpg" alt="img">
-                <h6 class="right-column" style="text-decoration: underline 1.5px;">read</h6>
-                <h5>Misteri Kota Gaib Saranjana di Kalimantan</h5>
-                <p class="art-right">"Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana."</p>
-
-            </div>
-            <div class="card">
-                <img src="assets/images/article.jpg" alt="img">
-                <h6 class="right-column" style="text-decoration: underline 1.5px;">read</h6>
-                <h5>Misteri Kota Gaib Saranjana di Kalimantan</h5>
-                <p class="art-right">"Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana."</p>
-
-            </div>
-
-            <div class="card">
-                <img src="assets/images/article.jpg" alt="img">
-                <h6 class="right-column" style="text-decoration: underline 1.5px;">read</h6>
-                <h5>Misteri Kota Gaib Saranjana di Kalimantan</h5>
-                <p class="art-right">"Baru-baru ini heboh sebuah foto wanita berpose di sebuah jembatan dengan pemandangan deretan gedung-gedung tinggi nan canggih. Penampakan “kota” tersebut dipercayai warga setempat sebagai Kota Saranjana."</p>
-
-            </div>
+        <div class="col-lg-3 md-6 sm-12">
+            <app-small-articles></app-small-articles>
         </div>
     </div>
 </div>

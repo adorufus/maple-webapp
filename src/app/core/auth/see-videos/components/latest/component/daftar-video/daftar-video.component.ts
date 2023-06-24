@@ -37,9 +37,9 @@ export class DaftarVideoComponent implements OnInit {
   @Input() title: string = ""
 
 
-  onVideo(title:string) {
+  onVideo(vidID:string, uid:string) {
     this.router.navigate(['/play-video'],{
-      queryParams: {id: title}
+      queryParams: {id: vidID, uid: uid}
     })
     window.scroll (0,0)
   }

@@ -1,0 +1,24 @@
+<div *ngFor="let article of articles | async;" class="card">
+              
+    <img  src="{{article.content_image}}" alt="Image 1">
+
+    <h6 (click)="readClick(article.id)" class="right-column" style="text-decoration: underline 1.5px;">Read</h6>
+    <h5>{{article.title}}</h5>
+    <p class="art-right" [innerHTML]="article.short_content"></p> 
+    <p>Author: Author Name 1</p>
+        <p>Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
+
+</div>
+
+<!-- <div *ngFor="let article of articles | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
+    <div class="vertical-container">
+      <img style="height: 35.3vh; object-fit: contain; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
+      <div class="content">
+        <div style="font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div>
+        <div [innerHTML]="article.short_content"></div>
+        <p>Author: Author Name 1</p>
+        <p>Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
+        <a href="#">Read more</a>
+      </div>
+    </div>
+  </div> -->

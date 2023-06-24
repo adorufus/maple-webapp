@@ -8,8 +8,5 @@ import { Router } from '@angular/router';
 })
 export class PageTitleComponent {
 
-  constructor(private router: Router) {}
-  readClick() {
-    this.router.navigate(['/read-articles'])
-  }
+  
 }

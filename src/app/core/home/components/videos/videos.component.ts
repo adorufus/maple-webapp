@@ -15,7 +15,7 @@ export class VideosComponent implements OnInit{
   }
 
   ngOnInit() {
-    let temp = this.firestoreService.getCollection("media-type")
+    let temp = this.firestoreService.getCollection("media-type", ref=> ref.where("name", "!=", "All"))
 
     if(temp instanceof Observable<any>) {
       this.segments = temp

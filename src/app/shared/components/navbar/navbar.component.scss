@@ -13,23 +13,23 @@
     font-size: 18px;
 }
 
+.btn-primary12, .btn-12{
+  border-radius: 40px;
+  background-color: transparent !important;
+  border: 1px solid black !important;
+  font-family: 'bebas neue Bold',sans-serif;
+  margin: 0 100px 0 0;
+    padding-left: 0;
+    font-size: 22px;
+    color: white;
+}
+
 .btn-group{
   margin-right: 70px;
 }
 
-.btn-1{
-  border-radius: 40px;
-  background-color: transparent !important;
-  border: 1px solid black !important;
-  font-family: 'Bebas Neueu',sans-serif;
-  font-weight: bold;
-  margin: 0 -8px 0 0;
-    padding-left: 0;
-    color: white;
-    font-size: 18px;
-}
 
-.btn-primary:active, .btn-primary:hover,.btn-1:hover {
+.btn-primary12:active, .btn-primary12:hover,.btn-1:hover {
   color: #6123B5;
   
 }
@@ -39,8 +39,22 @@ text-decoration: underline 1.5px;
     text-underline-offset: 2px;
     font-family: 'Sequel Sans', sans-serif;
     font-weight: 410;
+    color: black ;
 }
 
 .dropdown-item:active{
-  background-color: #6123B5;
+  background-color: #ffffff;
+}
+
+.navbar .nav-btn{
+  border-radius: 40px;
+}
+
+.show:hover{
+  color:#6123B5 ;
+}
+
+.dropdown-menu.show{
+  border:  2.781px solid #000;
+  border-radius: 0px;
 }

@@ -1,6 +1,8 @@
 import { Component, Input } from '@angular/core';
 import { Router } from '@angular/router';
 import {OwlOptions} from "ngx-owl-carousel-o";
+import { Observable } from 'rxjs';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 interface content {
   title: string;
@@ -13,9 +15,24 @@ interface content {
 })
 export class QuizzesListComponent {
   @Input() title: string = ""
+  public activity?: Observable<any[]>;
+  public indexZeroActivity?: any
 
 
-  constructor(private router: Router) {}
+  constructor(private router: Router, private firestoreService:FirestoreService) {}
+
+  ngOnInit() {
+    let temp = this.firestoreService.getCollection("activity", (ref) => ref.orderBy("created_time", "desc").limit(5))
+
+    if(temp instanceof Observable<any>) {
+      this.activity = temp
+
+      this.activity.subscribe(test => {
+        console.log("test: ", test)
+        this.indexZeroActivity = test[0]
+      })
+    }
+  }
 
   onClick() {
     this.router.navigate(['/detail-activation'])

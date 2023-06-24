@@ -1,34 +1,23 @@
-<section class="hero-one-1 position-relative"
-         style="background-image: url(../../../../../assets/images/banner-play.png);" id="home">
-  <!--  <div class="bg-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
-  <!--  <div class="bg-hero-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
-  <section class="section" id="review">
-    <div class="container">
+<div class="container">
+  <div class="row">
+    <div class="col- mt-4 pt-2">
+      <app-page-title>
+        Just <p class="text">For You!</p>
+      </app-page-title>
+    </div>
+  </div>
 
-        <div class="row no-gutters">
-            <div class="col-6 mt-12 pt-2">
-              <div class="client-slider-one">
-                  <owl-carousel-o [options]="customOptions" class="text-right home-carousel">
-                    <ng-template carouselSlide>
-                      
-                        <div style="height: 100%;">
-                          <img style="height: 100%; object-fit: cover;" src="assets/images/test.png" alt="">
-                  
-                        </div>
-                        </ng-template>
-                        </owl-carousel-o>
-                        </div>
+  <div class="row no-gutters pt" >
+    <div *ngFor="let value of videos | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
+            <div class="client-box">
+              <div style="height: 80%; padding-bottom: 1vh">
+                <img (click)="onVideo(value.vidID,value.id)" style="height: 100%; width: 100%; object-fit: cover; cursor: pointer;" src="{{value.thumbnails.standard.url}}" alt="">
+              </div>
+              <div class="client-box-2">
+                <h6 class="title fw-bold">{{value.title}}</h6>
+                <p class="credit">The Maple Media • {{value.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
+              </div>
             </div>
-      
-            <div class="col-6 mt-12 pt-2">
-              <table class="text-white">
-                <h2>#REWIND with Laze: Hip Hop Bukan Cuma Musik Orang Kaya (Part 2)</h2>
-                <p>Kalo nyari “rekomendasi artis hip hop Indonesia” di Google, ada aja nama Laze yang muncul. Makanya Maple ajak ke Rewind buat lebih kenal sama rapper yang satu ini. Untuk membuat karya yang dianggap keren di Indonesia dengan lagu-lagu berbahasa Indonesia ternyata jadi tantangan tersendiri buat para rapper, termasuk Laze. Yuk simak ceritanya dan dapetin insights soal definisi sukses dan berproses dari Laze. <br><br>Saksikan penampilan Laze secara langsung di The Other Festival tanggal 13-14 Mei 2023, di JIExpo Kemayoran, Jakarta</p>
-              </table>
-            </div>
-          </div>
-
-        </div>
-        </section>
-  <!-- end container -->
-</section>
+      </div>
+    </div>
+  </div>

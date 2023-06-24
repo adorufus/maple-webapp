@@ -33,6 +33,40 @@ $maple-webapp-theme: mat.define-light-theme((
 // that you are using.
 @include mat.all-component-themes($maple-webapp-theme);
 
+
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$maple-webapp-primary: mat.define-palette(mat.$indigo-palette);
+$maple-webapp-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$maple-webapp-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$maple-webapp-theme: mat.define-light-theme((
+  color: (
+    primary: $maple-webapp-primary,
+    accent: $maple-webapp-accent,
+    warn: $maple-webapp-warn,
+  )
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
@@ -54,6 +88,34 @@ $maple-webapp-theme: mat.define-light-theme((
 @font-face {
   font-family: 'Sequel Sans Black Disp';
   src: url('assets/font/Sequel Sans Black Disp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sequel Sans Bold Disp';
+  src: url('assets/font/Sequel Sans Bold Disp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sequel Sans Bold Head';
+  src: url('assets/font/Sequel Sans Bold Head.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sequel Sans Roman Head';
+  src: url('assets/font/Sequel Sans Roman Head.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Sequel Sans Roman Disp';
+  src: url('assets/font/Sequel Sans Roman Disp.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
@@ -101,7 +163,7 @@ color: #6123B5 !important;
 }
 
 .dropdown-item.active{
-  background-color: #6123B5;
+  background-color:transparent;
 }
 
 .dropdown-menu.show{
@@ -123,9 +185,7 @@ color: #6123B5 !important;
   text-decoration: none;
 }
 
-.owl-carousel.owl-drag .owl-item{
-  width: 280px !important;
-}
+
 
 .owl-theme .owl-nav [class*=owl-] {
   font-size: 14px;
@@ -141,6 +201,9 @@ color: #6123B5 !important;
   background: white !important;
 }
 
+h6 {
+  font-family: "Sequel Sans Bold Disp", sans-serif;}
+
 @media only screen and (min-width: 320px) and (max-width: 768px) {
   
 
@@ -153,5 +216,8 @@ color: #6123B5 !important;
   }
 
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

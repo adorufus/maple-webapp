@@ -11,9 +11,8 @@ border-radius: 100%;
 }
 
 h1{
-    font-family: 'Sequel San',sans-serif;
+    font-family: 'Sequel Sans Heavy Disp',sans-serif;
 font-style: normal;
-font-weight: bold;
 font-size: 56px;
 }
 
@@ -27,13 +26,16 @@ h5{
 }
 
 p{
-    font-family: 'Sequel Sans',sans-serif;
+    font-family: 'Sequel Sans Roman Head',sans-serif;
 font-style: normal;
 font-weight: 360;
 font-size: 20px;
 line-height: 160%;
 }
 
+.short_content{
+    font-family: 'Sequel Sans Roman Head',sans-serif;
+}
 
 .text-white{
     font-size: 16px;

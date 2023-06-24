@@ -1,44 +1,43 @@
-.col-lg-6, .col-lg-5{
+.col-lg-6, .col-lg-4{
     padding-top: 80px;
     
 }
 
 .namecard{
-    font-family: 'sequel sans', sans-serif;
+    font-family: 'Sequel Sans Bold Head', sans-serif;
     font-size: 20px;
-    font-weight: bold;
     padding-left: 30px;
     padding-top: 27px;
 }
 
 .description{
-    font-family: 'sequel sans', sans-serif;
+    font-family: 'Sequel Sans Roman Head', sans-serif;
     font-size: 20px;
     font-weight: 400px;
     margin-top: 30px;
     margin-left: 27px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
-.col-lg-1{
+.col-lg-2{
     width: 0px;
     height: 865px;
     border-left: 1px solid #E8E8E8;
     margin-top: 80px;
+    margin: 81px 85px 0px 76px;
 }
 
 .name-produk{
-    font-family: 'Sequel Sans',sans-serif;
+    font-family: 'Sequel Sans Bold Head',sans-serif;
 font-style: normal;
-font-weight: bold;
 font-size: 32px;
 line-height: 38px;
 }
 
 .harga-produk {
-    font-family: 'Sequel Sans',sans-serif;
+    font-family: 'Sequel Sans Roman Head',sans-serif;
     font-style: normal;
-    font-weight: 360;
     font-size: 20px;
     line-height: 24px;
 }
@@ -98,7 +97,7 @@ height: 36px;
         
     margin-left: -30px;
 }
-.col-lg-1{
+.col-lg-2{
     height: 0px;
         padding-top: 0px;
 }

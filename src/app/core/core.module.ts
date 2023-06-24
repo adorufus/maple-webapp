@@ -54,6 +54,7 @@ import { TextUnsceneComponent } from './auth/shared/text-unscene/text-unscene.co
 import { TextWanderComponent } from './auth/shared/text-wander/text-wander.component';
 import { TextTrickComponent } from './auth/shared/text-trick/text-trick.component';
 import { TextDixiComponent } from './auth/shared/text-dixi/text-dixi.component';
+import { SmallArticlesComponent } from './auth/read-articles/components/small-articles/small-articles.component';
 
 @NgModule({
   declarations: [
@@ -103,6 +104,7 @@ import { TextDixiComponent } from './auth/shared/text-dixi/text-dixi.component';
     TextWanderComponent,
     TextTrickComponent,
     TextDixiComponent,
+    SmallArticlesComponent,
  
     
   ],

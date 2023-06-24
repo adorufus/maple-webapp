@@ -77,6 +77,10 @@ const routes: Routes = [
         component: ReadArticlesComponent
       },
       {
+        path: 'article',
+        component: ArticlesComponent
+      },
+      {
         path: 'detail-activation',
         component: DetailActivationComponent
       },
