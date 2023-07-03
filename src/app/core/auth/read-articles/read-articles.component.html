@@ -27,33 +27,3 @@
         </div>
     </div>
 </div>
-
-<!-- <div class="container">
-    <div *ngIf="indexZeroArticle" class="row no-gutters">
-      <div class="col-lg-6 col-md-6 col-sm-12">
-        <img class="image" src="../../../../../assets/layout/images/hero-one-1-img.jpg" alt="Image">
-      </div>
-      <div class="col-lg-6 col-md-6 col-sm-12 right-column">
-        <p style="font-size: 20px; font-weight: bold; font-family: 'Sequel Sans Heavy Disp', sans-serif">{{indexZeroArticle.title}}</p>
-        <p [innerHTML]="indexZeroArticle.short_content"></p>
-        <p>Author: Author Name</p>
-        <p>Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br><br><br>
-        <a (click)="readClick()" >Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%;"></a>
-      </div>
-    </div>
-
-    <div class="row pt-3">
-      <div *ngFor="let article of articles | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
-        <div class="vertical-container">
-          <img style="height: 35.3vh; object-fit: contain; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
-          <div class="content">
-            <div style="font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div>
-            <div [innerHTML]="article.short_content"></div>
-            <p>Author: Author Name 1</p>
-            <p>Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
-            <a href="#">Read more</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>   -->

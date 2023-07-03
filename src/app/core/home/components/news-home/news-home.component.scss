@@ -52,6 +52,10 @@ font-family: 'Sequel Sans Roman HeadS', sans-serif;
   height: 100%;
 }
 
+.container{
+  margin-bottom: 6rem;
+}
+
 @media screen and (max-width: 767px) {
   .col {
     flex: 0 0 100%;

@@ -7,8 +7,8 @@
   <div class="container">
     <div class="row">
       <div class="col-4 mt-4 pt-2">
-        <div *ngIf="title.split(' ').length  == 2 && title != 'Latest Video'; else singleText ">
-          <span class="text">{{title.split(' ')[0]}} <br/> {{title.split(' ')[1]}} <br/> Videos</span>
+        <div *ngIf="title.split(' ').length  == 2 && title != 'Latest'; else singleText ">
+          <span class="text">{{title.split(' ')[0]}}{{title.split(' ')[2]}} <br/> Videos</span>
         </div>
         <ng-template #singleText><span class="text">{{title}} <br/> Videos</span></ng-template>
       </div>
@@ -18,7 +18,7 @@
       </div>
     </div>
 
-    <div *ngIf="indexZeroVideo" class="row no-gutters pb-5">
+    <div *ngIf="indexZeroVideo && title=='Latest Video'" class="row no-gutters pb-5">
       <div class="col-lg-6 mt-12 pt-2 col-sm-12">
         <div style="height: 100%; ">
           <img (click)="onVideo(indexZeroVideo.vidID,indexZeroVideo.id)" style="height: 100%; width: 100%; object-fit: contain; cursor: pointer;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
@@ -34,26 +34,35 @@
           <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
         </table>
       </div>
+      <hr/>
     </div>
 
-    <hr/>
+    
 
     <!-- end row -->
+    <ng-container *ngIf="videos|async as videosAsync">
     <div class="row no-gutters pt" >
-      <div *ngFor="let video of videos | async; let i = index" class="col-lg-4 col-md-6 col-sm-12">
+      <div *ngFor="let video of videosAsync | paginate: {  itemsPerPage: item, currentPage: p }" class="col-lg-4 col-md-6 col-sm-12">
         <div class="client-box">
           <div style="height: 80%; ">
-            <img (click)="onVideo(video.vidID,video.id)" style="height: 100%; width: 100%; object-fit: cover; cursor: pointer;" [src]="video.thumbnails.high.url" alt="">
+            <img (click)="onVideo(video.vidID,video.id)" style="height: 100%; width: 100%; object-fit: cover; cursor: pointer; " [src]="video.thumbnails.high.url"   alt="">
           </div>
           <div class="client-box-2">
             <h6 class="title fw-bold">{{video.title}}</h6>
-            <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
+            <p class="credit">The Maple Media • {{video.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
           </div>
         </div>
       </div>
     </div>
+    <div class="text-center">
+    <pagination-controls (pageChange)="onPageChange($event)" [maxSize]="maxSize"  [directionLinks]="directionLinks" ></pagination-controls>
+  </div>
+  </ng-container>
+    
+  
+    
 
-    <div class="row no-gutters">
+    <!-- <div class="row no-gutters">
       <div class="col-lg-5 col-md-6 col-sm-12">
         <div class="pagination-right pt-3">
           <p class="text-next">Previous</p>
@@ -73,7 +82,7 @@
       </div>
     </div>
 
-  </div>
+  </div> -->
   
 </div>
   <!-- end container -->

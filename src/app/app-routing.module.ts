@@ -17,6 +17,9 @@ import { ReadArticlesComponent } from './core/auth/read-articles/read-articles.c
 import { Detailproduk2Component } from './core/components/deptstore/detail/components/detailproduk2/detailproduk2.component';
 import { Detailproduk3Component } from './core/components/deptstore/detail/components/detailproduk3/detailproduk3.component';
 import { DetailActivationComponent } from './core/auth/activation/detail-activation/detail-activation.component';
+import { HomeCompanyComponent } from './core/auth/home-company/home-company.component';
+import { CollaborationComponent } from './core/auth/home-company/components/collaboration/collaboration.component';
+import { ContactComponent } from './core/auth/home-company/components/contact/contact.component';
 
 const routes: Routes = [
   {
@@ -84,6 +87,18 @@ const routes: Routes = [
         path: 'detail-activation',
         component: DetailActivationComponent
       },
+      {
+        path: 'home-company',
+        component: HomeCompanyComponent
+      },
+      {
+        path: 'collaboration',
+        component: CollaborationComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
       
       {
         path: '',
@@ -96,7 +111,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{scrollPositionRestoration: 'enabled'})],
   exports: [RouterModule]
 })
 export class AppRoutingModule {

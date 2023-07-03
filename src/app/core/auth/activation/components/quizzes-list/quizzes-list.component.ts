@@ -15,27 +15,28 @@ interface content {
 })
 export class QuizzesListComponent {
   @Input() title: string = ""
-  public activity?: Observable<any[]>;
-  public indexZeroActivity?: any
+  public games?: Observable<any[]>;
+ 
 
 
   constructor(private router: Router, private firestoreService:FirestoreService) {}
 
   ngOnInit() {
-    let temp = this.firestoreService.getCollection("activity", (ref) => ref.orderBy("created_time", "desc").limit(5))
+    let temp = this.firestoreService.getCollection("activity/games/quiz", (ref) => ref.limit(5))
 
     if(temp instanceof Observable<any>) {
-      this.activity = temp
+      this.games = temp
 
-      this.activity.subscribe(test => {
+      this.games.subscribe(test => {
         console.log("test: ", test)
-        this.indexZeroActivity = test[0]
       })
     }
   }
 
-  onClick() {
-    this.router.navigate(['/detail-activation'])
+  onClick( uid:string) {
+    this.router.navigate(['/detail-activation'],{
+      queryParams: {uid:uid}
+    })
     window.scroll(0, 0)
   }
 

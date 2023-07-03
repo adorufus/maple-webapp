@@ -18,12 +18,20 @@
   .container {
     margin-left: 17vw;
   }
+
+  img{
+    width: 80%;
+  }
   
-  @media (max-width: 576px) {
+  @media (max-width: 768px) {
     .sequel-font {
       font-size: 5vh;
       font-family: "Sequel Sans Heavy Disp", sans-serif;
       
+    }
+
+    div{
+      padding: 22vh 0vw 19vh 0vh !important; 
     }
   }
   

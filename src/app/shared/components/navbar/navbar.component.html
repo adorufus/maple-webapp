@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar" (window:scroll)="windowScroll()">
   <div class="container">
     <a routerLink="/layout-one-3" class="navbar-brand">
-      <img src="assets/images/logo/maple-logo.png" alt="" height="22" />
+      <img src="assets/images/logo/maple-logo.png" alt="" style="width: 100px; height: 100%;" />
     </a>
     <a href="javascript:void(0)" class="navbar-toggler" (click)="toggleMenu()" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -14,15 +14,15 @@
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              COMPANY
+              COMPANY <img src="assets/images/nav.svg" alt="svg">
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-              (click)="onNavClick('videos')">About</button>
+              (click)="onNavClick('home-company')">About</button>
             <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-              (click)="onNavClick('articles')">Collaboration</button>
+              (click)="onNavClick('collaboration')">Collaboration</button>
             <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-              (click)="onNavClick('store')">Contact</button>
+              (click)="onNavClick('contact')">Contact</button>
             </div>
           </div>
           
@@ -31,7 +31,7 @@
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              APP
+              APP <img src="assets/images/nav.svg" alt="svg">
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
@@ -46,56 +46,7 @@
                 (click)="onNavClick('activation')">Activation</button>
             </div>
           </div>
-          <!-- <button type="button" class="btn btn-primary12" [ngClass]="{'active':currentSection === 'home'}"
-            href="javascript: void(0);" (click)="onNavClick('home')">APP</button>
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button type="button" class="btn btn-primary dropdown-toggle-split" ngbDropdownToggle></button>
-            <div class="dropdown-menu" ngbDropdownMenu>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-                (click)="onNavClick('media')">Video</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-                (click)="onNavClick('articles')">Article</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-                (click)="onNavClick('store')">Dept.store</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
-                (click)="onNavClick('activation')">Activation</button>
-            </div>
-          </div> -->
         </li>
-
-        <!-- <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'home'}"
-            href="javascript: void(0);" (click)="onNavClick('home')">COMPANY</button>
-          <div class="btn-group" ngbDropdown role="group" aria-label="Button group with nested dropdown">
-            <button type="button" class="btn btn-1 dropdown-toggle-split" ngbDropdownToggle></button>
-            <div class="dropdown-menu" ngbDropdownMenu>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-                (click)="onNavClick('videos')">About</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-                (click)="onNavClick('articles')">Collaboration</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-                (click)="onNavClick('store')">Contact</button>
-            </div>
-          </div> -->
-
-        <!-- <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'home'}"
-             href="javascript: void(0);" (click)="onNavClick('home')">HOME</a>
-        </li><li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'videos'}"
-             href="javascript: void(0);" (click)="onNavClick('videos')">VIDEO</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'articles'}"
-             href="javascript: void(0);" (click)="onNavClick('articles')">ARTICLE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'store'}"
-          href="javascript: void(0);" (click)="onNavClick('store')">DEPT.STORE</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [ngClass]="{'active':currentSection === 'activation'}"
-             href="javascript: void(0);"(click)="onNavClick('activation')">ACTIVATION</a>
-        </li> -->
       </ul>
       <a href="javascript:void(0);" (click)="onLoginClick()"
         class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in

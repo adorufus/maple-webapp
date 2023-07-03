@@ -14,7 +14,7 @@
   
   .marquee {
     display: inline-block;
-    padding-right: 304px; /* Adjust the padding as per your requirements */
+    padding-right: 500px; /* Adjust the padding as per your requirements */
     animation: marquee 10s linear infinite ;
     animation-delay: 0s;
     padding-top: 6px;
@@ -41,6 +41,10 @@
     color:  #6123B5;
   }
   
+  img{
+    height: 44px;
+    padding-top: 6px;
+  }
   @keyframes marquee {
     0% { transform: translateX(0%); }
     100% { transform: translateX(-100%); }

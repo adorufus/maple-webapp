@@ -18,11 +18,19 @@
     margin-left: 17vw;
   }
   
-  @media (max-width: 576px) {
+img{
+  width: 50%;
+}
+
+  @media (max-width: 768px) {
     .sequel-font {
       font-size: 5vh;
       font-family: "Sequel Sans Heavy Disp", sans-serif;
       font-weight: bold;
+    }
+
+    img{
+      width: 90%;
     }
   }
   

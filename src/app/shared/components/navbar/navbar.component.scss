@@ -28,6 +28,10 @@
   margin-right: 70px;
 }
 
+.dropdown-toggle::after{
+  border: hidden;
+}
+
 
 .btn-primary12:active, .btn-primary12:hover,.btn-1:hover {
   color: #6123B5;
@@ -40,11 +44,10 @@ text-decoration: underline 1.5px;
     font-family: 'Sequel Sans', sans-serif;
     font-weight: 410;
     color: black ;
+    background-color: white;
 }
 
-.dropdown-item:active{
-  background-color: #ffffff;
-}
+
 
 .navbar .nav-btn{
   border-radius: 40px;

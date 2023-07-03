@@ -7,13 +7,13 @@
         <div class="col-12 mt-4 pt-2">
           <div class="client-slider-one">
             <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-              <ng-template carouselSlide *ngFor='let value of contentData'>
+              <ng-template carouselSlide>
                 <div class="client-box">
                   <div style="height: 80%;">
-                    <img (click)="onClick()" style="height: 100%; object-fit: cover;" src="assets/images/puzzle.png" alt="">
+                    <img (click)="onClick()" style="height: 100%; object-fit: cover;" src="{{indexZeroActivity.item_image_url}}" alt="">
                   </div>
-                  <div class="client-box-2">
-                  <h6>Quiz: Yang jawabannya bener dapet saldo dana 500rb </h6>
+                  <div class="client-box-2 text-center pt-2">
+                  <h6>{{indexZeroActivity.activity_title}}</h6>
                 </div>
                 </div>
               </ng-template>

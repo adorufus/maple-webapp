@@ -28,13 +28,13 @@ export class BannerPlayComponent implements OnInit {
     let temp =
       this.title == 'Latest Video'
         ? this.firestoreService.getCollection('media', (ref) =>
-            ref.orderBy('upload_date', 'desc').limit(5)
+            ref.orderBy('upload_date', 'desc') .limit(9)
           )
         : this.firestoreService.getCollection('media', (ref) =>
             ref
               .where('type', '==', this.title)
-              .orderBy('upload_date', 'desc')
-              .limit(9)
+              .orderBy('upload_date', 'desc').limit(9)
+              
           );
 
     if (temp instanceof Observable<any>) {
@@ -51,7 +51,8 @@ export class BannerPlayComponent implements OnInit {
       queryParams: {id: vidID, uid: uid}
     })
    
-
+   
+    
     setTimeout(()=>{
       
       window.location.reload();

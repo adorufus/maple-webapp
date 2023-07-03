@@ -55,6 +55,12 @@ import { TextWanderComponent } from './auth/shared/text-wander/text-wander.compo
 import { TextTrickComponent } from './auth/shared/text-trick/text-trick.component';
 import { TextDixiComponent } from './auth/shared/text-dixi/text-dixi.component';
 import { SmallArticlesComponent } from './auth/read-articles/components/small-articles/small-articles.component';
+import { SmallDetailComponent } from './auth/activation/small-detail/small-detail.component';
+import {NgxPaginationModule} from 'ngx-pagination';
+import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyload-image';
+import { HomeCompanyComponent } from './auth/home-company/home-company.component';
+import { CollaborationComponent } from './auth/home-company/components/collaboration/collaboration.component';
+import { ContactComponent } from './auth/home-company/components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -105,7 +111,11 @@ import { SmallArticlesComponent } from './auth/read-articles/components/small-ar
     TextTrickComponent,
     TextDixiComponent,
     SmallArticlesComponent,
- 
+    SmallDetailComponent,
+    HomeCompanyComponent,
+    CollaborationComponent,
+    ContactComponent,
+    
     
   ],
   exports: [
@@ -114,14 +124,19 @@ import { SmallArticlesComponent } from './auth/read-articles/components/small-ar
     ProdukComponent
   ],
   imports: [
+    NgxPaginationModule,
     CommonModule,
     NgbModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     CarouselModule,
     FeatherModule,
-    YouTubePlayerModule
+    YouTubePlayerModule,
+    LazyLoadImageModule
   ],
-  providers: [CategoriesComponent]
+  providers: [
+    CategoriesComponent, { provide:
+    LAZYLOAD_IMAGE_HOOKS, 
+      useClass: ScrollHooks }]
 })
 export class CoreModule { }

@@ -24,6 +24,8 @@ import {AngularFireAuthModule} from "@angular/fire/compat/auth";
 import {AuthService} from "./services/auth.service";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import {NgxPaginationModule} from 'ngx-pagination';
+
 
 
 
@@ -47,6 +49,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     AngularFirestoreModule,
     NgbDropdownModule,
     MatSlideToggleModule,
+    NgxPaginationModule
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

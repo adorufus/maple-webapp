@@ -1,5 +1,6 @@
 <app-running-text></app-running-text>
 <section class="hero-one-1 position-relative"
+#top
   style="background-image: url(../../../../../assets/images/banner-play.png);" id="home">
   <!--  <div class="bg-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
   <!--  <div class="bg-hero-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
@@ -7,16 +8,16 @@
     
 <div class="container">
       <div class="row no-gutters">
-        <div class="col-9 mt-12 pt-2">
+        <div class="col-lg-7 col-md-6 col-sm-12mt-12 pt-2">
           <div class="client-slider-one">
-                <div style="height: 100%;">
-                  <youtube-player [videoId]="vidID" suggestedQuality="highres" [height]="443" [width]="788" [playerVars]="playerConfig" >
+                <div>
+                  <youtube-player [videoId]="vidID" suggestedQuality="highres" [playerVars]="playerConfig" >
                   </youtube-player>
                 </div>
           </div>
         </div>
 
-        <div class="col-3 mt-12 pt-2">
+        <div class="col-lg-5 col-md-7 col-sm-12 mt-12 pt-4">
           <table class="text-white">  
             <h2>{{(indexZeroVideo | async)?.title}}</h2>
             <p>{{(indexZeroVideo | async)?.description}}
@@ -32,4 +33,4 @@
   <!-- end container -->
 </section>
 
-<app-banner-play title="All"></app-banner-play>
+<app-banner-play title="Latest Video"></app-banner-play>

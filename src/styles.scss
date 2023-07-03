@@ -121,6 +121,13 @@ $maple-webapp-theme: mat.define-light-theme((
 }
 
 @font-face {
+  font-family: 'Sequel Sans Semi Bold';
+  src: url('assets/font/Sequel Sans Semi Bold Disp.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'bebas neue';
   src: url('assets/font/BebasNeue Regular.ttf') format('truetype');
   font-weight: normal;
@@ -158,9 +165,6 @@ $maple-webapp-theme: mat.define-light-theme((
   right: -60px !important;
 }
 
-.section .owl-next div:hover, .section .owl-prev div:hover{
-color: #6123B5 !important;
-}
 
 .dropdown-item.active{
   background-color:transparent;
@@ -183,6 +187,14 @@ color: #6123B5 !important;
   background: transparent;
   color: #FFF;
   text-decoration: none;
+}
+
+@media screen and (max-width: 767px){
+  div > youtube-player > iframe {
+      display: block;
+      height: 100%;
+      width: 100%;
+    }
 }
 
 
@@ -213,7 +225,10 @@ h6 {
     position:absolute !important;
     top: 30px !important;
     right: 0px !important;
+   visibility: hidden;
   }
+
+
 
 }
 html, body { height: 100%; }

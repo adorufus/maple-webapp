@@ -1,0 +1,119 @@
+.row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  a{
+    cursor: pointer;
+  }
+  
+  p{
+    cursor: default;
+  }
+  
+  .p1, .p2{
+    font-family: 'Sequel Sans Roman Head', sans-serif;
+  }
+  
+  .short_content{
+  font-family: 'Sequel Sans Roman HeadS', sans-serif;
+  }
+  
+  .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .row.no-gutters {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  
+  .no-gutters .col,
+  .no-gutters [class^="col-"] {
+    padding-right: 0;
+    padding-left: 0;
+  }
+  
+  .image {
+    width: 100%;
+    height: auto;
+    transition: opacity 1s;
+  }
+  
+  .right-column {
+    background-color: black;
+    color: white;
+    padding: 20px !important;
+  }
+  
+  .vertical-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  ::ng-deep{
+  
+    .ngx-pagination{
+        margin-left: -3rem !important;
+        margin-bottom: 4rem  !important;
+    
+    }
+    
+      .ngx-pagination .current{
+        background: #6123b5 !important;
+        border-radius: 4px !important;
+      }
+    
+      .ngx-pagination .pagination-previous a:before,.ngx-pagination .pagination-next a:after, .ngx-pagination .pagination-previous.disabled:before, .ngx-pagination .pagination-next.disabled::after {
+        display: none !important;
+    }
+    
+    .ngx-pagination li{
+      justify-content: center ;
+      align-items: center;
+      font-family: 'Sequel Sans Semi Bold', sans-serif !important;
+        font-size: 16px;
+    }
+    
+    
+    
+    &.pagination-previous, .pagination-next{
+      a,span{
+        margin: 0rem 8rem 0rem 8rem;
+        border-radius: 4px !important;
+        font-family: 'Sequel Sans Semi Bold', sans-serif !important;
+        font-size: 16px;
+    }
+    }
+    
+    @media screen and (max-width: 768px) {
+      &.pagination-previous, .pagination-next{
+        a,span{
+          margin: 0rem 0rem 0rem 0rem;
+          border-radius: 4px !important;
+          
+      }
+      }
+    
+      .ngx-pagination{
+        margin-left: -38px !important;
+      }
+    }
+    
+    }
+  
+  @media screen and (max-width: 767px) {
+    .col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .right-column {
+      background-color: white;
+      color: black;
+      padding: 20px !important;
+    }
+  }
+  

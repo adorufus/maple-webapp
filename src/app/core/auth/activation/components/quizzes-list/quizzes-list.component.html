@@ -5,17 +5,17 @@
       <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
       <!-- end row -->
       <div class="row">
-        <div class="col-4 mt-4 pt-2">
+        <div class="col-12 mt-4 pt-2">
           
           <div class="client-slider-one">
             <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
-              <ng-template carouselSlide>
-                <div class="client-box">
+              <ng-template carouselSlide  *ngFor="let game of games | async; let i = index" >
+                <div  class="client-box">
                   <div style="height: 80%;">
-                    <img (click)="onClick()" style="height: 100%; object-fit: cover;" src="{{indexZeroActivity.activity_image_url}}" alt="">
+                    <img (click)="onClick(game.uid)" style="height: 100%; object-fit: cover;" src="{{game.item_image_url[0]}}" alt="">
                   </div>
                   <div class="client-box-2 text-center pt-2">
-                  <h6>{{indexZeroActivity.activity_title}}</h6>
+                  <h6>{{game.description}}</h6>
                 </div>
                 </div>
                 

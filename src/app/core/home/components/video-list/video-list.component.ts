@@ -61,8 +61,8 @@ export class VideoListComponent implements OnInit {
     dots: true,
     center: false,
     navText: [
-      "<div class='nav-button owl-prev'>‹</div>",
-      "<div class='nav-button owl-next'>›</div>",
+      "<div class='nav-button owl-prev'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
+      "<div class='nav-button owl-next'><img  src='assets/images/arrow_forward_ios.svg'></div>",
     ],
     responsive: {
       0: {

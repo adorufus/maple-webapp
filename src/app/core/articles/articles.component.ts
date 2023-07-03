@@ -1,10 +1,52 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
+import { FirestoreService } from 'src/app/services/firestore.service';
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
-export class ArticlesComponent {
+export class ArticlesComponent implements OnInit{
+  public articles?: Observable<any[]>
+  public indexZeroArticle?: any
+  public maxSize: number = 5;
+  public directionLinks: boolean = true;
 
+//page control
+  p: number = 1;
+  item: number=9;
+  onPageChange(page: number) {
+    this.p = page;
+    window.scrollTo(0, 0);
+ }
+
+  constructor(private firestoreService: FirestoreService, private router: Router) {}
+
+  readClick(articleId: string) {
+    this.router.navigate(['/read-articles'], {
+      queryParams: {
+        id: articleId
+      }
+    })
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+});
+  }
+
+  ngOnInit() {
+    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc"))
+
+    if(temp instanceof Observable<any>) {
+      this.articles = temp
+
+      this.articles.subscribe(test => {
+        console.log("test: ", test)
+        this.indexZeroArticle = test[0]
+      })
+    }
+  }
 }

@@ -16,7 +16,7 @@ export class SmallArticlesComponent implements OnInit {
   constructor(private firestoreService: FirestoreService, private router: Router) {}
 
   ngOnInit() {
-    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(5))
+    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(6))
 
     if(temp instanceof Observable<any>) {
       this.articles = temp

@@ -9,6 +9,12 @@
     height: 231px !important;
 }
 
+iframe{
+    border-radius: 15px;
+    height: 100%;
+    width:100%;
+}
+
 .client-box-2 {
     background-color: black;
     color: white;
@@ -20,4 +26,8 @@
     height: 62px;
     border: 2px solid #000000;
 
+}
+
+.container{
+    margin-bottom: 6rem;
 }

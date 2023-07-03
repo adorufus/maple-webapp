@@ -3,6 +3,16 @@
   letter-spacing: 0px;
   padding-top: 64px;
   font-family: 'Sequel Sans Heavy Disp', sans-serif;
+  cursor: default;
+}
+
+hr{
+  height: 2px;
+  color: black;
+}
+
+hr{
+  opacity: 1;
 }
 
 @media (max-width: 576px) {

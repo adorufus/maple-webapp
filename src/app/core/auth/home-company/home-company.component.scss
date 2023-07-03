@@ -1,0 +1,31 @@
+.col-lg-12{
+    padding-top: 114px;
+}
+
+h1{
+    font-family: 'Sequel Sans Heavy Disp', sans-serif;
+    font-size: 64px;
+    color: black;
+    padding-top: 57px;
+    cursor: default;
+}
+
+.col-lg-8, .col-lg-4{
+    padding-top: 143px;
+
+    margin-bottom: 133px;
+}
+
+@media screen and (max-width: 768px) {
+    .logo{
+        width: 80%;
+    }
+
+    h1{
+        font-size: 30px;
+    }
+
+    .text{
+        width: 100%;
+    }
+}

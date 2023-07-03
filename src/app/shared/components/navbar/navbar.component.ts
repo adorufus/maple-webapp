@@ -104,9 +104,14 @@ export class NavbarComponent implements OnInit {
 
   onNavClick(routeName: string){
     routeName == "media" ? this.router.navigate([`/${routeName}`], {
-      queryParams: {segment: "Latest Video"}
+      queryParams: {segment: "All"}
     }) : this.router.navigate([`/${routeName}`])
     this.currentSection = routeName
+
+    setTimeout(()=>{
+      
+      window.location.reload();
+    }, 100);
   }
 
   onLoginClick() {
