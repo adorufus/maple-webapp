@@ -2,6 +2,7 @@ import { Component, Input, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import {AngularFireAuth} from "@angular/fire/compat/auth";
 
 @Component({
   selector: 'app-user',
@@ -11,20 +12,20 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class UserComponent implements OnInit {
   public user?: Observable<any>
   @Input() userId: string = ""
+  @Input() imageUrl: string = ""
 
 
-  constructor(private firestoreService: FirestoreService) {}
+  constructor(private fAuth: AngularFireAuth) {}
 
   ngOnInit() {
-    let temp = this.firestoreService.getCollection(`users/${this.userId}`)
 
-    if(temp instanceof Observable<any>) {
-      this.user = temp
+    this.imageUrl = this.imageUrl.replace("s96-c", "s400-c")
+  }
 
-      this.user.subscribe(test => {
-        console.log("test: ", test)
-      })
-    }
+  onLogout() {
+    this.fAuth.signOut().then(() => {
+      console.log("user logged out")
+    })
   }
 }
 

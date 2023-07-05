@@ -1,10 +1,10 @@
 <li class="nav-item">
-    <div *ngIf="user" ngbDropdown class="d-inline-block">
+    <div ngbDropdown class="d-inline-block">
       <button type="button" class="btn btn-12 text-white" id="dropdownBasic1" ngbDropdownToggle>
-   <div class="border rounded-circle"><img src="{{(user | async)?.user_picture}}" alt=""></div> 
+   <div class="border rounded-circle"><img referrerpolicy="no-referrer" [src]="imageUrl" alt=""></div>
       </button>
       <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-        <button class="item">Logout</button>
+        <button (click)="onLogout()" class="item">Logout</button>
       </div>
     </div>
   </li>

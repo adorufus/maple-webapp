@@ -25,7 +25,7 @@
               (click)="onNavClick('contact')">Contact</button>
             </div>
           </div>
-          
+
         </li>
 
         <li class="nav-item">
@@ -48,10 +48,17 @@
           </div>
         </li>
       </ul>
-      <!-- <a href="javascript:void(0);" (click)="onLoginClick()"
-        class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in
-      </a> -->
-      <app-user></app-user>
+      <div *ngIf="user != undefined; else siginin">
+        <app-user [imageUrl]="user.photoURL"></app-user>
+      </div>
+
+
+      <ng-template #siginin>
+        <a href="javascript:void(0);" (click)="onLoginClick()"
+           class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in
+        </a>
+      </ng-template>
+
     </div>
   </div>
   <!-- end container -->

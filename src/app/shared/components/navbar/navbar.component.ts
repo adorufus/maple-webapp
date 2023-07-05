@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import {OwlOptions} from "ngx-owl-carousel-o";
 import { Router } from '@angular/router';
+import {AngularFireAuth} from "@angular/fire/compat/auth";
 
 
 interface content {
@@ -16,7 +17,9 @@ interface content {
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private fAuth: AngularFireAuth) { }
+
+  user?: any
 
   currentSection = 'home';
 
@@ -65,11 +68,20 @@ export class NavbarComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.fAuth.onAuthStateChanged(user => {
+      if(user) {
+        this.user = user
+      } else {
+        this.user = undefined
+      }
+    })
   }
+
   /**
    * Window scroll method
    */
   // tslint:disable-next-line: typedef
+
   windowScroll() {
     const navbar = document.getElementById('navbar');
     if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
@@ -109,7 +121,7 @@ export class NavbarComponent implements OnInit {
     this.currentSection = routeName
 
     setTimeout(()=>{
-      
+
       window.location.reload();
     }, 100);
   }
