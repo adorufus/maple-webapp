@@ -39,6 +39,11 @@
   .text {
     font-family: 'Sequel Sans Heavy Disp', sans-serif;
     font-size: 48px;
+    color: black;
+  }
+
+  h6,p{
+    cursor: default;
   }
   
   @media (max-width: 768px) {

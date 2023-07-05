@@ -23,7 +23,7 @@ export class DaftarVideoComponent implements OnInit {
   item: number=9;
   onPageChange(page: number) {
     this.p = page;
-    window.scrollTo(0, 0);
+    window.scrollTo(0, 800);
  }
 
   constructor(
@@ -97,15 +97,15 @@ export class DaftarVideoComponent implements OnInit {
     } else if (this.title.toLowerCase() == 'all') {
       image = 'assets/images/banner-videos.png';
     } else if (this.title.toLowerCase() == 'trick room') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner-trick.png';
     } else if (this.title.toLowerCase() == 'unscene') {
       image = 'assets/images/banner-videos.png';
     } else if (this.title.toLowerCase() == 'dixi') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner-dixi.png';
     } else if (this.title.toLowerCase() == 'playroom') {
       image = 'assets/images/banner-videos.png';
     } else if (this.title.toLowerCase() == 'wander') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner-wander.png';
     } else if (this.title.toLowerCase() == 'can!') {
       image = 'assets/images/banner-can.png';
     } else {

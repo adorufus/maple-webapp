@@ -17,7 +17,7 @@
       <div class="vertical-container">
         <img style="height: 35.3vh; object-fit: contain; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
         <div class="content">
-          <div style="font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div><br>  
+          <div style="font-family: Sequel Sans Heavy Disp, sans-serif; font-size: 14px; font-weight: bold; height: 5vh">{{article.title}}</div><br>  
           <div class="short_content" [innerHTML]="article.short_content"></div> <br> <br>
           <p class="p1">Author: Author Name 1</p>
           <p class="p2">Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br>

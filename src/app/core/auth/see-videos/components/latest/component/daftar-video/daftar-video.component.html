@@ -1,5 +1,5 @@
 <!--what client says -->
-<div *ngIf="title != 'Latest Video'">
+<div *ngIf="title != 'Latest Video' && title != 'Breaking Bad News' && title != 'DEETS' ">
   <app-banner-videos [textImage]="title" [runnerText]="title"
                      [bannerImage]="checkForImage()" [runnerColor]="checkForColor()"></app-banner-videos>
 </div>
@@ -31,10 +31,11 @@
           <p style="font-weight: 500">{{indexZeroVideo.description}}
           </p>
           <br><br>
-          <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
+          <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'MM, EEEE yyyy'}}</p>
         </table>
+        
       </div>
-      <hr/>
+      <hr class="foot" style="height: 2px; color: #000 !important;">
     </div>
 
     
@@ -49,7 +50,7 @@
           </div>
           <div class="client-box-2">
             <h6 class="title fw-bold">{{video.title}}</h6>
-            <p class="credit">The Maple Media • {{video.upload_date.toDate() | date:'EEEE, MM yyyy'}}</p>
+            <p class="credit">The Maple Media • {{video.upload_date.toDate() | date:'MMMM, EE yyyy'}}</p>
           </div>
         </div>
       </div>
