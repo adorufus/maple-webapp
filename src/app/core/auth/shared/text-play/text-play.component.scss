@@ -1,0 +1,38 @@
+.sequel-font {
+    font-size: 12vh;
+    font-family: "Sequel Sans Heavy Disp", sans-serif;
+    
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+  }
+
+  .hero-title{
+    font-family: 'bebas neue Bold', sans-serif;
+    color: #A3FF00;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.75);
+  }
+  
+  .description{
+    font-size: 24px;
+  }
+
+  .container {
+    margin-left: 17vw;
+  }
+
+  img{
+    width: 80%;
+    margin-left: 6.6rem;
+  }
+  
+  @media (max-width: 768px) {
+    .sequel-font {
+      font-size: 5vh;
+      font-family: "Sequel Sans Heavy Disp", sans-serif;
+      
+    }
+
+    div{
+      padding: 18vh 0vw 12vh !important;
+    }
+  }
+  

@@ -99,11 +99,11 @@ export class DaftarVideoComponent implements OnInit {
     } else if (this.title.toLowerCase() == 'trick room') {
       image = 'assets/images/banner-trick.png';
     } else if (this.title.toLowerCase() == 'unscene') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner-uns.png';
     } else if (this.title.toLowerCase() == 'dixi') {
       image = 'assets/images/banner-dixi.png';
     } else if (this.title.toLowerCase() == 'playroom') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner-playroom.png';
     } else if (this.title.toLowerCase() == 'wander') {
       image = 'assets/images/banner-wander.png';
     } else if (this.title.toLowerCase() == 'can!') {

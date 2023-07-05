@@ -25,6 +25,7 @@ import {AuthService} from "./services/auth.service";
 import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {NgxPaginationModule} from 'ngx-pagination';
+import { UserComponent } from './shared/components/user/user.component';
 
 
 

@@ -20,6 +20,7 @@ import { DetailActivationComponent } from './core/auth/activation/detail-activat
 import { HomeCompanyComponent } from './core/auth/home-company/home-company.component';
 import { CollaborationComponent } from './core/auth/home-company/components/collaboration/collaboration.component';
 import { ContactComponent } from './core/auth/home-company/components/contact/contact.component';
+import { UserComponent } from './shared/components/user/user.component';
 
 const routes: Routes = [
   {
@@ -98,6 +99,10 @@ const routes: Routes = [
       {
         path: 'contact',
         component: ContactComponent
+      },
+      {
+        path: 'user',
+        component: UserComponent
       },
       
       {

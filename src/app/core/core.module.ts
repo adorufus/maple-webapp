@@ -61,6 +61,7 @@ import { LazyLoadImageModule, LAZYLOAD_IMAGE_HOOKS, ScrollHooks } from 'ng-lazyl
 import { HomeCompanyComponent } from './auth/home-company/home-company.component';
 import { CollaborationComponent } from './auth/home-company/components/collaboration/collaboration.component';
 import { ContactComponent } from './auth/home-company/components/contact/contact.component';
+import { TextPlayComponent } from './auth/shared/text-play/text-play.component';
 
 @NgModule({
   declarations: [
@@ -115,6 +116,7 @@ import { ContactComponent } from './auth/home-company/components/contact/contact
     HomeCompanyComponent,
     CollaborationComponent,
     ContactComponent,
+    TextPlayComponent
     
     
   ],
