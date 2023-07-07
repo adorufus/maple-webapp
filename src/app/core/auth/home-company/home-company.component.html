@@ -1,21 +1,20 @@
 <section class="hero-one-1 position-relative">
-    <div class="hero">
-        <img  src="assets/images/banner-all.png" alt="" style="width: 100%;">
-      </div>
-    <div class="container">
-        <div class="row" >
-            <div class="col-lg-5 col-md-6 col-sm-12" >
-                <button (click)="onCollabClick()" class="btn btn-outline-light align-items-center">We’ll make a great team <img  src='assets/images/arrow_forward_ios-white.svg'> </button>
-            </div>
+  <div class="hero">
+    <img class="image-padding" src="assets/images/banner-all.png" alt="" style="width: 100%; position: absolute; z-index: 300000" >
+    <video src="assets/videos/maple.mp4" style="width: 100%; position:relative;" [autoplay]="true" [muted]="true"></video>
+
+  </div>
+<div class="container">
+    <div class="row" >
+        <div class="col-lg-5 col-md-6 col-sm-12" >
+            <button (click)="onCollabClick()" class="btn btn-outline-light align-items-center">We’ll make a great team <img  src='assets/images/arrow_forward_ios-white.svg'> </button>
         </div>
       
     </div>
-    <video autoplay muted loop playsinline onloadedmetadata="this.muted = true">
-        <source  [src]="video" type="video/mp4">
-    
-  
 
-</video>
+</div>
+
+
 
 
   <!-- end container -->
