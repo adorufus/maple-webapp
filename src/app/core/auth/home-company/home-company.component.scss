@@ -1,72 +1,80 @@
-.col-lg-12{
-    padding-top: 114px;
+.col-lg-12 {
+  padding-top: 114px;
 }
 
-h1{
-    font-family: 'Sequel Sans Heavy Disp', sans-serif;
-    font-size: 64px;
-    color: black;
-    padding-top: 57px;
-    cursor: default;
+h1 {
+  font-family: 'Sequel Sans Heavy Disp', sans-serif;
+  font-size: 64px;
+  color: black;
+  padding-top: 57px;
+  cursor: default;
 }
 
-.col-lg-8, .col-lg-4{
-    padding-top: 143px;
+.col-lg-8, .col-lg-4 {
+  padding-top: 143px;
 
-    margin-bottom: 133px;
+  margin-bottom: 133px;
 }
 
-.btn, .btn:after{
-    width: 80%;
-    height: 20%;
-    border-radius: 20px;
-    border: 2px;
-    margin-top: 6rem;
-    margin-bottom: 8rem;
-    color: white !important;
-    border: 2px solid white!important;
-    box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75) !important;
-    background-color:transparent !important;
-    font-size: 20px;
-    font-family: 'Sequel Sans Roman Disp', sans-serif;
-  }
+.btn, .btn:after {
+  width: 80%;
+  height: 20%;
+  border-radius: 20px;
+  border: 2px;
+  margin-top: 6rem;
+  margin-bottom: 8rem;
+  color: white !important;
+  border: 2px solid white !important;
+  box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75) !important;
+  background-color: transparent !important;
+  font-size: 20px;
+  font-family: 'Sequel Sans Roman Disp', sans-serif;
+}
 
-  .btn:hover, .btn:active{
-    background-color: #6123B5 !important;
-    color: white;
-  }
+.btn:hover, .btn:active {
+  background-color: #6123B5 !important;
+  color: white;
+}
 
- .hero{
-    line-height: 1; 
-    padding: 2vh 12vw 0vh;
- }
+.hero {
+  line-height: 1;
+}
+
+.image-padding {
+  padding: 2vh 12vw 0vh;
+}
+
+.hero-one-1 {
+  padding: 0 !important;
+}
 
 @media screen and (max-width: 769px) {
-    .hero{
-        padding: 2vh 4vw 0vh;
-    }
 
-    .logo{
-        width: 80%;
-    }
+  .image-padding {
+    padding: 2vh 4vw 0vh;
+  }
 
-    h1{
-        font-size: 30px;
-    }
+  .logo {
+    width: 80%;
+  }
 
-    .text{
-        width: 100%;
-    }
-.btn{
+  h1 {
+    font-size: 30px;
+  }
+
+  .text {
+    width: 100%;
+  }
+  .btn {
     font-size: 14px;
     height: 38%;
-        width: 70%;
-        margin-top: 2rem;
-        margin-bottom: 2rem;
-}
+    width: 70%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+  }
 
-.col-lg-4{
+  .col-lg-4 {
     padding-top: 0px;
-}
+  }
 
 }
