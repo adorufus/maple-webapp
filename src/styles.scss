@@ -196,7 +196,9 @@ $maple-webapp-theme: mat.define-light-theme((
   text-decoration: none;
 }
 
-
+html {
+  scroll-behavior: smooth !important;
+}
 
 @media screen and (max-width: 767px){
   div > youtube-player > iframe {

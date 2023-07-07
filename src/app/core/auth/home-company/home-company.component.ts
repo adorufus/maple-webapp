@@ -1,4 +1,4 @@
-import { Component, OnInit, Renderer2 } from '@angular/core';
+import { Component, OnInit, Renderer2, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
@@ -6,24 +6,11 @@ import { Router } from '@angular/router';
   templateUrl: './home-company.component.html',
   styleUrls: ['./home-company.component.scss']
 })
-export class HomeCompanyComponent implements OnInit { 
+export class HomeCompanyComponent{ 
+
+  video = 'assets/images/tes.mp4';
 
   constructor(private router:Router, private renderer: Renderer2){}
-
-  ngOnInit(){
-    const video = this.renderer.createElement('video');
-    this.renderer.setStyle(video, 'width', '100%');
-  this.renderer.setStyle(video, 'height', '100%');
-  this.renderer.setStyle(video, 'object-fit', 'cover');
-  this.renderer.setStyle(video, 'z-index', '-1');
-  this.renderer.setAttribute(video, 'autoplay', '');
-  this.renderer.setAttribute(video, 'loop', '');
-  this.renderer.setAttribute(video, 'muted', '');
-  this.renderer.setAttribute(video, 'src', 'assets/images/tes.mp4');
-
-  this.renderer.appendChild(document.body, video);
-
-  }
 
   onCollabClick() {
     this.router.navigate(['/home-company']);
