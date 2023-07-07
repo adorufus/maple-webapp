@@ -16,7 +16,7 @@ interface content {
 export class CategoriesComponent implements OnInit{
 
 
-
+  btnColor: string = "red"
   public segments?: Observable<any[]>
 
   constructor(private firestoreService: FirestoreService, private router:Router) {
@@ -35,7 +35,7 @@ export class CategoriesComponent implements OnInit{
     }
 
 
-    
+
   }
 
   onClick(title:string) {

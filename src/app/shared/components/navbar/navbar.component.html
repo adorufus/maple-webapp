@@ -16,7 +16,7 @@
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
               COMPANY <img src="assets/images/nav.svg" alt="svg">
             </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+            <div ngbDropdownMenu class="shadow-border" aria-labelledby="dropdownBasic1">
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'about'}" href="javascript: void(0);"
               (click)="onAboutClick()">About</button>
             <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'collaboration'}" href="javascript: void(0);"

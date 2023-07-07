@@ -6,58 +6,59 @@
   border-radius: 40px;
   background-color: transparent !important;
   border: 1px solid black !important;
-  font-family: 'Bebas Neueu',sans-serif;
+  font-family: 'Bebas Neueu', sans-serif;
   font-weight: bold;
   margin: 0 -8px 0 0;
-    padding-left: 0;
-    font-size: 18px;
+  padding-left: 0;
+  font-size: 18px;
 }
 
-.btn-primary12, .btn-12{
+.btn-primary12, .btn-12 {
   border-radius: 40px;
   background-color: transparent !important;
   border: 1px solid black !important;
-  font-family: 'bebas neue Bold',sans-serif;
+  font-family: 'bebas neue Bold', sans-serif;
   margin: 0 100px 0 0;
-    padding-left: 0;
-    font-size: 22px;
-    color: white;
+  padding-left: 0;
+  font-size: 22px;
+  color: white;
 }
 
-.btn-group{
+.btn-group {
   margin-right: 70px;
 }
 
-.dropdown-toggle::after{
+.dropdown-toggle::after {
   border: hidden;
 }
 
 
-.btn-primary12:active, .btn-primary12:hover,.btn-1:hover {
+.btn-primary12:active, .btn-primary12:hover, .btn-1:hover {
   color: #6123B5;
-  
+
 }
 
-.dropdown-item{
-text-decoration: underline 1.5px;
-    text-underline-offset: 2px;
-    font-family: 'Sequel Sans Roman Disp', sans-serif;
-    font-weight: 410;
-    color: black ;
-    background-color: white;
+.dropdown-item {
+  text-decoration: underline 1.5px;
+  text-underline-offset: 2px;
+  font-family: 'Sequel Sans Roman Disp', sans-serif;
+  font-weight: 410;
+  color: black;
+  background-color: white;
 }
 
 
-
-.navbar .nav-btn{
+.navbar .nav-btn {
   border-radius: 40px;
 }
 
-.show:hover{
-  color:#6123B5 ;
+.show:hover {
+  color: #6123B5;
 }
 
-.dropdown-menu.show{
-  border:  2.781px solid #000;
+.dropdown-menu.show {
+  //border: 2.781px solid #000;
   border-radius: 0px;
+  box-shadow: -5px 5px black, -6px 6px white, -4px 6px white !important;
 }
+
