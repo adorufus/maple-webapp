@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar" (window:scroll)="windowScroll()">
   <div class="container">
     <a routerLink="/layout-one-3" class="navbar-brand">
-      <img src="assets/images/logo/maple-logo.png" alt="" style="width: 100px; height: 100%;" />
+      <img (click)="onNavClick('home-company')" src="assets/images/logo/maple-logo.png" alt="" style="width: 100px; height: 100%;" />
     </a>
     <a href="javascript:void(0)" class="navbar-toggler" (click)="toggleMenu()" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -17,12 +17,12 @@
               COMPANY <img src="assets/images/nav.svg" alt="svg">
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-              (click)="onNavClick('home-company')">About</button>
-            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-              (click)="onNavClick('collaboration')">Collaboration</button>
-            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-              (click)="onNavClick('contact')">Contact</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'about'}" href="javascript: void(0);"
+              (click)="onAboutClick()">About</button>
+            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'collaboration'}" href="javascript: void(0);"
+              (click)="onCollabClick()">Collaboration</button>
+            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'contact'}" href="javascript: void(0);"
+              (click)="onContactClick()">Contact</button>
             </div>
           </div>
 

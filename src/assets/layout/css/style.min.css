@@ -421,11 +421,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-light {
   background-color: transparent !important;
   border: 1px solid #f9f9fd !important;
-  color: #6d62fd !important
+  color: #6123B5 !important
 }
 
 .btn-outline-light:hover, .btn-outline-light:focus, .btn-outline-light:active, .btn-outline-light.active {
-  background-color: #6d62fd !important;
+  background-color: #6123B5 !important;
   color: #fff !important
 }
 
@@ -443,11 +443,11 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline-muted {
   background-color: transparent !important;
   border: 1px solid #a5a5bf !important;
-  color: #6d62fd !important
+  color: #6123B5 !important
 }
 
 .btn-outline-muted:hover, .btn-outline-muted:focus, .btn-outline-muted:active, .btn-outline-muted.active {
-  background-color: #6d62fd !important;
+  background-color: #6123B5 !important;
   color: #fff !important
 }
 

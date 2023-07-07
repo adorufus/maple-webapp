@@ -23,7 +23,7 @@ export class DetailActivationComponent {
       this.uid = paths["uid"] 
     })
 
-    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`http://mapleapp-7c7ab.web.app/game?gameId=${this.uid}`)
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://mapleapp-7c7ab.web.app/game?gameId=${this.uid}`)
 
     let temp = this.firestoreService.getDoc(`activity/games/quiz/${this.uid}`)
 

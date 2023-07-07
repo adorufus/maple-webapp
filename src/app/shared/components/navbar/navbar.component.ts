@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import {OwlOptions} from "ngx-owl-carousel-o";
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Router } from '@angular/router';
-import {AngularFireAuth} from "@angular/fire/compat/auth";
-
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 interface content {
   title: string;
@@ -13,34 +12,43 @@ interface content {
 @Component({
   selector: 'app-navbar',
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.scss']
+  styleUrls: ['./navbar.component.scss'],
 })
 export class NavbarComponent implements OnInit {
+  constructor(private router: Router, private fAuth: AngularFireAuth) {}
 
-  constructor(private router: Router, private fAuth: AngularFireAuth) { }
-
-  user?: any
+  user?: any;
 
   currentSection = 'home';
 
   heading: string = 'What Client Says';
-  content: string = 'It is a long established fact that create category leading brand experiences a reader will be distracted by the readable content of a page when looking at its layout.';
+  content: string =
+    'It is a long established fact that create category leading brand experiences a reader will be distracted by the readable content of a page when looking at its layout.';
   contentData: content[] = [
     {
       title: 'Powering Business',
       sub_title: 'Find Your Element',
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." + '\n' + "Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde."
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
+        '\n' +
+        'Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.',
     },
     {
       title: 'To Grow Business',
       sub_title: 'Multi purpose theme',
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." + '\n' + " Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.",
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
+        '\n' +
+        ' Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.',
     },
     {
       title: 'With Online Customers',
       sub_title: 'Start Connecting',
-      content: "Lorem ipsum dolor sit amet consectetur adipisicing elit." + '\n' + " Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.",
-    }
+      content:
+        'Lorem ipsum dolor sit amet consectetur adipisicing elit.' +
+        '\n' +
+        ' Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.',
+    },
   ];
 
   /**
@@ -55,26 +63,26 @@ export class NavbarComponent implements OnInit {
     navText: ['', ''],
     responsive: {
       0: {
-        items: 1
+        items: 1,
       },
       600: {
-        items: 1
+        items: 1,
       },
       900: {
-        items: 1
-      }
+        items: 1,
+      },
     },
-    nav: false
-  }
+    nav: false,
+  };
 
   ngOnInit(): void {
-    this.fAuth.onAuthStateChanged(user => {
-      if(user) {
-        this.user = user
+    this.fAuth.onAuthStateChanged((user) => {
+      if (user) {
+        this.user = user;
       } else {
-        this.user = undefined
+        this.user = undefined;
       }
-    })
+    });
   }
 
   /**
@@ -84,12 +92,14 @@ export class NavbarComponent implements OnInit {
 
   windowScroll() {
     const navbar = document.getElementById('navbar');
-    if (document.body.scrollTop > 40 || document.documentElement.scrollTop > 40) {
+    if (
+      document.body.scrollTop > 40 ||
+      document.documentElement.scrollTop > 40
+    ) {
       if (navbar !== null) {
         navbar.classList.add('nav-sticky');
       }
-    }
-    else {
+    } else {
       if (navbar !== null) {
         navbar.classList.remove('nav-sticky');
       }
@@ -114,20 +124,37 @@ export class NavbarComponent implements OnInit {
     }
   }
 
-  onNavClick(routeName: string){
-    routeName == "media" ? this.router.navigate([`/${routeName}`], {
-      queryParams: {segment: "All"}
-    }) : this.router.navigate([`/${routeName}`])
-    this.currentSection = routeName
+  onNavClick(routeName: string) {
+    routeName == 'media'
+      ? this.router.navigate([`/${routeName}`], {
+          queryParams: { segment: 'All' },
+        })
+      : this.router.navigate([`/${routeName}`]);
+    this.currentSection = routeName;
+  }
 
-    setTimeout(()=>{
+  onAboutClick() {
+    this.router.navigate(['/home-company']);
+    setTimeout(() => {
+    window.scrollTo(0,1160);
+    }, 100);
+  }
 
-      window.location.reload();
+  onCollabClick() {
+    this.router.navigate(['/home-company']);
+    setTimeout(() => {
+      window.scrollTo(0, 2977);
+    }, 100);
+  }
+
+  onContactClick() {
+    this.router.navigate(['/home-company']);
+    setTimeout(() => {
+      window.scrollTo(0, 3800);
     }, 100);
   }
 
   onLoginClick() {
-    this.router.navigate(['/auth'])
+    this.router.navigate(['/auth']);
   }
-
 }
