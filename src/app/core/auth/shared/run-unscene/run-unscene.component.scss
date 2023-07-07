@@ -17,6 +17,7 @@
     display: inline-block;
     padding-right: 256px; /* Adjust the padding as per your requirements */
     animation: marquee 20s linear infinite;
+    padding-top: 3px;
     animation-delay: 0.5s;
     cursor: default;
   }

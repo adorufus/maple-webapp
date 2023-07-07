@@ -28,7 +28,7 @@ export class HomeCompanyComponent implements OnInit {
   onCollabClick() {
     this.router.navigate(['/home-company']);
     setTimeout(() => {
-      window.scrollTo(0, 2977);
+      window.scrollTo(0, 2843);
     }, 100);
   }
 

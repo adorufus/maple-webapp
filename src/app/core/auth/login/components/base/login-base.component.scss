@@ -8,43 +8,15 @@
     bottom: 55.55%;
 }
 
-.logo-mapple {
-    position: absolute;
-    padding: 0% 10%;
-    margin: 67px;
-    width: 140px;
-    left: calc(60% - 83px);
-    top: 9.31%;
-    bottom: 55.55%;
+.login {
+    width: 100%;
+    margin-top: 12rem;
 }
 
-.box {
-    position: absolute;
-    margin-top: 362px;
-    width: 444px;
-    height: 444px;
-    left: calc(50% - 150px);
-    top: calc(50% - 222px + 23px);
-    background: #FFFFFF;
-    box-shadow: -2px 2px 8px rgba(0, 0, 0, 0.15);
-    border-radius: 20px;
+span{
+    font-size: 16px;
+    font-family: 'Sequel Sans Medium Head';
 }
-
-h3 {
-    position: absolute;
-    width: 170px;
-    left: 170px;
-    top: 23px;
-    bottom: 69.17%;
-    font-family: "Sequel Sans", sans-serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 32px;
-    line-height: 38px;
-    /* identical to box height */
-    color: #000000;
-}
-
 .btn {
     position: absolute;
     left: 47px;
@@ -64,7 +36,8 @@ h3 {
 }
 
 .img-google {
-    margin-right: 80px;
+    margin-right: 50px;
+    margin-left: 6px;
 }
 
 .or {
@@ -84,16 +57,16 @@ h3 {
 }
 
 .btn-google {
-    position: absolute;
-    width: 350px;
-    height: 60px;
-    left: 47px;
-    right: 47px;
-    top: 44.75%;
-    bottom: 27.92%;
+    position: relative;
+    width: 60%;
+    height: 12%;
+    margin: -10rem 0rem 0rem 3rem;
     background: #FFFFFF;
-    outline-color: #C4CBD9;
+    border-color: white !important;
+    border: solid;
     border-radius: 30px;
+    box-shadow: 0px 0px 14px -2px #b1b1b1;
+    margin-left: 118px;
 }
 
 .btn-google:focus,
@@ -156,123 +129,34 @@ a {
     color: #9CA6B9;
 }
 
-@media (max-width: 992px) {
-    .box {
-        left: calc(50% - 234px);
+@media screen and (max-width:769px) {
+
+    .btn-google{
+    width: 70%;
+
     }
 
-    .logo-mapple {
-        left: calc(60% - 169px);
+    .img-google{
+        margin-right: 100px;
     }
+
+    .login{
+        margin-top: 6rem;
+    }
+    
+    
 }
 
-@media (max-width: 768px) {
-    .box {
-        left: calc(50% - 183px);
-        width: 354px;
-        height: 354px;
+@media screen and (max-width:426px){
+.btn-google{
+    margin: -5.5rem 0rem 0rem 3.4rem;
+//    margin-left: 44px;
+    }
+    .img-google{
+        margin-right: 20px;
     }
 
-    h3 {
-        font-size: 26px;
-        left: 139px;
+    .btn-google{
+        height: 16%;
     }
-
-    .logo-mapple {
-        left: calc(60% - 157px);
-    }
-
-    .btn-google {
-
-        width: 263px;
-
-    }
-
-    .img-google {
-        margin-right: 30px;
-    }
-
-    a {
-        left: 221px;
-    }
-}
-
-@media (min-width: 577px) {
-    .box {
-        left: calc(50% - 112px);
-        width: 292px;
-        height: 292px;
-
-    }
-
-    .logo-mapple {
-        left: calc(60% - 122px);
-    }
-
-    .btn-google {
-
-        width: 247px;
-        height: 46px;
-        left: 21px;
-    }
-
-    a {
-        left: 175px;
-        font-size: 12px;
-    }
-
-    .have {
-        font-size: 12px;
-    }
-
-    h3 {
-        font-size: 26px;
-        left: 106px;
-    }
-
-    .img-google {
-        margin-right: 30px;
-    }
-
-
-}
-
-@media (max-width: 576px) {
-    .box {
-        left: calc(50% - 182px);
-        width: 292px;
-        height: 292px;
-
-    }
-
-    .logo-mapple {
-        left: calc(60% - 188px);
-    }
-
-    .btn-google {
-
-        width: 247px;
-        height: 46px;
-        left: 21px;
-    }
-
-    a {
-        left: 175px;
-        font-size: 12px;
-    }
-
-    .have {
-        font-size: 12px;
-    }
-
-    h3 {
-        font-size: 26px;
-        left: 106px;
-    }
-
-    .img-google {
-        margin-right: 30px;
-    }
-
-
 }

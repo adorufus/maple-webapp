@@ -136,21 +136,21 @@ export class NavbarComponent implements OnInit {
   onAboutClick() {
     this.router.navigate(['/home-company']);
     setTimeout(() => {
-    window.scrollTo(0,1160);
+    window.scrollTo(0,1080);
     }, 100);
   }
 
   onCollabClick() {
     this.router.navigate(['/home-company']);
     setTimeout(() => {
-      window.scrollTo(0, 2977);
+      window.scrollTo(0, 2843);
     }, 100);
   }
 
   onContactClick() {
     this.router.navigate(['/home-company']);
     setTimeout(() => {
-      window.scrollTo(0, 3800);
+      window.scrollTo(0, 3650);
     }, 100);
   }
 

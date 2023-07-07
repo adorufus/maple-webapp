@@ -128,6 +128,13 @@ $maple-webapp-theme: mat.define-light-theme((
 }
 
 @font-face {
+  font-family: 'Sequel Sans Medium Head';
+  src: url('assets/font/Sequel Sans Medium Head.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
   font-family: 'Sequel Sans Book Head';
   src: url('assets/font/Sequel Sans Book Head.ttf') format('truetype');
   font-weight: normal;

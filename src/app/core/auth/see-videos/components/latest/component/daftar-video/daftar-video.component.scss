@@ -12,6 +12,12 @@
   padding-top: 2%;
 }
 
+br{
+  content: ""; /* clears default height */
+  display: block;
+  margin-top: -20px;
+}
+
 h2{
 font-family: 'Sequel Sans Bold Disp', sans-serif;
 }
@@ -58,7 +64,7 @@ p{
 }
 
 .col-8 {
-  padding-top: 137px !important;
+  padding-top: 120px !important;
 }
 
 .owl-items {

@@ -43,7 +43,9 @@ img {
 .dropdown-menu.show {
   border: 2.781px solid #000;
   border-radius: 0px;
-}
+    box-shadow: -5px 5px black, -7px 7px white !important;
+  }
+
 
 .item {
   background-color: transparent;
@@ -51,4 +53,11 @@ img {
   text-decoration: underline 1.5px;
   text-underline-offset: 2px;
   font-family: 'Sequel Sans Roman Disp', sans-serif;
+}
+
+@media screen and (max-width:768px) {
+  .btn{
+    // margin-bottom: 0px;
+    margin-left: 220px;
+  }
 }
