@@ -55,9 +55,26 @@ img {
   font-family: 'Sequel Sans Roman Disp', sans-serif;
 }
 
-@media screen and (max-width:768px) {
+@media screen and (max-width:769px) {
   .btn{
-    // margin-bottom: 0px;
-    margin-left: 220px;
+    margin-left: 40rem;
+  }
+}
+
+@media screen and (max-width:437px) {
+  .btn{
+    margin-left: 20rem;
+  }
+}
+
+@media screen and (max-width:376px) {
+  .btn{
+    margin-left: 16rem;
+  }
+}
+
+@media screen and (max-width:320px) {
+  .btn{
+    margin-left: 12rem;
   }
 }

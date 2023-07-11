@@ -61,7 +61,7 @@ export class QuizzesListComponent {
         items: 1,
       },
       600: {
-        items: 2,
+        items: 3,
       },
       900: {
         items: 3,

@@ -61,21 +61,34 @@ h1 {
   content: '';
   position: absolute;
   background: rgba(0, 0, 0, 0.5);
-  border-radius: 5px;
-  top: 0;
+  border-radius: 0px;
+  top: -1px;
   right: 0;
   bottom: 0;
   left: 0;
 }
 
+
+@media screen and (max-width: 1041px) {
+  .btn{
+    margin-top: 30rem !important;
+    margin-left: 6rem !important;
+  }
+  
+}
+
 @media screen and (max-width: 769px) {
+
+  .logo {
+    width: 40% ;
+  }
+
+  .col-md-6{
+    width: 100%;
+  }
 
   .image-padding {
     padding: 2vh 4vw 0vh;
-  }
-
-  .logo {
-    width: 80%;
   }
 
   h1 {
@@ -87,14 +100,41 @@ h1 {
   }
   .btn {
     font-size: 14px;
-    height: 38%;
     width: 70%;
-    margin-top: 2rem;
+    margin-top: 23rem;
     margin-bottom: 2rem;
+    display: none;
   }
 
   .col-lg-4 {
     padding-top: 0px;
   }
+
+}
+
+@media screen and (max-width: 320px) {
+
+.btn{
+  display: none;
+}
+
+.logo {
+  width: 40%;
+}
+
+.trick{
+  width: 108%;
+}
+
+.content:after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  top: -1px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
 
 }

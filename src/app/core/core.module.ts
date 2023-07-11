@@ -62,6 +62,7 @@ import { HomeCompanyComponent } from './auth/home-company/home-company.component
 import { CollaborationComponent } from './auth/home-company/components/collaboration/collaboration.component';
 import { ContactComponent } from './auth/home-company/components/contact/contact.component';
 import { TextPlayComponent } from './auth/shared/text-play/text-play.component';
+import { TextAllComponent } from './auth/shared/text-all/text-all.component';
 
 @NgModule({
   declarations: [
@@ -116,7 +117,8 @@ import { TextPlayComponent } from './auth/shared/text-play/text-play.component';
     HomeCompanyComponent,
     CollaborationComponent,
     ContactComponent,
-    TextPlayComponent
+    TextPlayComponent,
+    TextAllComponent
     
     
   ],

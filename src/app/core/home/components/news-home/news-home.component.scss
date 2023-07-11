@@ -50,10 +50,15 @@ font-family: 'Sequel Sans Roman HeadS', sans-serif;
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 12px;
 }
 
 .container{
   margin-bottom: 6rem;
+}
+
+.col-lg-4{
+  margin-bottom: 10px;
 }
 
 @media screen and (max-width: 767px) {
