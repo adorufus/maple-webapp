@@ -11,7 +11,7 @@
   position: absolute;
   white-space: nowrap;
   overflow: hidden;
-  
+
 }
 
 .marquee {
@@ -57,5 +57,8 @@
     height: 4vh;
     background-color: #A3FF00 !important;
   }
-  
+
+  .marquee {
+    margin-top: -7px;
+  }
 }

@@ -69,15 +69,24 @@ h1 {
 }
 
 
-@media screen and (max-width: 1041px) {
+@media  (max-width: 1920px) {
   .btn{
-    margin-top: 30rem !important;
-    margin-left: 6rem !important;
+    margin-top: 50rem ;
   }
-  
-}
 
-@media screen and (max-width: 769px) {
+}
+@media  (max-width: 1440px){
+  .btn{
+    margin-top:40rem ;
+  }
+
+}@media  (max-width: 1024px){
+  .btn{
+    margin-top:30rem;
+  }
+
+}
+@media (max-width: 769px) {
 
   .logo {
     width: 40% ;
@@ -100,10 +109,10 @@ h1 {
   }
   .btn {
     font-size: 14px;
-    width: 70%;
+    width: 30%;
     margin-top: 23rem;
     margin-bottom: 2rem;
-    display: none;
+
   }
 
   .col-lg-4 {
@@ -111,7 +120,10 @@ h1 {
   }
 
 }
-
+@media  screen and (max-width: 425px) {
+.btn{ display: none;
+}
+}
 @media screen and (max-width: 320px) {
 
 .btn{
