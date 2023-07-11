@@ -49,3 +49,13 @@
   0% { transform: translate(0, 0); }
   100% { transform: translate(-100%); }
 }
+
+@media  screen and (max-width:786px) {
+  .marquee-container {
+    overflow: hidden;
+    position: relative;
+    height: 4vh;
+    background-color: #A3FF00 !important;
+  }
+  
+}
