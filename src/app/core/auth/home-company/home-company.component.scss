@@ -73,8 +73,6 @@ h1 {
   .btn{
     margin-top: 50rem ;
   }
-  
-}
 
 @media (max-width: 1550px) {
 
@@ -121,10 +119,10 @@ h1 {
   }
   .btn {
     font-size: 14px;
-    width: 70%;
+    width: 30%;
     margin-top: 23rem;
     margin-bottom: 2rem;
-    display: none;
+
   }
 
   .col-lg-4 {
@@ -132,14 +130,10 @@ h1 {
   }
 
 }
-
-@media screen and (max-width: 426px) {
-
-  .btn{
-    display: none;
-  }
+@media  screen and (max-width: 425px) {
+.btn{ display: none;
 }
-
+}
 @media screen and (max-width: 320px) {
 
 .btn{
