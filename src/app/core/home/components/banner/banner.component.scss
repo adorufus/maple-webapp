@@ -1,8 +1,6 @@
-.sequel-font {
-  font-size: 154px;
-  font-family: "Sequel Sans Heavy Disp", sans-serif;
-  font-weight: bold;
-  text-shadow: 0 0 10px white;
+
+.hero-one-1{
+  padding-bottom: 6rem;
 }
 
 .container {
@@ -16,8 +14,47 @@
  text-shadow: 0 0 10px white;
 }
 
-@media (max-width: 576px) {
-  .sequel-font, .hero-title {
-    font-size: 8vh;
+video{
+padding-bottom: 6rem;
+}
+
+.hero-one-1{
+  padding: 0 !important;
+}
+
+.content {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+.content video {
+  width: 100%;
+  display: block;
+}
+.content:after {
+  content: '';
+  position: absolute;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 0px;
+  top: -1px;
+  right: 0;
+  bottom: 96px;
+  left: 0;
+}
+
+.image-padding{
+  padding: 14vh 12vw 17vh;
+}
+
+@media screen and (max-width: 1025px) {
+  .image-padding{
+    padding: 5vh 12vw 17vh;
   }
+}
+
+@media (max-width: 426px){
+  .image-padding{
+    padding: 2vh 12vw 17vh;
+  }
+
 }

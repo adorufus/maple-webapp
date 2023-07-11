@@ -1,0 +1,19 @@
+    .description{
+    font-size: 24px;
+  }
+
+  .container {
+    margin-left: 17vw;
+  }
+
+  img{
+    width: 80%;
+  }
+  
+  @media screen and (max-width: 769px) {
+
+    div{
+        padding: 2vh 2vw 0vh 2vh !important;
+    }
+
+  }

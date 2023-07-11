@@ -11,6 +11,27 @@
     </a>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav mx-auto navbar-center mt-lg-0 mt-2">
+
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
+              FOR YOU <img src="assets/images/nav.svg" alt="svg">
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
+            href="javascript: void(0);" (click)="onNavClick('home')">Home</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
+                (click)="onNavClick('media')">Video</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+                (click)="onNavClick('articles')">Article</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
+                (click)="onNavClick('store')">Dept.store</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
+                (click)="onNavClick('activation')">Activation</button>
+            </div>
+          </div>
+        </li>
+
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
@@ -26,26 +47,6 @@
             </div>
           </div>
 
-        </li>
-
-        <li class="nav-item">
-          <div ngbDropdown class="d-inline-block">
-            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              APP <img src="assets/images/nav.svg" alt="svg">
-            </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
-            href="javascript: void(0);" (click)="onNavClick('home')">Home</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-                (click)="onNavClick('media')">Video</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-                (click)="onNavClick('articles')">Article</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-                (click)="onNavClick('store')">Dept.store</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
-                (click)="onNavClick('activation')">Activation</button>
-            </div>
-          </div>
         </li>
       </ul>
       <div *ngIf="user != undefined; else siginin">

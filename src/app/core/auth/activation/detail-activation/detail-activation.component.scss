@@ -35,7 +35,17 @@ iframe{
 @media screen and (max-width: 768px) {
 
     .col-lg-8 {
-        height: 40rem;
+        height: 46rem;
     }
     
+    .col-lg-1 {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    .col-lg-8 {
+        height: 42rem;
+    }
 }

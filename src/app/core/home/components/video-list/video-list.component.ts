@@ -54,7 +54,7 @@ export class VideoListComponent implements OnInit {
   }
 
   customOptions: OwlOptions = {
-    loop: true,
+    loop: false,
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
@@ -72,10 +72,10 @@ export class VideoListComponent implements OnInit {
         items: 2,
       },
       640: {
-        items: 3,
+        items: 2,
       },
       940: {
-        items: 3,
+        items: 0,
       }
     },
     nav: true,

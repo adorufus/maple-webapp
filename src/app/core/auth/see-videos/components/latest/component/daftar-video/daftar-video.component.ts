@@ -95,7 +95,7 @@ export class DaftarVideoComponent implements OnInit {
     if (this.title.toLowerCase() == 'rewind') {
       image = 'assets/images/banner-rewind.png';
     } else if (this.title.toLowerCase() == 'all') {
-      image = 'assets/images/banner-videos.png';
+      image = 'assets/images/banner.png';
     } else if (this.title.toLowerCase() == 'trick room') {
       image = 'assets/images/banner-trick.png';
     } else if (this.title.toLowerCase() == 'unscene') {

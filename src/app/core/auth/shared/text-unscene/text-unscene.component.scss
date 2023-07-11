@@ -25,14 +25,14 @@
   }
   
   @media (max-width: 768px) {
-    .sequel-font {
-      font-size: 5vh;
-      font-family: "Sequel Sans Heavy Disp", sans-serif;
-      
-    }
 
     div{
-      padding: 18vh 0vw 12vh !important;
+      padding: 10vh 0vw 12vh 1vh !important;
     }
+
+    img{
+      margin-left: 0rem;
+    }
+
   }
   
