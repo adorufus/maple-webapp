@@ -2,7 +2,7 @@
   <div class="row flex-column-reverse flex-sm-row">
     <div class="col-lg-7 col-md-6 col-sm-12 left-column">
       <div class="card">
-        <img  src="{{(product  | async)?.merch_image_url}}" alt="Image 1">
+        <img style="object-fit: cover;" src="{{(product  | async)?.merch_image_url}}" alt="Image 1">
         <span class="namecard">Product description</span>
         <table class="description" [innerHTML]="(product  | async)?.description">  </table>
     </div>

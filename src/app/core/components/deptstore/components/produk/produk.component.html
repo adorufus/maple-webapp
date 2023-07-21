@@ -2,7 +2,7 @@
   <div class="row no-gutters">
     <div *ngFor="let article of articles | async; let i = index" class="col-lg-6 col-md-6 col-sm-12">
       <div (click)="onClick(article.id)" class="card" style="cursor: pointer;">
-        <img class="image" src="{{article.merch_image_url}}" alt="Image 1">
+        <img style="object-fit: cover;" src="{{article.merch_image_url}}" alt="Image 1">
         <div class="content">
           <br>
           <div style="font-size: 24px; font-weight: bold; height: 5vh">{{article.title}}</div><br>

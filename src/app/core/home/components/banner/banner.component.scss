@@ -48,13 +48,22 @@ padding-bottom: 6rem;
 
 @media screen and (max-width: 1025px) {
   .image-padding{
-    padding: 5vh 12vw 17vh;
+    padding: 14vh 12vw 17vh;
   }
 }
 
 @media (max-width: 426px){
   .image-padding{
-    padding: 2vh 12vw 17vh;
+    padding: 5vh 12vw 17vh;
   }
+
+  video{
+    padding-bottom: 0rem;
+    }
+
+    .content:after {
+      content: '';
+      bottom: 0px;
+    }
 
 }
