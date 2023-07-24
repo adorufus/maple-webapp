@@ -34,7 +34,7 @@ export class BannerPlayComponent implements OnInit {
             ref
               .where('type', '==', this.title)
               .orderBy('upload_date', 'desc').limit(9)
-              
+
           );
 
     if (temp instanceof Observable<any>) {
@@ -50,16 +50,16 @@ export class BannerPlayComponent implements OnInit {
     this.router.navigate(['/play-video'],{
       queryParams: {id: vidID, uid: uid}
     })
-   
-   
-    
-    setTimeout(()=>{
-      
-      window.location.reload();
-    }, 100);
 
- 
-    
+
+
+    setTimeout(()=>{
+
+      window.location.reload();
+    }, 5);
+
+
+
   }
 
   customOptions: OwlOptions = {
