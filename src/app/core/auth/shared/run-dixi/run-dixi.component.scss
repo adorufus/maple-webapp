@@ -4,14 +4,14 @@
     position: relative;
     background-color: #FF5AD1;
   }
-  
+
   .marquee-wrapper {
     position: absolute;
     white-space: nowrap;
     overflow: hidden;
-    
+
   }
-  
+
   .marquee {
     display: inline-block;
     padding-right: 436px; /* Adjust the padding as per your requirements */
@@ -20,11 +20,11 @@
     animation-delay: 0.5s;
     cursor: default;
   }
-  
+
   .marquee2 {
     animation-delay: 0.5s;
   }
-  
+
   .hero-title{
     font-family: 'Sequel Sans Heavy Disp',sans-serif;
     font-size: 36px;
@@ -32,27 +32,27 @@
 
     margin-left: 2%;
   }
-  
+
   .fw-lighter{
     font-family: 'bebas neue', sans-serif;
     font-size: 36px;
   }
-  
+
   @keyframes marquee {
     0% { transform: translate(0, 0); }
     100% { transform: translate(-100%); }
-  }  
+  }
 
   @media screen and (max-width:769px) {
     .marquee{
-      padding-top: 0px;
+      padding-top: 3px;
     }
-    
+
   }
 
   @media screen and (max-width:321px) {
     .marquee{
       padding-top: 3px;
     }
-    
+
   }
