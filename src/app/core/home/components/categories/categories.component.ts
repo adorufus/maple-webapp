@@ -61,8 +61,8 @@ export class CategoriesComponent implements OnInit{
       600: {
         items: 3
       },
-      900: {
-        items: 5
+      1000: {
+        items: 4
       }
     },
     nav: false

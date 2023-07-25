@@ -60,6 +60,7 @@ export class VideoListComponent implements OnInit {
     pullDrag: false,
     dots: true,
     center: false,
+    
     navText: [
       "<div class='nav-button owl-prev'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
       "<div class='nav-button owl-next'><img  src='assets/images/arrow_forward_ios.svg'></div>",
@@ -67,15 +68,13 @@ export class VideoListComponent implements OnInit {
     responsive: {
       0: {
         items: 1,
+        nav:false,
       },
-      500: {
+      600: {
         items: 2,
       },
-      640: {
-        items: 2,
-      },
-      940: {
-        items: 0,
+      1000: {
+        items: 4,
       }
     },
     nav: true,
