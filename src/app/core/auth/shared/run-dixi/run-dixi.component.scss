@@ -2,7 +2,6 @@
 .marquee-container {
     overflow: hidden;
     position: relative;
-    height: 6vh;
     background-color: #FF5AD1;
   }
   
@@ -17,7 +16,7 @@
     display: inline-block;
     padding-right: 436px; /* Adjust the padding as per your requirements */
     animation: marquee 20s linear infinite;
-    padding-top: 3px;
+    padding-top: 1vh;
     animation-delay: 0.5s;
     cursor: default;
   }
