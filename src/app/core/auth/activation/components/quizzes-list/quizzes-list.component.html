@@ -1,24 +1,24 @@
 <!--what client says -->
 <section class="section" id="review">
     <div class="container">
-      
+
       <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
       <!-- end row -->
       <div class="row">
         <div class="col-12 mt-4 pt-2">
-          
+
           <div class="client-slider-one">
             <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
               <ng-template carouselSlide  *ngFor="let game of games | async; let i = index" >
                 <div  class="client-box">
                   <div style="height: 80%;">
-                    <img (click)="onClick(game.uid)" style="height: 100%; object-fit: cover;" src="{{game.item_image_url[0]}}" alt="">
+                    <img (click)="onClick(game.uid, game.type)" style="height: 100%; object-fit: cover;" src="{{game.type == 'tot' ? game.item_image_url[0].left : game.item_image_url[0]}}" alt="">
                   </div>
                   <div class="client-box-2 text-center pt-2">
                   <h6>{{game.description}}</h6>
                 </div>
                 </div>
-                
+
               </ng-template>
             </owl-carousel-o>
           </div>
@@ -30,4 +30,3 @@
     <!-- end container -->
   </section>
   <!-- end what client says -->
-  

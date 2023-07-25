@@ -1,6 +1,6 @@
-<div (click)="onClick(game.uid)" *ngFor="let game of games | async;"  class="card border-0" >
+<div (click)="onClick(game.uid, game.type)" *ngFor="let game of games | async;"  class="card border-0" >
 
-    <img style="object-fit: cover;"  src="{{game.item_image_url[0]}}" alt="Image 1">
+    <img style="object-fit: cover;"  src="{{game.type == 'tot' ? game.item_image_url[0].left : game.item_image_url[0]}}" alt="Image 1">
 
     <div class="client-box-2 text-center pt-2">
     <h6 style="padding: 12px;" >{{game.description}}</h6>

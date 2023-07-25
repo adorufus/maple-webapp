@@ -37,9 +37,9 @@ export class QuizzesListComponent {
     }
   }
 
-  onClick(uid: string) {
+  onClick(uid: string, type: string) {
     this.router.navigate(['/detail-activation'], {
-      queryParams: { uid: uid },
+      queryParams: { type: type, uid: uid },
     });
     window.scroll(0, 0);
   }

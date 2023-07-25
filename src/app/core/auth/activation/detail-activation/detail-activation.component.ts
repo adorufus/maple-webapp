@@ -12,7 +12,8 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 export class DetailActivationComponent {
 
   public activity?: Observable<any>
-  @Input () uid: string=""
+  uid: string=""
+  type: string=""
   url: SafeResourceUrl = ""
 
   constructor(private route:ActivatedRoute, private firestoreService:FirestoreService, private sanitizer: DomSanitizer){}
@@ -20,10 +21,14 @@ export class DetailActivationComponent {
 
   ngOnInit(): void {
     this.route.queryParams.subscribe(paths => {
-      this.uid = paths["uid"] 
+      this.uid = paths["uid"]
+      this.type = paths["type"]
     })
 
-    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`https://mapleapp-7c7ab.web.app/game?gameId=${this.uid}`)
+    const totUrl = 'https://mapleapp-7c7ab.web.app/activity/game/thisorthat?gameId='
+    const sopUrl = 'https://mapleapp-7c7ab.web.app/activity/game/smashpass?gameId='
+
+    this.url = this.sanitizer.bypassSecurityTrustResourceUrl(`${(this.type == 'tot' ? totUrl : sopUrl) + this.uid}`)
 
     let temp = this.firestoreService.getDoc(`activity/games/quiz/${this.uid}`)
 
@@ -33,8 +38,8 @@ export class DetailActivationComponent {
     this.activity?.subscribe((v) => {
       console.log(v)
     })
-    
 
-    
+
+
   }
 }

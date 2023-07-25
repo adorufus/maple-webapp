@@ -32,9 +32,9 @@ export class SmallDetailComponent {
     }
   }
 
-  onClick(uid: string) {
+  onClick(uid: string, type: string) {
     this.router.navigate(['/detail-activation'], {
-      queryParams: { uid: uid },
+      queryParams: {type: type, uid: uid },
     });
 
     setTimeout(() => {
