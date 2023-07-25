@@ -1,28 +1,28 @@
 <!--what client says -->
 <div *ngIf="title != 'Latest Video' && title != 'Breaking Bad News' && title != 'DEETS' ">
-  <app-banner-videos [textImage]="title" [runnerText]="title"
-                     [bannerImage]="checkForImage()" [runnerColor]="checkForColor()"></app-banner-videos>
+  <app-banner-videos [textImage]="title" [runnerText]="title" [bannerImage]="checkForImage()"
+    [runnerColor]="checkForColor()"></app-banner-videos>
 </div>
 <section class="section" id="review">
   <div class="container">
     <div class="row">
-      <div class="col-4 mt-4 pt-2">
+      <div class="col-11 mt-4 pt-2">
         <div *ngIf="title.split(' ').length  == 2 && title != 'Latest'; else singleText ">
-          <span class="text">{{title.split(' ')[0]}}{{title.split(' ')[2]}} <br/> Videos</span>
+          <span class="text">{{title.split(' ')[0]}}{{title.split(' ')[2]}} <br /> Videos</span>
         </div>
-        <ng-template #singleText><span class="text">{{title}} <br/> Videos</span></ng-template>
+        <ng-template #singleText><span class="text">{{title}} <br /> <br /> Videos</span></ng-template>
       </div>
-      <div class="col-8 mt-4 pt-2">
-        <hr class="mt-auto"
-            style="margin: 1rem 0rem 1rem -10rem; border: 3px solid black !important;
-            opacity: 1;">
+      <div class="col-1 mt-4">
+        <hr class="hr">
       </div>
     </div>
 
     <div *ngIf="indexZeroVideo && title=='Latest Video'" class="row no-gutters pb-5">
       <div class="col-lg-6 mt-12 pt-2 col-sm-12">
         <div style="height: 100%; ">
-          <img (click)="onVideo(indexZeroVideo.vidID,indexZeroVideo.id)" style="height: 100%; width: 100%; object-fit: contain; cursor: pointer;" src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
+          <img (click)="onVideo(indexZeroVideo.vidID,indexZeroVideo.id)"
+            style="height: 100%; width: 100%; object-fit: contain; cursor: pointer;"
+            src="{{indexZeroVideo.thumbnails.maxres.url}}" alt="">
         </div>
       </div>
 
@@ -31,62 +31,40 @@
           <h2>{{indexZeroVideo.title}}</h2>
           <p style="font-weight: 500">{{indexZeroVideo.description}}
           </p>
-          <br><br>
-          <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'MM, EEEE yyyy'}}</p>
+  
+        <p class="credit">The Maple Media • {{indexZeroVideo.upload_date.toDate() | date:'MM, EEEE yyyy'}}</p>
         </table>
-        
+
       </div>
       <hr class="foot" style="height: 2px; color: #000 !important;">
     </div>
 
-    
+
 
     <!-- end row -->
     <ng-container *ngIf="videos|async as videosAsync">
-    <div class="row no-gutters pt" >
-      <div *ngFor="let video of videosAsync | paginate: {  itemsPerPage: item, currentPage: p }" class="col-lg-4 col-md-6 col-sm-12">
-        <div class="client-box">
-          <div style="height: 80%; ">
-            <img (click)="onVideo(video.vidID,video.id)" style="height: 100%; width: 100%; object-fit: cover; cursor: pointer; " [src]="video.thumbnails.high.url"   alt="">
-          </div>
-          <div class="client-box-2">
-            <h6 class="title fw-bold">{{video.title}}</h6>
-            <p class="credit">The Maple Media • {{video.upload_date.toDate() | date:'MMMM, EE yyyy'}}</p>
+      <div class="row no-gutters pt">
+        <div *ngFor="let video of videosAsync | paginate: {  itemsPerPage: item, currentPage: p }"
+          class="col-lg-4 col-md-6 col-sm-12">
+          <div class="client-box">
+            <div style="height: 80%; ">
+              <img (click)="onVideo(video.vidID,video.id)"
+                style="height: 100%; width: 100%; object-fit: cover; cursor: pointer; "
+                [src]="video.thumbnails.high.url" alt="">
+            </div>
+            <div class="client-box-2">
+              <h6 class="title fw-bold">{{video.title}}</h6>
+              <p class="credit">The Maple Media • {{video.upload_date.toDate() | date:'MMMM, EE yyyy'}}</p>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-    <div class="text-center">
-    <pagination-controls (pageChange)="onPageChange($event)" [maxSize]="maxSize"  [directionLinks]="directionLinks" ></pagination-controls>
+      <div class="text-center">
+        <pagination-controls (pageChange)="onPageChange($event)" [maxSize]="maxSize"
+          [directionLinks]="directionLinks"></pagination-controls>
+      </div>
+    </ng-container>
   </div>
-  </ng-container>
-    
-  
-    
-
-    <!-- <div class="row no-gutters">
-      <div class="col-lg-5 col-md-6 col-sm-12">
-        <div class="pagination-right pt-3">
-          <p class="text-next">Previous</p>
-        </div>
-      </div>
-    
-
-    <div class="col-lg-2 col-md-6 col-sm-12">
-      <p class="text-center fw-bold">1</p>
-      <hr class="mt-auto" style="height: 1px; margin: 0rem 4rem 0rem 4rem; background-color: black; border: none; opacity: 1;">
-      <p class="text-center fw-bold">999</p>
-    </div>
-
-    <div class="col-lg-5 col-md-6 col-sm-12">
-      <div class="pagination pt-3">
-        <p class="text-next fw-bold">Next</p>
-      </div>
-    </div>
-
-  </div> -->
-  
-</div>
   <!-- end container -->
 </section>
 <!-- end what client says -->

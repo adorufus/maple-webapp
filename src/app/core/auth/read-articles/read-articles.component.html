@@ -14,7 +14,7 @@
             <p class="text-right">by Author • {{(article | async)?.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
             <hr>
 
-                <img src="{{(article | async)?.content_image}}" alt="img">
+                <img style="object-fit: cover;" src="{{(article | async)?.content_image}}" alt="img">
                 <br> <br>
                <table class="text-justify">
                 <p [innerHTML]="(article | async)?.content"></p>
