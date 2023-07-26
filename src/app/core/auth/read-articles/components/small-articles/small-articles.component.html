@@ -1,6 +1,6 @@
 <div *ngFor="let article of articles | async;" class="card">
 
-    <img style="object-fit: cover;" src="{{article.content_image}}" alt="Image 1">
+    <img style="object-fit: cover; height: 35.3vh; background-color: black;" src="{{article.content_image}}" alt="Image 1">
 
     <h6 (click)="readClick(article.id)" class="right-column"
         style="text-decoration: underline 1.5px; cursor: pointer; ">Read</h6>
