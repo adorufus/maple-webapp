@@ -10,7 +10,7 @@
         <div *ngIf="title.split(' ').length  == 2 && title != 'Latest'; else singleText ">
           <span class="text">{{title.split(' ')[0]}}{{title.split(' ')[2]}} <br /> Videos</span>
         </div>
-        <ng-template #singleText><span class="text">{{title}} <br />Videos</span></ng-template>
+        <ng-template #singleText><span class="text">{{title}} Videos</span></ng-template>
       </div>
       <div class="col-1 mt-4">
         <hr class="hr">
