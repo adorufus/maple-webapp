@@ -14,7 +14,7 @@
 
   .marquee {
     display: inline-block;
-    padding-right: 236px; /* Adjust the padding as per your requirements */
+    padding-right: 436px; /* Adjust the padding as per your requirements */
     animation: marquee 20s linear infinite;
     padding-top: 1vh;
     animation-delay: 0.5s;
@@ -46,6 +46,7 @@
   @media screen and (max-width:769px) {
     .marquee{
       padding-top: 7px;
+      padding-right: 136px; /* Adjust the padding as per your requirements */
     }
 
   }
