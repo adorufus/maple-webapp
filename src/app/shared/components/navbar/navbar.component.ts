@@ -132,6 +132,11 @@ export class NavbarComponent implements OnInit {
         })
       : this.router.navigate([`/${routeName}`]);
     this.currentSection = routeName;
+
+    const nav = document.getElementById('navbarNav');
+    if (nav !== null) {
+      nav.classList.remove('show');
+    }
   }
 
   onAboutClick() {
@@ -139,6 +144,11 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
     window.scrollTo(0,1080);
     }, 100);
+
+    const nav = document.getElementById('navbarNav');
+    if (nav !== null) {
+      nav.classList.remove('show');
+    }
   }
 
   onCollabClick() {
@@ -146,6 +156,11 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo(0, 2843);
     }, 100);
+
+    const nav = document.getElementById('navbarNav');
+    if (nav !== null) {
+      nav.classList.remove('show');
+    }
   }
 
   onContactClick() {
@@ -153,6 +168,11 @@ export class NavbarComponent implements OnInit {
     setTimeout(() => {
       window.scrollTo(0, 3650);
     }, 100);
+
+    const nav = document.getElementById('navbarNav');
+    if (nav !== null) {
+      nav.classList.remove('show');
+    }
   }
 
   onLoginClick() {
