@@ -10,7 +10,7 @@
       <p style="font-size: 20px; font-weight: bold; font-family: 'Sequel Sans Heavy Disp', sans-serif">{{indexZeroArticle.title}}</p>
       <p [innerHTML]="indexZeroArticle.short_content"></p> <br> <br>
       <!-- <p class="p1">Author: Author Name</p> -->
-      <p class="p2">Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br><br><br>
+      <p class="p2">Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br>
       <a (click)="readClick(indexZeroArticle.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%; "></a>
     </div>
   </div>

@@ -122,6 +122,7 @@ export class NavbarComponent implements OnInit {
     if (nav !== null) {
       nav.classList.toggle('show');
     }
+    
   }
 
   onNavClick(routeName: string) {
