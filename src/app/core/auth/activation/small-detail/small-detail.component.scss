@@ -1,9 +1,16 @@
 .client-box-2 {
-    background-color: black;
-    color: white;
-  }
+  background-color: black;
+  color: white;
+}
 
-  .card{
-    margin-top: 26px;
-    cursor: pointer;
+.card {
+  margin-top: 26px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 767px) {
+  img {
+    height: 39vh;
+
+  }
 }
