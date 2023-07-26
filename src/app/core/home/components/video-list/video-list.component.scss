@@ -43,15 +43,17 @@
     width: 340px ;
     height: 33vh !important;
   }
+  
 }
 
-@media only screen and (max-width: 320px) {
+@media only screen and (max-width: 426px) {
   .client-slider-one .client-box {
     text-align: start
   }
 
   .client-box {
     width: 100% ;
+    height: 40vh !important;
   }
 
   
