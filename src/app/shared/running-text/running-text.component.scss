@@ -51,15 +51,9 @@
 }
 
 @media  screen and (max-width:786px) {
-  .marquee-container {
-    overflow: hidden;
-    position: relative;
-    height: 5vh;
-    background-color: #A3FF00 !important;
-  }
-
   .marquee {
     margin-top: -7px;
+    padding-right: 35px;
   }
 }
 
