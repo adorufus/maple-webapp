@@ -31,13 +31,14 @@
     font-weight: bold;
     font-size: 36px;
     line-height: 36px;
-
+    color: black;
     margin-left: 2%;
   }
   
   .fw-lighter{
     font-family: 'bebas neue', sans-serif;
     font-size: 36px;
+    color: black;
   }
   
   @keyframes marquee {
@@ -47,7 +48,8 @@
 
   @media screen and (max-width:769px) {
     .marquee{
-      padding-top: 0px;
+      padding-top: 7px;
+      padding-right: 150px;
     }
     
   }
