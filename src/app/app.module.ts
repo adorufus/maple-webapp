@@ -26,8 +26,7 @@ import {AngularFirestoreModule} from "@angular/fire/compat/firestore";
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import {NgxPaginationModule} from 'ngx-pagination';
 import { UserComponent } from './shared/components/user/user.component';
-
-
+import  {AngularFireAnalyticsModule} from "@angular/fire/compat/analytics";
 
 
 @NgModule({
@@ -48,9 +47,10 @@ import { UserComponent } from './shared/components/user/user.component';
     AngularFireModule.initializeApp(environment.firebase),
     AngularFireAuthModule,
     AngularFirestoreModule,
+    AngularFireAnalyticsModule,
     NgbDropdownModule,
     MatSlideToggleModule,
-    NgxPaginationModule
+    NgxPaginationModule,
   ],
   providers: [AuthService],
   bootstrap: [AppComponent]

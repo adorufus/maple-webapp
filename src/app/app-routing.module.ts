@@ -25,9 +25,12 @@ import { UserComponent } from './shared/components/user/user.component';
 const routes: Routes = [
   {
     path: 'auth',
-    component: LoginComponent
+    component: LoginComponent,
+    data: {
+      title: "auth"
+    }
   },
-  
+
   // {
   //   path: 'kesasar',
   //   component: NotfoundComponent
@@ -104,14 +107,14 @@ const routes: Routes = [
         path: 'user',
         component: UserComponent
       },
-      
+
       {
         path: '',
         redirectTo: 'home',
         pathMatch: 'full'
       }
     ]
-    
+
   }
 ];
 

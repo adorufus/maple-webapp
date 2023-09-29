@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
+import {AngularFireAnalytics} from "@angular/fire/compat/analytics";
 
 @Component({
   selector: 'app-produk',
@@ -13,7 +14,7 @@ export class ProdukComponent implements OnInit {
   public articles?: Observable<any[]>
   public indexZeroProduct?: any
 
-  constructor(private router: Router, private firestoreService:FirestoreService) {}
+  constructor(private router: Router, private firestoreService:FirestoreService, private analytics: AngularFireAnalytics) {}
 
 
   ngOnInit() {
@@ -29,12 +30,21 @@ export class ProdukComponent implements OnInit {
     }
   }
 
-  onClick(productId: string) {
-    this.router.navigate(['/detail'], {
-      queryParams: {
-        id: productId
-      }
+  onClick(productId: string, product_detail: any) {
+
+    this.analytics.logEvent("product_click", {
+      item: product_detail.title
+    }).then(d => {
+
+      console.log("successfully logged product click", d)
+      this.router.navigate(['/detail'], {
+        queryParams: {
+          id: productId
+        }
+      })
+      window.scroll(0, 0)
     })
-    window.scroll(0, 0)
+
+
   }
 }
