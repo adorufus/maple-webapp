@@ -63,6 +63,7 @@ import { CollaborationComponent } from './auth/home-company/components/collabora
 import { ContactComponent } from './auth/home-company/components/contact/contact.component';
 import { TextPlayComponent } from './auth/shared/text-play/text-play.component';
 import { TextAllComponent } from './auth/shared/text-all/text-all.component';
+import {MatIconModule} from "@angular/material/icon";
 
 @NgModule({
   declarations: [
@@ -119,8 +120,8 @@ import { TextAllComponent } from './auth/shared/text-all/text-all.component';
     ContactComponent,
     TextPlayComponent,
     TextAllComponent
-    
-    
+
+
   ],
   exports: [
     NewsHomeComponent,
@@ -136,11 +137,12 @@ import { TextAllComponent } from './auth/shared/text-all/text-all.component';
     CarouselModule,
     FeatherModule,
     YouTubePlayerModule,
-    LazyLoadImageModule
+    LazyLoadImageModule,
+    MatIconModule
   ],
   providers: [
     CategoriesComponent, { provide:
-    LAZYLOAD_IMAGE_HOOKS, 
+    LAZYLOAD_IMAGE_HOOKS,
       useClass: ScrollHooks }]
 })
 export class CoreModule { }

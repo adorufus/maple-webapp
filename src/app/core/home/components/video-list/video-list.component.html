@@ -10,12 +10,13 @@
         <div class="client-slider-one">
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
             <ng-template carouselSlide *ngFor='let value of videos | async'>
-              <div class="client-box">
-                <div style="height: 80%; padding-bottom: 1vh">
+              <div class="client-box" style="overflow: hidden">
+                <div style="height: 50%; padding-bottom: 1vh">
                   <img (click)="onVideo(value.vidID,value.id)" style="height: 100%; object-fit: cover;"
                     src="{{value.thumbnails.standard.url}}" alt="">
                 </div>
-                <h6>{{value.title}}</h6>
+                <h6 class="px-3">{{value.title}}</h6>
+                <div class="d-flex px-3 pb-3" style="font-size: 0.5rem; bottom: 0; color: #D3D3D3; position: absolute">test tanggal ajah</div>
               </div>
 
 

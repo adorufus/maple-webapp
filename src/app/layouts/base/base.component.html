@@ -1,9 +1,11 @@
-<app-navbar></app-navbar>
-<div *ngIf="isLoading" class="spinner-wrapper">
-  <div class="spinner">Loading...</div>
-</div>
+<section class="background-black">
+  <app-navbar></app-navbar>
+  <div *ngIf="isLoading" class="spinner-wrapper">
+    <div class="spinner">Loading...</div>
+  </div>
 
-<div contentAnimate *ngIf="!isLoading">
-  <router-outlet></router-outlet>
-</div>
-<app-footer></app-footer>
+  <div contentAnimate *ngIf="!isLoading">
+    <router-outlet></router-outlet>
+  </div>
+  <app-footer></app-footer>
+</section>

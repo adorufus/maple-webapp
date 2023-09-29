@@ -1,9 +1,6 @@
 <app-banner class="component-margin"></app-banner>
-<app-categories></app-categories>
-<app-video-list title="Latest Video"></app-video-list>
-<div *ngFor="let cat of segments | async; let i = index">
-  <app-video-list [title]="cat.name"></app-video-list>
-</div>
+<!--<app-categories></app-categories>-->
+<app-video-list title="Latest Videos"></app-video-list>
 <div class="container">
   <app-scroller-menu-title title="Articles"></app-scroller-menu-title>
 </div>

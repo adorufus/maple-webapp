@@ -26,7 +26,7 @@ export class VideoListComponent implements OnInit {
   ngOnInit() {
     console.log(this.title);
     let temp =
-      this.title == 'Latest Video'
+      this.title == 'Latest Videos'
         ? this.firestoreService.getCollection('media', (ref) =>
             ref.orderBy('upload_date', 'desc').limit(5)
           )
