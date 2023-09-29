@@ -1,7 +1,8 @@
 <nav class="navbar navbar-expand-lg navbar-dark sticky" id="navbar" (window:scroll)="windowScroll()">
   <div class="container">
     <a class="navbar-brand">
-      <img (click)="onNavClick('home-company')" src="assets/images/logo/maple-logo.png" alt="" style="width: 100px; height: 100%;" />
+      <img (click)="onNavClick('home-company')" src="assets/images/logo/maple-logo.png" alt=""
+        style="width: 100px; height: 100%;" />
     </a>
     <a href="javascript:void(0)" class="navbar-toggler" (click)="toggleMenu()" data-bs-toggle="collapse"
       data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -15,19 +16,15 @@
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              FOR YOU <img src="assets/images/nav.svg" alt="svg">
+              About Us <img src="assets/images/nav.svg" alt="svg">
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
-            href="javascript: void(0);" (click)="onNavClick('home')">Home</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
-                (click)="onNavClick('media')">Video</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
-                (click)="onNavClick('articles')">Article</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
-                (click)="onNavClick('store')">Dept.store</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
-                (click)="onNavClick('activation')">Activation</button>
+                href="javascript: void(0);" (click)="onNavClick('home')">COMPANY</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
+                href="javascript: void(0);" (click)="onNavClick('media')">COLLABORATION</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
+                href="javascript: void(0);" (click)="onNavClick('articles')">CONTACT</button>
             </div>
           </div>
         </li>
@@ -35,30 +32,52 @@
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              COMPANY <img src="assets/images/nav.svg" alt="svg">
+              Program <img src="assets/images/nav.svg" alt="svg">
             </button>
-            <div ngbDropdownMenu class="shadow-border" aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'about'}" href="javascript: void(0);"
-              (click)="onAboutClick()">About</button>
-            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'collaboration'}" href="javascript: void(0);"
-              (click)="onCollabClick()">Collaboration</button>
-            <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'contact'}" href="javascript: void(0);"
-              (click)="onContactClick()">Contact</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
+                href="javascript: void(0);" (click)="onNavClick('home')">REWIND</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
+                href="javascript: void(0);" (click)="onNavClick('media')">WANDER</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
+                href="javascript: void(0);" (click)="onNavClick('articles')">BREAKING BAD NEWS</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}"
+                href="javascript: void(0);" (click)="onNavClick('store')">CAN!</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">TRICK ROOM</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">DIXI</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">UNSCENE</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">PLAY ROOM</button>
             </div>
           </div>
+        </li>
 
+        <li class="nav-item">
+          <button class="btn btn-12" [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+            (click)="onNavClick('articles')">Article</button>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'activation'}"
+            href="javascript: void(0);" (click)="onNavClick('activation')">Games</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('store')">Shop</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('app')">App</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('films')">Maple Films</button>
         </li>
       </ul>
-      <div *ngIf="user != undefined; else siginin">
-        <app-user [imageUrl]="user.photoURL"></app-user>
-      </div>
-
-
-      <ng-template #siginin>
-        <a href="javascript:void(0);" (click)="onLoginClick()"
-           class="btn btn-sm nav-btn text-primary mb-4 mb-lg-0 btn-signin">Sign in
-        </a>
-      </ng-template>
+      <i-feather name="search" style="color: white;"></i-feather>
 
     </div>
   </div>
