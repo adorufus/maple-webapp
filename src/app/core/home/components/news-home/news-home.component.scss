@@ -13,12 +13,11 @@ p{
 
 .p1, .p2{
   font-family: 'Sequel Sans Roman Head', sans-serif;
-  color: black;
 }
 
 .short_content{
 font-family: 'Sequel Sans Roman HeadS', sans-serif;
-color: black;
+// color: black;
 }
 
 .col {
@@ -39,7 +38,6 @@ color: black;
 
 .image {
   width: 100%;
-  height: auto;
 }
 
 .right-column {
@@ -48,9 +46,15 @@ color: black;
   padding: 20px !important;
 }
 
+.custom-card {
+  padding: 0px;
+  background: #252323;
+  color: white;
+  height: 255px
+}
+
 .vertical-container {
   display: flex;
-  flex-direction: column;
   height: 100%;
   padding: 12px;
 }
