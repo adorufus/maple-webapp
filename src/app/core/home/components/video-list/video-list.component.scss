@@ -1,5 +1,4 @@
 .client-box {
-  width: 15.375rem;
   height: 16rem !important;
   background-color: #252323;
   color: white;
@@ -10,7 +9,7 @@
 }
 
 .owl-theme .owl-nav {
-   background-color: transparent !important;
+  background-color: transparent !important;
 }
 
 .client-slider-one .client-box {
@@ -18,9 +17,14 @@
   font-size: 14pt;
 }
 
+.owl-carousel .owl-item {
+  width: 15.375rem;
+}
+
 .section {
   padding: 0;
 }
+
 .owl-prev .owl-next {
   color: white;
   font-size: 55px;
@@ -32,41 +36,36 @@
   border-radius: 3px;
 }
 
-.text{
- text-align: right;
- margin-top: -60px;
+.text {
+  text-align: right;
+  margin-top: -60px;
 }
 
-.text:hover{
-  color: #6123B5;
+.text:hover {
+  color: #6123b5;
 }
 
-.carousel{
+.carousel {
   width: 280px;
 }
 
-#owl-example .item{
+#owl-example .item {
   margin-right: 80px;
 }
 @media screen and (max-width: 769px) {
   .client-box {
-    width: 340px ;
+    width: 340px;
     height: 33vh !important;
   }
-
 }
 
 @media only screen and (max-width: 426px) {
   .client-slider-one .client-box {
-    text-align: start
+    text-align: start;
   }
 
   .client-box {
-    width: 100% ;
+    width: 100%;
     height: 40vh !important;
   }
-
-
-
-
 }

@@ -64,6 +64,7 @@ import { ContactComponent } from './auth/home-company/components/contact/contact
 import { TextPlayComponent } from './auth/shared/text-play/text-play.component';
 import { TextAllComponent } from './auth/shared/text-all/text-all.component';
 import {MatIconModule} from "@angular/material/icon";
+import { PopularVideoComponent } from './home/components/popular-video/popular-video.component';
 
 @NgModule({
   declarations: [
@@ -119,9 +120,8 @@ import {MatIconModule} from "@angular/material/icon";
     CollaborationComponent,
     ContactComponent,
     TextPlayComponent,
-    TextAllComponent
-
-
+    TextAllComponent,
+    PopularVideoComponent
   ],
   exports: [
     NewsHomeComponent,
