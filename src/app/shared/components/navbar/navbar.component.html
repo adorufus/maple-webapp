@@ -16,6 +16,93 @@
         <li class="nav-item">
           <div ngbDropdown class="d-inline-block">
             <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
+              <div>About Us</div>
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
+                href="javascript: void(0);" (click)="onNavClick('company')">COMPANY</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
+                href="javascript: void(0);" (click)="onNavClick('media')">COLLABORATION</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
+                href="javascript: void(0);" (click)="onNavClick('articles')">CONTACT</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
+              Program
+            </button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
+                href="javascript: void(0);" (click)="onNavClick('home')">REWIND</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
+                href="javascript: void(0);" (click)="onNavClick('media')">WANDER</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
+                href="javascript: void(0);" (click)="onNavClick('articles')">BREAKING BAD NEWS</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}"
+                href="javascript: void(0);" (click)="onNavClick('store')">CAN!</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">TRICK ROOM</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">DIXI</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">UNSCENE</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
+                href="javascript: void(0);" (click)="onNavClick('activation')">PLAY ROOM</button>
+            </div>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <button class="btn btn-12" [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+            (click)="onNavClick('articles')">Article</button>
+        </li>
+
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'activation'}"
+            href="javascript: void(0);" (click)="onNavClick('activation')">Games</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('store')">Shop</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('app')">App</button>
+        </li>
+        <li class="nav-item">
+          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+            href="javascript: void(0);" (click)="onNavClick('films')">Maple Films</button>
+        </li>
+      </ul>
+      <i-feather name="search" style="color: white;"></i-feather>
+
+    </div>
+  </div>
+</nav>
+
+
+
+<!-- <nav class="bg-black">
+  <div class="max-w-screen-xl container flex flex-wrap items-center justify-between mx-auto">
+    <a class="navbar-brand">
+      <img (click)="onNavClick('home-company')" src="assets/images/logo/maple-logo.png" alt=""
+        style="width: 100px; height: 100%;" />
+    </a>
+    <a href="javascript:void(0)" class="navbar-toggler" (click)="toggleMenu()" data-bs-toggle="collapse"
+      data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggle-icon">
+        <i-feather name="menu"></i-feather>
+      </span>
+    </a>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav text-white mx-auto navbar-center mt-lg-0 mt-2">
+
+        <li class="nav-item">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
               About Us <img src="assets/images/nav.svg" alt="svg">
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
@@ -81,5 +168,4 @@
 
     </div>
   </div>
-  <!-- end container -->
-</nav>
+</nav> -->
