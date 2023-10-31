@@ -9,6 +9,7 @@
 // Be sure that you only ever include this mixin once!
 @include mat.core();
 
+
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
 // hue. Available color palettes: https://material.io/design/color/
@@ -70,6 +71,8 @@ $maple-webapp-theme: mat.define-light-theme((
 /* You can add global styles to this file, and also import other style files */
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
 @import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
+
+
 
 @font-face {
   font-family: 'Sequel Sans Heavy Disp';
@@ -252,3 +255,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+//@tailwind base;
+//@tailwind components;
+//@tailwind utilities;

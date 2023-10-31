@@ -122,7 +122,7 @@ export class NavbarComponent implements OnInit {
     if (nav !== null) {
       nav.classList.toggle('show');
     }
-    
+
   }
 
   onNavClick(routeName: string) {
@@ -140,7 +140,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onAboutClick() {
-    this.router.navigate(['/home-company']);
+    this.router.navigate(['/company']);
     setTimeout(() => {
     window.scrollTo(0,1080);
     }, 100);
@@ -152,7 +152,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onCollabClick() {
-    this.router.navigate(['/home-company']);
+    this.router.navigate(['/company']);
     setTimeout(() => {
       window.scrollTo(0, 2843);
     }, 100);
@@ -164,7 +164,7 @@ export class NavbarComponent implements OnInit {
   }
 
   onContactClick() {
-    this.router.navigate(['/home-company']);
+    this.router.navigate(['/company']);
     setTimeout(() => {
       window.scrollTo(0, 3650);
     }, 100);

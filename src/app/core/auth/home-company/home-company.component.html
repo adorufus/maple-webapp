@@ -1,13 +1,17 @@
 <section class="hero-one-1 position-relative">
   <div class="hero">
-    <img class="image-padding" src="assets/images/home-company.png" alt="" style="width: 100%; position: absolute; z-index: 10" >
+    <!--    <img class="image-padding" src="assets/images/home-company.png" alt="" style="width: 100%; position: absolute; z-index: 10" >-->
     <div class="container">
-    <div class="row" >
-    <div class="col-lg-5 col-md-6 col-sm-12" >
-        <button (click)="onCollabClick()" class="btn btn-outline-light align-items-center" style="position: absolute; z-index: 10"  >We’ll make a great team <img  src='assets/images/arrow_forward_ios-white.svg'> </button>
-    </div> </div> </div>
+      <div class="row">
+        <!--        <div class="col-lg-5 col-md-6 col-sm-12">-->
+        <!--          <button (click)="onCollabClick()" class="btn btn-outline-light align-items-center"-->
+        <!--                  style="position: absolute; z-index: 10">We’ll make a great team <img-->
+        <!--            src='assets/images/arrow_forward_ios-white.svg'></button>-->
+        <!--        </div>-->
+      </div>
+    </div>
     <div class="content">
-      <video src="assets/videos/maple.mp4" webkit-playsinline playsinline style="width: 100%; position:relative;" [autoplay]="true" [muted]="true" [loop]="true"></video>
+      <img src="assets/images/Banner.svg" style="width: 100%">
     </div>
   </div>
   <!-- end container -->
@@ -15,42 +19,87 @@
 
 <app-running-text></app-running-text>
 
-<div class="container">
-    <div class="row no-gutters">
-        <div class="col-lg-12 col-md-6 col-sm-12">
-            <img class="logo" src="assets/images/logo-company.svg" alt="svg">
-
-            <h1>We don't provide the sweet syrup. Maple is a digital media that celebrates diverse perspectives and culture in an entertaining way.</h1>
+<div class="container my-5">
+  <section>
+    <app-scroller-menu-title title="Partners"></app-scroller-menu-title>
+    <div class="row gy-2 gx-2 mt-5">
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/redwoods.svg">
+          <div>Redwoods Digital is a full-service agency that helps
+            businesses grow Strategy, creativity, and technology under one tree.
+          </div>
         </div>
+      </div>
 
-        <div class="row no-gutters">
-            <div class="col-lg-8 col-md-6 col-sm-12">
-                <img src="assets/images/home-rewind.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-rewind.svg" alt="svg"><br>
-
-                <img style="padding-top: 113px;" src="assets/images/home-wander.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-wander.svg" alt="svg"><br>
-
-                <img style="padding-top: 113px;" src="assets/images/home-play.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-play.svg" alt="svg"><br>
-
-                <img style="padding-top: 113px;" src="assets/images/home-unscene.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-scene.svg" alt="svg"><br>
-            </div>
-
-            <div class="col-lg-4 col-md-6 col-sm-12">
-                <img class="trick" src="assets/images/home-trick.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-trick.svg" alt="svg"> <br>
-
-                <img style="padding-top: 113px;" src="assets/images/home-dixi.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-dixi.svg" alt="svg"><br>
-
-                <img style="padding-top: 113px;" src="assets/images/home-can.svg" alt="svg"><br><br><br>
-                <img class="text" src="assets/images/text-can.svg" alt="svg"><br>
-            </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/qualita.svg">
+          <div style="font-size: 1rem">We provide responsible packaging for a great
+            environmental impact. #PackforImpact
+          </div>
         </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/sorreal.svg">
+          <div style="font-size: 1rem">Your go-to podcast for self-improvement to tell you things
+            you always thought you knew (but didn't) and things you
+            never thought you wanted to know.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/maple-films.svg">
+          <div style="font-size: 1rem">The hangout for movie lovers! We're all about independent
+            creations. Join us for the scoop on new movies and a sneak
+            peek behind the scenes!
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/studio101.svg">
+          <div style="font-size: 1rem">Studio 101 is a podcast that caters to the creative industry,
+            providing a platform for artists, designers, and other
+            creative professionals.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/tempat-humble.svg">
+          <div style="font-size: 1rem">A chill, down-to-earth spot where you can just be
+            yourself and connect with others, no frills or fancy
+            distractions. It's all about keeping it real and authentic.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/stellars.svg">
+          <div style="font-size: 1rem">Platform slash marketplace to empower influencers and
+            creators for your business account.
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 lg:h-[17.75rem]">
+        <div class="w-100 p-5 h-100 space-y-[2.87rem]" style="background-color: #222222; color: white;">
+          <img class="" src="assets/images/castanea.svg">
+          <div style="font-size: 1rem">Castanea is your go-to digital printing partner.
+            We're all about quick and easy solutions without
+            compromising quality.
+          </div>
+        </div>
+      </div>
     </div>
+  </section>
+  <section class="flex flex-column justify-center gap-5">
+    <app-scroller-menu-title title="Masterminds"></app-scroller-menu-title>
+    <img src="assets/images/Mastermind-content.svg">
+  </section>
 </div>
 
-<app-collaboration></app-collaboration>
-<app-contact></app-contact>
+<!--<app-collaboration></app-collaboration>-->
+<!--<app-contact></app-contact>-->

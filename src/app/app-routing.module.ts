@@ -92,7 +92,7 @@ const routes: Routes = [
         component: DetailActivationComponent
       },
       {
-        path: 'home-company',
+        path: 'company',
         component: HomeCompanyComponent
       },
       {
