@@ -19,8 +19,9 @@ import { Detailproduk3Component } from './core/components/deptstore/detail/compo
 import { DetailActivationComponent } from './core/auth/activation/detail-activation/detail-activation.component';
 import { HomeCompanyComponent } from './core/auth/home-company/home-company.component';
 import { CollaborationComponent } from './core/auth/home-company/components/collaboration/collaboration.component';
-import { ContactComponent } from './core/auth/home-company/components/contact/contact.component';
+import { ContactComponent } from './core/contact/contact.component';
 import { UserComponent } from './shared/components/user/user.component';
+import { ColabComponent } from './core/colab/colab.component';
 
 const routes: Routes = [
   {
@@ -72,6 +73,14 @@ const routes: Routes = [
         component: ActivationComponent
       },
       {
+        path: 'collaboration',
+        component: ColabComponent
+      },
+      {
+        path: 'contact',
+        component: ContactComponent
+      },
+      {
         path: 'media',
         component: LatestComponent
       },
@@ -94,14 +103,6 @@ const routes: Routes = [
       {
         path: 'company',
         component: HomeCompanyComponent
-      },
-      {
-        path: 'collaboration',
-        component: CollaborationComponent
-      },
-      {
-        path: 'contact',
-        component: ContactComponent
       },
       {
         path: 'user',
