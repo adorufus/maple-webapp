@@ -66,6 +66,7 @@ import { TextAllComponent } from './auth/shared/text-all/text-all.component';
 import {MatIconModule} from "@angular/material/icon";
 import { PopularVideoComponent } from './home/components/popular-video/popular-video.component';
 import { ColabComponent } from './colab/colab.component';
+import { SegmentPageComponent } from './segment-page/segment-page.component';
 
 @NgModule({
   declarations: [
@@ -123,7 +124,8 @@ import { ColabComponent } from './colab/colab.component';
     TextPlayComponent,
     TextAllComponent,
     PopularVideoComponent,
-    ColabComponent
+    ColabComponent,
+    SegmentPageComponent
   ],
   exports: [
     NewsHomeComponent,
