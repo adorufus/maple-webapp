@@ -1,36 +1,15 @@
 <app-running-text></app-running-text>
-<section class="hero-one-1 position-relative"
-#top
-  style="background-image: url(../../../../../assets/images/banner-play.png);" id="home">
-  <!--  <div class="bg-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
-  <!--  <div class="bg-hero-overlay position-absolute top-0 end-0 bottom-0 start-0"></div>-->
-  <section class="section" id="review">
-    
-<div class="container">
-      <div class="row no-gutters">
-        <div class="col-lg-7 col-md-6 col-sm-12mt-12 pt-2">
-          <div class="client-slider-one">
-                <div>
-                  <youtube-player [videoId]="vidID" suggestedQuality="highres" [playerVars]="playerConfig" >
-                  </youtube-player>
-                </div>
-          </div>
-        </div>
-
-        <div class="col-lg-5 col-md-7 col-sm-12 mt-12 pt-4">
-          <table class="text-white">  
-            <h2>{{(indexZeroVideo | async)?.title}}</h2>
-            <p>{{(indexZeroVideo | async)?.description}}
-            
-            <br><br>  
-            The Maple Media • {{(indexZeroVideo | async)?.upload_date.toDate() | date:'MMMM, EE yyyy'}} </p>
-          </table>
-        </div>
-      </div>
+<div class="w-full flex flex-col">
+  <youtube-player [videoId]="vidID" [width]='innerWidth' [height]="innerWidth / (16/9)" suggestedQuality="highres"
+    [playerVars]="playerConfig">
+  </youtube-player>
+  <div class="p-10">
+    <table class="text-white">
+      <h2>{{(indexZeroVideo | async)?.title}}</h2>
+      <p class="text-[12px]">{{(indexZeroVideo | async)?.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</p>
+      <p>{{(indexZeroVideo | async)?.description}}</p>
+    </table>
+  </div>
 </div>
-  
-  </section>
-  <!-- end container -->
-</section>
 
-<app-banner-play title="Latest Video"></app-banner-play>
+<app-video-list title="Recommended for You"></app-video-list>

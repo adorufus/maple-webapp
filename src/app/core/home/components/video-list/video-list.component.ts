@@ -26,7 +26,7 @@ export class VideoListComponent implements OnInit {
   ngOnInit() {
     console.log(this.title);
     let temp =
-      this.title == 'Latest Videos'
+      this.title == 'Latest Videos' || 'Recommended for You'
         ? this.firestoreService.getCollection('media', (ref) =>
             ref.orderBy('upload_date', 'desc').limit(5)
           )
@@ -62,8 +62,8 @@ export class VideoListComponent implements OnInit {
     center: false,
     autoWidth: true,
     navText: [
-      "<div class='nav-button owl-prev'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
-      "<div class='nav-button owl-next'><img  src='assets/images/arrow_forward_ios.svg'></div>",
+      "<div class='nav-button owl-prev' style='top: 33% !important;'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
+      "<div class='nav-button owl-next' style='top: 33% !important;'><img  src='assets/images/arrow_forward_ios.svg'></div>",
     ],
     responsive: {
       0: {

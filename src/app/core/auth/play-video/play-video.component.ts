@@ -1,5 +1,5 @@
 import { TemplateBindingParseResult } from '@angular/compiler';
-import { Component, ElementRef, Input, OnInit, ViewChild } from '@angular/core';
+import { Component, ElementRef, HostListener, Input, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute, Route, Router } from '@angular/router';
 import { OwlOptions } from 'ngx-owl-carousel-o';
 import { Observable } from 'rxjs';
@@ -19,11 +19,14 @@ export class PlayVideoComponent implements OnInit {
   @Input() vidID: string = '';
   @Input() uid: string = '';
   @ViewChild('top', { static: true }) top?: ElementRef;
+  innerWidth?: any;
 
   constructor(
     private route: ActivatedRoute,
     private firestoreService: FirestoreService
-  ) {}
+  ) {
+    this.innerWidth = window.innerWidth
+   }
 
   ngOnInit(): void {
 
@@ -42,7 +45,12 @@ export class PlayVideoComponent implements OnInit {
     });
   }
 
-  
+  @HostListener('window:resize', ['$event'])
+  onResize(event: any) {
+    this.innerWidth = event.target.innerWidth;
+  }
+
+
 
   playerConfig = {
     controls: 1,

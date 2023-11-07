@@ -34,7 +34,16 @@
   /* display: inline-block; */
   cursor: pointer;
   border-radius: 3px;
+  top: 50% !important;
 }
+
+// .section .owl-next div {
+//   top: 33% !important;
+// }
+
+// .section .owl-prev div{
+//   top: 33% !important;
+// }
 
 .text {
   text-align: right;

@@ -1,11 +1,11 @@
-.text{
-    font-family: 'Sequel Sans',sans-serif;
-font-style: normal;
-font-weight: bold;
-font-size: 48px;
+.text {
+    font-family: "Sequel Sans", sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
 }
 
-.col-3{
+.col-3 {
     padding: 0 0 0 0;
 }
 
@@ -13,50 +13,44 @@ font-size: 48px;
     --bs-gutter-x: 3.5rem;
 }
 
-
-
-h2{
+h2 {
     font-size: 28px;
-    font-family: 'Sequel Sans Bold Disp', sans-serif;
+    font-family: "Sequel Sans Bold Disp", sans-serif;
     cursor: default;
 }
 
-p{
-    font-family: 'Sequel Sans Roman Head', sans-serif;
+p {
+    font-family: "Sequel Sans Roman Head", sans-serif;
     cursor: default;
 }
 
-@media screen and (max-width: 1025px){
-
+@media screen and (max-width: 1025px) {
     .col-md-7 {
         flex: 1 0 auto;
         width: 58.3333333333%;
     }
 
-    .html5-video-player .video-click-tracking, .html5-video-player .video-stream {
+    .html5-video-player .video-click-tracking,
+    .html5-video-player .video-stream {
         width: 550px !important;
-    height: 342px !important;
+        height: 342px !important;
     }
-
-   
 }
 
-@media screen and (max-width: 767px){
-
-    h2{
+@media screen and (max-width: 767px) {
+    h2 {
         padding-top: 5px;
         font-size: 20px;
     }
 
-    p{
+    p {
         font-size: 12px;
         height: 280px;
-    overflow: hidden;
-    overflow-y: scroll;
+        overflow: hidden;
+        overflow-y: scroll;
     }
 
-    .col-lg-5{
+    .col-lg-5 {
         padding-left: 38px;
     }
-
 }

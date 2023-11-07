@@ -179,7 +179,7 @@ $maple-webapp-theme: mat.define-light-theme((
   color: black !important;
   font-size: 58px !important;
   position:absolute !important;
-  top: 30px !important;
+  top: 33% !important;
   right: -60px !important;
 }
 
@@ -196,7 +196,7 @@ $maple-webapp-theme: mat.define-light-theme((
   color: black !important;
   font-size: 58px !important;
   position:absolute !important;
-  top: 30px !important;
+  top: 33% !important;
   left: -65px !important;
 
 }
@@ -232,7 +232,7 @@ html {
 }
 
 .owl-theme:active .owl-nav:hover {
-  background: white !important;
+  // background: white !important;
 }
 
 h6 {
