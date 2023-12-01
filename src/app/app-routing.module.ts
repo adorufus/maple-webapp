@@ -22,7 +22,6 @@ import { CollaborationComponent } from './core/auth/home-company/components/coll
 import { ContactComponent } from './core/contact/contact.component';
 import { UserComponent } from './shared/components/user/user.component';
 import { ColabComponent } from './core/colab/colab.component';
-import { SegmentPageComponent } from './core/segment-page/segment-page.component';
 
 const routes: Routes = [
   {
@@ -47,9 +46,6 @@ const routes: Routes = [
     children: [
       {
         path: "home", component: HomeComponent,
-      },
-      {
-        path: "segment", component: SegmentPageComponent
       },
       {
         path: "videos", component: VideosPageComponent,

@@ -35,22 +35,22 @@
               Program
             </button>
             <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'segment'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Rewind')">REWIND</button>
+              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
+                href="javascript: void(0);" (click)="onNavClick('home')">REWIND</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Wander')">WANDER</button>
+                href="javascript: void(0);" (click)="onNavClick('media')">WANDER</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
-                href="javascript: void(0);" (click)="onSegmentClick('bbn')">BREAKING BAD NEWS</button>
+                href="javascript: void(0);" (click)="onNavClick('articles')">BREAKING BAD NEWS</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}"
-                href="javascript: void(0);" (click)="onSegmentClick('CAN!')">CAN!</button>
+                href="javascript: void(0);" (click)="onNavClick('store')">CAN!</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('trickroom')">TRICK ROOM</button>
+                href="javascript: void(0);" (click)="onNavClick('activation')">TRICK ROOM</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Dixi')">DIXI</button>
+                href="javascript: void(0);" (click)="onNavClick('activation')">DIXI</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Unscene')">UNSCENE</button>
+                href="javascript: void(0);" (click)="onNavClick('activation')">UNSCENE</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Playroom')">PLAY ROOM</button>
+                href="javascript: void(0);" (click)="onNavClick('activation')">PLAY ROOM</button>
             </div>
           </div>
         </li>

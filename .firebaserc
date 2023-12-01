@@ -1,8 +1,5 @@
 {
   "projects": {
-    "default": "maple-web-cf927",
-    "staging": "maple-staging-9b8fd"
-  },
-  "targets": {},
-  "etags": {}
+    "default": "maple-web-cf927"
+  }
 }

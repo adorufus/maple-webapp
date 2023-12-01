@@ -1,12 +1,12 @@
-import { Component, OnInit } from '@angular/core'
-import { OwlOptions } from 'ngx-owl-carousel-o'
-import { Router } from '@angular/router'
-import { AngularFireAuth } from '@angular/fire/compat/auth'
+import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
+import { Router } from '@angular/router';
+import { AngularFireAuth } from '@angular/fire/compat/auth';
 
 interface content {
-  title: string
-  sub_title: string
-  content: string
+  title: string;
+  sub_title: string;
+  content: string;
 }
 
 @Component({
@@ -17,13 +17,13 @@ interface content {
 export class NavbarComponent implements OnInit {
   constructor(private router: Router, private fAuth: AngularFireAuth) {}
 
-  user?: any
+  user?: any;
 
-  currentSection = 'home'
+  currentSection = 'home';
 
-  heading: string = 'What Client Says'
+  heading: string = 'What Client Says';
   content: string =
-    'It is a long established fact that create category leading brand experiences a reader will be distracted by the readable content of a page when looking at its layout.'
+    'It is a long established fact that create category leading brand experiences a reader will be distracted by the readable content of a page when looking at its layout.';
   contentData: content[] = [
     {
       title: 'Powering Business',
@@ -49,7 +49,7 @@ export class NavbarComponent implements OnInit {
         '\n' +
         ' Est error maxime ullam veritatis beatae impedit sit illo nulla nemo dolor mollitia ea unde.',
     },
-  ]
+  ];
 
   /**
    * owl carousel slider
@@ -73,16 +73,16 @@ export class NavbarComponent implements OnInit {
       },
     },
     nav: false,
-  }
+  };
 
   ngOnInit(): void {
     this.fAuth.onAuthStateChanged((user) => {
       if (user) {
-        this.user = user
+        this.user = user;
       } else {
-        this.user = undefined
+        this.user = undefined;
       }
-    })
+    });
   }
 
   /**
@@ -91,17 +91,17 @@ export class NavbarComponent implements OnInit {
   // tslint:disable-next-line: typedef
 
   windowScroll() {
-    const navbar = document.getElementById('navbar')
+    const navbar = document.getElementById('navbar');
     if (
       document.body.scrollTop > 40 ||
       document.documentElement.scrollTop > 40
     ) {
       if (navbar !== null) {
-        navbar.classList.add('nav-sticky')
+        navbar.classList.add('nav-sticky');
       }
     } else {
       if (navbar !== null) {
-        navbar.classList.remove('nav-sticky')
+        navbar.classList.remove('nav-sticky');
       }
     }
   }
@@ -111,17 +111,18 @@ export class NavbarComponent implements OnInit {
    * @param sectionId specify the current sectionID
    */
   onSectionChange(sectionId: string) {
-    this.currentSection = sectionId
+    this.currentSection = sectionId;
   }
 
   /**
    * Toggle navbar
    */
   toggleMenu() {
-    const nav = document.getElementById('navbarNav')
+    const nav = document.getElementById('navbarNav');
     if (nav !== null) {
-      nav.classList.toggle('show')
+      nav.classList.toggle('show');
     }
+
   }
 
   onNavClick(routeName: string) {
@@ -129,65 +130,52 @@ export class NavbarComponent implements OnInit {
       ? this.router.navigate([`/${routeName}`], {
           queryParams: { segment: 'All' },
         })
-      : this.router.navigate([`/${routeName}`])
-    this.currentSection = routeName
+      : this.router.navigate([`/${routeName}`]);
+    this.currentSection = routeName;
 
-    const nav = document.getElementById('navbarNav')
+    const nav = document.getElementById('navbarNav');
     if (nav !== null) {
-      nav.classList.remove('show')
-    }
-  }
-
-  onSegmentClick(segmentType: string) {
-    this.router.navigate(['/segment'], {
-      queryParams: { type: segmentType },
-    })
-
-    this.currentSection = "segment"
-
-    const nav = document.getElementById('navbarNav')
-    if (nav !== null) {
-      nav.classList.remove('show')
+      nav.classList.remove('show');
     }
   }
 
   onAboutClick() {
-    this.router.navigate(['/company'])
+    this.router.navigate(['/company']);
     setTimeout(() => {
-      window.scrollTo(0, 1080)
-    }, 100)
+    window.scrollTo(0,1080);
+    }, 100);
 
-    const nav = document.getElementById('navbarNav')
+    const nav = document.getElementById('navbarNav');
     if (nav !== null) {
-      nav.classList.remove('show')
+      nav.classList.remove('show');
     }
   }
 
   onCollabClick() {
-    this.router.navigate(['/company'])
+    this.router.navigate(['/company']);
     setTimeout(() => {
-      window.scrollTo(0, 2843)
-    }, 100)
+      window.scrollTo(0, 2843);
+    }, 100);
 
-    const nav = document.getElementById('navbarNav')
+    const nav = document.getElementById('navbarNav');
     if (nav !== null) {
-      nav.classList.remove('show')
+      nav.classList.remove('show');
     }
   }
 
   onContactClick() {
-    this.router.navigate(['/company'])
+    this.router.navigate(['/company']);
     setTimeout(() => {
-      window.scrollTo(0, 3650)
-    }, 100)
+      window.scrollTo(0, 3650);
+    }, 100);
 
-    const nav = document.getElementById('navbarNav')
+    const nav = document.getElementById('navbarNav');
     if (nav !== null) {
-      nav.classList.remove('show')
+      nav.classList.remove('show');
     }
   }
 
   onLoginClick() {
-    this.router.navigate(['/auth'])
+    this.router.navigate(['/auth']);
   }
 }
