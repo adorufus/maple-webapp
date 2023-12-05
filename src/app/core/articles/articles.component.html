@@ -1,39 +1,43 @@
-<app-page-title>
-   <p style="color: black;font-family: 'Sequel Sans Heavy Disp', sans-serif" >Read <br> The Article</p>
-</app-page-title>
-<div class="container">
-  <div *ngIf="indexZeroArticle" class="row no-gutters">
-    <div class="col-lg-6 col-md-6 col-sm-12">
-      <img class="image" src="{{indexZeroArticle.content_image}}" alt="Image">
-    </div>
-    <div class="col-lg-6 col-md-6 col-sm-12 right-column">
-      <p style="font-size: 20px; font-weight: bold; font-family: 'Sequel Sans Heavy Disp', sans-serif">{{indexZeroArticle.title}}</p>
-      <p [innerHTML]="indexZeroArticle.short_content"></p> <br> <br>
-      <!-- <p class="p1">Author: Author Name</p> -->
-      <p class="p2">Post Date: {{indexZeroArticle.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br><br>
-      <a (click)="readClick(indexZeroArticle.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read more <img src="assets/images/arrow_next.svg" alt="svg" style="height: 4%; "></a>
-    </div>
-  </div>
+<section class="container sm:px-5 pt-[4.88rem] gap-y-[4.19rem]">
+  <p class="text-center text-[1.5rem] lg:text-[2.5rem] text-white font-medium">Read the Articles</p>
 
-  <ng-container *ngIf="articles|async as articlesAsync">
-  <div class="row pt-3">
-    <div *ngFor="let article of articlesAsync | paginate: {  itemsPerPage: item, currentPage: p }" class="col-lg-4 col-md-6 col-sm-12">
-      <div class="vertical-container card">
-        <img style="height: 35.3vh; object-fit: cover; background-color: black" class="image" src="{{article.content_image}}" alt="Image 1">
-        <div class="content">
-          <br>
-          <div style="font-family: Sequel Sans Heavy Disp, sans-serif; font-size: 14px; font-weight: bold; height: 5vh; cursor: default; color: black;">{{article.title}}</div><br>  
-          <div class="short_content" [innerHTML]="article.short_content"></div> <br> <br>
-          <!-- <p class="p1">Author: Author Name 1</p> -->
-          <p class="p2">Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br>
-          <a (click)="readClick(article.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif; color: black;">Read more</a><br><br><br>
-        </div>
+  <p class="text-[#A3FF00] text-[1.25rem] text-left">Recent Updates</p>
+
+  <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
+    <div *ngFor="let article of articles | async"
+      class="relative z-20 aspect-square h-[550px] max-h-[550px] p-5 w-full flex flex-col text-white bg-gray-600" (click)="readClick(article.id)">
+      <p class="text-sm md:text-[0.75rem] z-20">Friday, 8 September 2023</p>
+      <p class="text-sm md:text-[1.5rem] z-20 font-bold">{{article.title}}</p>
+      <p id="content"
+        class="text-sm z-20 h-[70%] overflow-hidden md:text-[15px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
+        [innerHTML]="article.short_content"></p>
+      <div class="grow"></div>
+      <div class="text-sm md:text-[0.75rem] flex z-20">4 min read • <div
+          class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
       </div>
+      <div class="absolute left-0 top-0 w-full h-full z-10 bg-gray-500 opacity-80"></div>
+      <img class="absolute left-0 top-0 w-full h-full object-cover z-0 filter blur"
+        [src]="article.content_image">
     </div>
   </div>
 
-  <div class="text-center">
-    <pagination-controls (pageChange)="onPageChange($event)" [maxSize]="maxSize"  [directionLinks]="directionLinks" ></pagination-controls>
+  <div class="w-full my-6 items-center bg-white gap-x-7 flex px-[2.5rem] py-[1.19rem]">
+    <div class="flex font-medium">Filter by <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
+        class="flex items-center justify-between pl-3 text-[#6123B5]">Tag <svg class="w-2.5 h-2.5 ml-2.5"
+          aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 1 4 4 4-4" />
+        </svg></button></div>
+    <div class="flex font-medium grow">Filter by <button id="filterDropdownButton" data-dropdown-toggle="filterDropdown"
+        class="flex items-center justify-between pl-3 text-[#6123B5]">Category <svg class="w-2.5 h-2.5 ml-2.5"
+          aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 10 6">
+          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="m1 1 4 4 4-4" />
+        </svg></button></div>
+    <div class="relative h-[2.875rem] w-[20rem]">
+      <img class="absolute -right-[-5%] -top-[-25%]" src="assets/images/search.svg">
+      <input class="border h-full w-full rounded-none placeholder:text-[#222222] py-[0.75rem] px-[1rem] border-black"
+        placeholder="Search article">
+    </div>
   </div>
-</ng-container>
-</div>
+</section>

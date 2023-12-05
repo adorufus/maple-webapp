@@ -2,28 +2,28 @@ import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
-import {AngularFireAnalytics} from "@angular/fire/compat/analytics";
+import { AngularFireAnalytics } from "@angular/fire/compat/analytics";
 
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
   styleUrls: ['./articles.component.scss']
 })
-export class ArticlesComponent implements OnInit{
+export class ArticlesComponent implements OnInit {
   public articles?: Observable<any[]>
   public indexZeroArticle?: any
   public maxSize: number = 5;
   public directionLinks: boolean = true;
 
-//page control
+  //page control
   p: number = 1;
-  item: number=9;
+  item: number = 9;
   onPageChange(page: number) {
     this.p = page;
     window.scrollTo(0, 0);
- }
+  }
 
-  constructor(private firestoreService: FirestoreService, private router: Router, private analytics: AngularFireAnalytics) {}
+  constructor(private firestoreService: FirestoreService, private router: Router, private analytics: AngularFireAnalytics) { }
 
   readClick(articleId: string) {
     this.router.navigate(['/read-articles'], {
@@ -35,7 +35,11 @@ export class ArticlesComponent implements OnInit{
       top: 0,
       left: 0,
       behavior: 'smooth'
-});
+    });
+  }
+
+  convertToPlainString(content: string): string {
+    return content.replace(/<[^>]*>/g, '')
   }
 
   ngOnInit() {
@@ -46,7 +50,7 @@ export class ArticlesComponent implements OnInit{
 
     let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc"))
 
-    if(temp instanceof Observable<any>) {
+    if (temp instanceof Observable<any>) {
       this.articles = temp
 
       this.articles.subscribe(test => {

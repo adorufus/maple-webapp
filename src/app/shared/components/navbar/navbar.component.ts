@@ -75,6 +75,20 @@ export class NavbarComponent implements OnInit {
     nav: false,
   };
 
+  onSegmentClick(segmentType: string) {
+    this.router.navigate(['/segment'], {
+      queryParams: { type: segmentType },
+    })
+
+    this.currentSection = "segment"
+
+    const nav = document.getElementById('navbarNav')
+    if (nav !== null) {
+      nav.classList.remove('show')
+    }
+  }
+
+
   ngOnInit(): void {
     this.fAuth.onAuthStateChanged((user) => {
       if (user) {
