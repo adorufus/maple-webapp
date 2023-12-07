@@ -13,21 +13,28 @@
   </div> -->
 
   <div *ngFor="let article of articles | async; let i = index" class="pt-3">
-    <div class="row custom-card">
-      <div class="col-lg-6 p-5">
-        <div
-          style="font-family: Sequel Sans Heavy Disp, sans-serif; font-size: 14px; font-weight: bold; height: 5vh;">
+    <div class="flex h-[255px] text-white w-full bg-[#252323]">
+      <div class="flex w-full flex-col px-3 py-3">
+        <div style="font-family: Sequel Sans Heavy Disp, sans-serif; font-size: 14px; font-weight: bold; height: 5vh;">
           {{article.title}}</div><br>
-        <div class="short_content" [innerHTML]="article.short_content"></div> <br> <br>
+        <div class="short_content h-[20%]" [innerHTML]="article.short_content"></div> <br> <br>
         <!-- <p class="p1">Author: Author Name 1</p> -->
         <p class="p2">Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br>
         <a (click)="readClick(article.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read
           more</a><br><br><br>
       </div>
-      <div class="col-lg-12" style="height: inherit; width: 255px; margin-left: auto;">
-        <img height="100%" style="width: inherit; object-fit: cover; background-color: black;" class="d-flex image" src="{{article.content_image}}"
-          alt="Image 1">
+      <div class="h-full w-[30%]">
+        <img class="h-full w-full" style="object-fit: cover; background-color: black;" 
+          src="{{article.content_image}}" alt="Image 1">
       </div>
     </div>
+    <!-- <div class="row custom-card">
+      <div class="col-lg-6 p-5">
+
+      </div>
+      <div class="col-lg-12" style="height: inherit; width: 255px; margin-left: auto;">
+
+      </div>
+    </div> -->
   </div>
 </div>

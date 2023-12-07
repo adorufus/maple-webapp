@@ -6,8 +6,8 @@
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
     <div *ngFor="let article of articles | async"
       class="relative z-20 aspect-square h-[550px] max-h-[550px] p-5 w-full flex flex-col text-white bg-gray-600" (click)="readClick(article.id)">
-      <p class="text-sm md:text-[0.75rem] z-20">Friday, 8 September 2023</p>
-      <p class="text-sm md:text-[1.5rem] z-20 font-bold">{{article.title}}</p>
+      <p class="text-sm md:text-[0.75rem] z-20">{{article.created_time.toDate() | date:'MMMM, EE yyyy'}}</p>
+      <p class="text-sm md:text-[1.5rem] z-20 font-bold leading-[150%]">{{article.title}}</p>
       <p id="content"
         class="text-sm z-20 h-[70%] overflow-hidden md:text-[15px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
         [innerHTML]="article.short_content"></p>

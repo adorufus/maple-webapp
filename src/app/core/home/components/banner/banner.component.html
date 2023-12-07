@@ -1,16 +1,7 @@
-<ngb-carousel>
-  <ng-template ngbSlide>
-    <div class="wrapper" style="background-color: #6123B5;"></div>
-  </ng-template>
-  <ng-template ngbSlide>
+<ngb-carousel class="h-[661px] pt-14 mb-10">
+  <ng-template *ngFor="let item of banners | async as list" ngbSlide>
     <div class="wrapper">
-      <img src="../../../../../assets/images/rewind.png" style="width: 100%;" alt="">
+      <img src="{{item.imageUrl}}" style="width: 100%;" alt="">
     </div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="wrapper" style="background-color: #6123B5;"></div>
-  </ng-template>
-  <ng-template ngbSlide>
-    <div class="wrapper" style="background-color: #6123B5;"></div>
   </ng-template>
 </ngb-carousel>

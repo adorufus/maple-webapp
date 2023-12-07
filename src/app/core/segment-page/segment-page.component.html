@@ -1,10 +1,11 @@
+<p>segment-page works!</p>
 <section class="w-full">
     <img *ngIf="bannerUrl" class="w-full" [src]="bannerUrl" />
 </section>
 
 <section class="px-[7.94rem] w-full mt-[6.19rem] mb-[3.75rem]">
     <div class="flex text-center justify-center items-center">
-        <p class="text-white text-[2.5rem] font-bold">Welcome Back to <span class="text-[#A3FF00]">Rewind</span></p>
+        <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Welcome Back to <span class="text-[#A3FF00]">{{segmentType}}</span></p>
     </div>
 
     <div class="w-full flex flex-col justify-center items-center gap-y-3">
