@@ -1,14 +1,13 @@
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 // Plus imports for other components in your app.
 
 // Include the common styles for Angular Material. We include this here so that you only
 // have to load a single css file for Angular Material in your app.
 // Be sure that you only ever include this mixin once!
 @include mat.core();
-
+@import url('https://fonts.cdnfonts.com/css/arvo');
 
 // Define the palettes for your theme using the Material Design palettes available in palette.scss
 // (imported above). For each palette, you can optionally specify a default, lighter, and darker
@@ -21,20 +20,21 @@ $maple-webapp-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$maple-webapp-theme: mat.define-light-theme((
-  color: (
-    primary: $maple-webapp-primary,
-    accent: $maple-webapp-accent,
-    warn: $maple-webapp-warn,
+$maple-webapp-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $maple-webapp-primary,
+      accent: $maple-webapp-accent,
+      warn: $maple-webapp-warn
+    )
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 @include mat.all-component-themes($maple-webapp-theme);
 
-
 // Custom Theming for Angular Material
 // For more information: https://material.angular.io/guide/theming
 
@@ -56,154 +56,150 @@ $maple-webapp-warn: mat.define-palette(mat.$red-palette);
 
 // Create the theme object. A theme consists of configurations for individual
 // theming systems such as "color" or "typography".
-$maple-webapp-theme: mat.define-light-theme((
-  color: (
-    primary: $maple-webapp-primary,
-    accent: $maple-webapp-accent,
-    warn: $maple-webapp-warn,
+$maple-webapp-theme: mat.define-light-theme(
+  (
+    color: (
+      primary: $maple-webapp-primary,
+      accent: $maple-webapp-accent,
+      warn: $maple-webapp-warn
+    )
   )
-));
+);
 
 // Include theme styles for core and each component used in your app.
 // Alternatively, you can import and @include the theme mixins for each component
 // that you are using.
 
 /* You can add global styles to this file, and also import other style files */
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.carousel';
-@import 'ngx-owl-carousel-o/lib/styles/scss/owl.theme.default';
-
-
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.carousel";
+@import "ngx-owl-carousel-o/lib/styles/scss/owl.theme.default";
 
 @font-face {
-  font-family: 'Sequel Sans Heavy Disp';
-  src: url('assets/font/Sequel Sans Heavy Disp.ttf') format('truetype');
+  font-family: "Sequel Sans Heavy Disp";
+  src: url("assets/font/Sequel Sans Heavy Disp.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Heavy Head';
-  src: url('assets/font/Sequel Sans Heavy Head.ttf') format('truetype');
+  font-family: "Sequel Sans Heavy Head";
+  src: url("assets/font/Sequel Sans Heavy Head.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Black Disp';
-  src: url('assets/font/Sequel Sans Black Disp.ttf') format('truetype');
+  font-family: "Sequel Sans Black Disp";
+  src: url("assets/font/Sequel Sans Black Disp.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Bold Disp';
-  src: url('assets/font/Sequel Sans Bold Disp.ttf') format('truetype');
+  font-family: "Sequel Sans Bold Disp";
+  src: url("assets/font/Sequel Sans Bold Disp.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Bold Head';
-  src: url('assets/font/Sequel Sans Bold Head.ttf') format('truetype');
+  font-family: "Sequel Sans Bold Head";
+  src: url("assets/font/Sequel Sans Bold Head.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Roman Head';
-  src: url('assets/font/Sequel Sans Roman Head.ttf') format('truetype');
+  font-family: "Sequel Sans Roman Head";
+  src: url("assets/font/Sequel Sans Roman Head.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Roman Disp';
-  src: url('assets/font/Sequel Sans Roman Disp.ttf') format('truetype');
+  font-family: "Sequel Sans Roman Disp";
+  src: url("assets/font/Sequel Sans Roman Disp.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Semi Bold';
-  src: url('assets/font/Sequel Sans Semi Bold Disp.ttf') format('truetype');
+  font-family: "Sequel Sans Semi Bold";
+  src: url("assets/font/Sequel Sans Semi Bold Disp.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Medium Head';
-  src: url('assets/font/Sequel Sans Medium Head.ttf') format('truetype');
+  font-family: "Sequel Sans Medium Head";
+  src: url("assets/font/Sequel Sans Medium Head.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'Sequel Sans Book Head';
-  src: url('assets/font/Sequel Sans Book Head.ttf') format('truetype');
+  font-family: "Sequel Sans Book Head";
+  src: url("assets/font/Sequel Sans Book Head.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bebas neue';
-  src: url('assets/font/BebasNeue Regular.ttf') format('truetype');
+  font-family: "bebas neue";
+  src: url("assets/font/BebasNeue Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bebas neue Book';
-  src: url('assets/font/BebasNeue Book.ttf') format('truetype');
+  font-family: "bebas neue Book";
+  src: url("assets/font/BebasNeue Book.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
-  font-family: 'bebas neue Bold';
-  src: url('assets/font/BebasNeue Bold.ttf') format('truetype');
+  font-family: "bebas neue Bold";
+  src: url("assets/font/BebasNeue Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
-.owl-next1{
-  top:100px !important;
+.owl-next1 {
+  top: 100px !important;
 }
-
 
 .owl-dots {
   margin-top: 20px !important;
 }
 
-
 .section .owl-next div {
   color: black !important;
   font-size: 58px !important;
-  position:absolute !important;
+  position: absolute !important;
   top: 33% !important;
   right: -60px !important;
 }
 
-
-.dropdown-item.active{
-  background-color:transparent;
+.dropdown-item.active {
+  background-color: transparent;
 }
 
-.dropdown-menu.show{
+.dropdown-menu.show {
   box-shadow: -5px 5px black;
 }
 
 .section .owl-prev div {
   color: black !important;
   font-size: 58px !important;
-  position:absolute !important;
+  position: absolute !important;
   top: 33% !important;
   left: -65px !important;
-
 }
 
-.owl-theme .owl-nav [class*=owl-]:hover {
+.owl-theme .owl-nav [class*="owl-"]:hover {
   background: transparent;
-  color: #FFF;
+  color: #fff;
   text-decoration: none;
 }
 
@@ -211,17 +207,15 @@ html {
   scroll-behavior: smooth !important;
 }
 
-@media screen and (max-width: 767px){
+@media screen and (max-width: 767px) {
   div > youtube-player > iframe {
-      display: block;
-      height: 100%;
-      width: 100%;
-    }
+    display: block;
+    height: 100%;
+    width: 100%;
+  }
 }
 
-
-
-.owl-theme .owl-nav [class*=owl-] {
+.owl-theme .owl-nav [class*="owl-"] {
   font-size: 14px;
   margin: 5px;
   padding: 4px 7px;
@@ -236,27 +230,54 @@ html {
 }
 
 h6 {
-  font-family: "Sequel Sans Bold Disp", sans-serif;}
+  font-family: "Sequel Sans Bold Disp", sans-serif;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 768px) {
-
-
   .section .owl-next div {
     color: transparent !important;
     font-size: 1px !important;
-    position:absolute !important;
+    position: absolute !important;
     top: 30px !important;
     right: 0px !important;
-   visibility: hidden;
+    visibility: hidden;
   }
 }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+}
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+* {
+  font-family: "Figtree";
+}
+
+/* figtree-latin-400-normal */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/figtree@latest/latin-400-normal.ttf) format("truetype");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304,
+    U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+/* figtree-latin-800-normal */
+@font-face {
+  font-family: "Figtree";
+  font-style: normal;
+  font-display: swap;
+  font-weight: 800;
+  src: url(https://cdn.jsdelivr.net/fontsource/fonts/figtree@latest/latin-800-normal.ttf) format("truetype");
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0300-0301, U+0303-0304,
+    U+0308-0309, U+0323, U+0329, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
 
 /* You can add global styles to this file, and also import other style files */
-@import 'tailwindcss/base';
-@import 'tailwindcss/components';
-@import 'tailwindcss/utilities';
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";

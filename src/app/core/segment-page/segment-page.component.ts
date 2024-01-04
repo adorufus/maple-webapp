@@ -53,7 +53,7 @@ export class SegmentPageComponent {
       console.log(paths['type'])
       this.segmentType =
         paths['type']
-      this.bannerUrl = `assets/images/${this.segmentType == "CAN!" ? "can" : this.segmentType.toLowerCase()}-banner.svg`
+      this.bannerUrl = `assets/images/banners/${this.segmentType.toUpperCase()}.jpg`
     })
 
     this.getVideos()

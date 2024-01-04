@@ -58,9 +58,10 @@ export class VideoListComponent implements OnInit {
     mouseDrag: true,
     touchDrag: true,
     pullDrag: false,
-    dots: true,
+    dots: false,
     center: false,
     autoWidth: true,
+    
     navText: [
       "<div class='nav-button owl-prev' style='top: 33% !important;'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
       "<div class='nav-button owl-next' style='top: 33% !important;'><img  src='assets/images/arrow_forward_ios.svg'></div>",

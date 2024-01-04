@@ -10,14 +10,17 @@
         <div class="client-slider-one">
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
             <ng-template carouselSlide *ngFor='let value of videos | async'>
-              <div class="client-box" style="overflow: hidden">
-                <div style="height: 50%; padding-bottom: 1vh">
-                  <img (click)="onVideo(value.vidID,value.id)" style="height: 100%; object-fit: cover;"
+              <div class="client-box hover:cursor-pointer" style="overflow: hidden">
+                <div style="height: 54%;">
+                  <img (click)="onVideo(value.vidID,value.id)" class="h-full object-cover"
                     src="{{value.thumbnails.standard.url}}" alt="">
                 </div>
-                <h6 class="px-3 mt-2">{{value.title}}</h6>
-                <div class="d-flex px-3 pb-3" style="font-size: 0.5rem; bottom: 0; color: #D3D3D3; position: absolute">
-                  {{value.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</div>
+                <div class="h-[40%]">
+                  <p class="px-3 mt-2 text-[14px]" style="font-family: 'Figtree' !important; font-weight: 800;">{{value.title}}</p>
+                  <div class="d-flex px-3 pb-3"
+                    style="font-size: 0.5rem; bottom: 0; color: #D3D3D3; position: absolute">
+                    {{value.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</div>
+                </div>
               </div>
 
 

@@ -3,21 +3,29 @@
   flex-wrap: wrap;
 }
 
-a{
+a {
   cursor: pointer;
 }
 
-p{
+p {
   cursor: default;
 }
 
-.p1, .p2{
-  font-family: 'Sequel Sans Roman Head', sans-serif;
+.p1,
+.p2 {
+  font-family: "Sequel Sans Roman Head", sans-serif;
 }
 
-.short_content{
-font-family: 'Sequel Sans Roman HeadS', sans-serif;
-// color: black;
+.short_content {
+  ::ng-deep {
+    p {
+      font-family: "arvo" !important;
+      // color: black;
+    }
+    span {
+      font-family: "arvo" !important;
+    }
+  }
 }
 
 .col {
@@ -50,7 +58,7 @@ font-family: 'Sequel Sans Roman HeadS', sans-serif;
   padding: 0px;
   background: #252323;
   color: white;
-  height: 255px
+  height: 255px;
 }
 
 .vertical-container {
@@ -59,11 +67,11 @@ font-family: 'Sequel Sans Roman HeadS', sans-serif;
   padding: 12px;
 }
 
-.container{
+.container {
   margin-bottom: 6rem;
 }
 
-.col-lg-4{
+.col-lg-4 {
   margin-bottom: 10px;
 }
 

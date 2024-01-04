@@ -15,17 +15,17 @@
   <div *ngFor="let article of articles | async; let i = index" class="pt-3">
     <div class="flex h-[255px] text-white w-full bg-[#252323]">
       <div class="flex w-full flex-col px-3 py-3">
-        <div style="font-family: Sequel Sans Heavy Disp, sans-serif; font-size: 14px; font-weight: bold; height: 5vh;">
+        <p class="text-[0.75rem] text-[#D3D3D3]">Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
+        <div style="font-family: Figtree, sans-serif; font-size: 1.25rem; font-weight: bold;">
           {{article.title}}</div><br>
-        <div class="short_content h-[20%]" [innerHTML]="article.short_content"></div> <br> <br>
+        <div class="short_content font-serif h-[20%]" [innerHTML]="article.short_content"></div> <br> <br>
         <!-- <p class="p1">Author: Author Name 1</p> -->
-        <p class="p2">Post Date: {{article.created_time.toDate() | date:'EEEE, MM yyyy'}}</p> <br>
         <a (click)="readClick(article.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read
           more</a><br><br><br>
       </div>
       <div class="h-full w-[30%]">
-        <img class="h-full w-full" style="object-fit: cover; background-color: black;" 
-          src="{{article.content_image}}" alt="Image 1">
+        <img class="h-full w-full" style="object-fit: cover; background-color: black;" src="{{article.content_image}}"
+          alt="Image 1">
       </div>
     </div>
     <!-- <div class="row custom-card">

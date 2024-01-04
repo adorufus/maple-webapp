@@ -1,7 +1,7 @@
-<nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="navbar" (window:scroll)="windowScroll()">
+<nav class="navbar navbar-expand-lg navbar-dark border-b-0 fixed-top" id="navbar" (window:scroll)="windowScroll()">
   <div class="container">
     <a class="navbar-brand">
-      <img class="cursor-pointer" (click)="onNavClick('/')" src="assets/images/logo/maple-logo.png" alt=""
+      <img class="cursor-pointer" (click)="onNavClick('/')" src="assets/images/logo/maple-logo.svg" alt=""
         style="width: 100px; height: 100%;" />
     </a>
     <a href="javascript:void(0)" class="navbar-toggler" (click)="toggleMenu()" data-bs-toggle="collapse"
@@ -11,31 +11,38 @@
       </span>
     </a>
     <div class="collapse navbar-collapse pt-3" id="navbarNav">
-      <ul class="navbar-nav text-white mx-auto navbar-center mt-lg-0 mt-2">
+      <ul class="navbar-nav text-white mx-auto space-x-[14px] navbar-center mt-lg-0 mt-2">
 
-        <li class="nav-item">
+        <li class="nav-item mr-5">
           <div ngbDropdown class="flex">
-            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
+            <button type="button" class="relative btn btn-12 text-[12px] font-extrabold" id="dropdownBasic1"
+              ngbDropdownToggle>
               <div>About Us</div>
+              <!-- <i-feather name="arrow-down" style="color: white;"></i-feather> -->
+              <mat-icon class="absolute -right-3 bottom-5" fontIcon="expand_more"></mat-icon>
             </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}"
-                href="javascript: void(0);" (click)="onNavClick('company')">COMPANY</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
-                href="javascript: void(0);" (click)="onNavClick('collaboration')">COLLABORATION</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
-                href="javascript: void(0);" (click)="onNavClick('contact')">CONTACT</button>
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1 text-[12px] font-extrabold">
+              <button class="show text-[12px] font-extrabold" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'home'}" href="javascript: void(0);"
+                (click)="onNavClick('company')">COMPANY</button>
+              <button class="show text-[12px] font-extrabold" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
+                (click)="onNavClick('collaboration')">COLLABORATION</button>
+              <button class="show text-[12px] font-extrabold" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+                (click)="onNavClick('contact')">CONTACT</button>
             </div>
           </div>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item pr-5">
           <div ngbDropdown class="d-inline-block">
-            <button type="button" class="btn btn-12" id="dropdownBasic1" ngbDropdownToggle>
-              Program
+            <button type="button" class="relative btn btn-12 text-[12px] font-[800]" id="dropdownBasic1" ngbDropdownToggle>
+              <div>Program</div>
+              <mat-icon class="absolute -right-3 bottom-5" fontIcon="expand_more"></mat-icon>
             </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'rewind'}"
+            <div ngbDropdownMenu aria-labelledby="dropdownBasic1 text-[12px] font-[800]">
+              <button class="show " ngbDropdownItem [ngClass]="{'active':currentSection === 'rewind'}"
                 href="javascript: void(0);" (click)="onSegmentClick('Rewind')">REWIND</button>
               <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
                 href="javascript: void(0);" (click)="onSegmentClick('Wander')">WANDER</button>
@@ -55,29 +62,29 @@
           </div>
         </li>
 
-        <li class="nav-item">
+        <li class="nav-item text-[12px]">
           <button class="btn btn-12" [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
             (click)="onNavClick('articles')">Article</button>
         </li>
 
-        <li class="nav-item">
-          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'activation'}"
+        <li class="nav-item text-[12px] ">
+          <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'activation'}"
             href="javascript: void(0);" (click)="onNavClick('activation')">Games</button>
         </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+        <li class="nav-item text-[12px]">
+          <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('store')">Shop</button>
         </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+        <li class="nav-item text-[12px]">
+          <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('app')">App</button>
         </li>
-        <li class="nav-item">
-          <button type="button" class="btn btn-12" [ngClass]="{'active':currentSection === 'store'}"
+        <li class="nav-item text-[12px] ">
+          <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('films')">Maple Films</button>
         </li>
       </ul>
-      <i-feather name="search" style="color: white;"></i-feather>
+      <i-feather class="mb-3" name="search" style="color: white;"></i-feather>
 
     </div>
   </div>

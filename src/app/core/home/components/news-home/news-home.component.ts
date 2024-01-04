@@ -6,7 +6,7 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-news-home',
   templateUrl: './news-home.component.html',
-  styleUrls: ['./news-home.component.scss']
+  styleUrls: ['./news-home.component.scss'],
 })
 export class NewsHomeComponent implements OnInit {
 

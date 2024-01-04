@@ -5,7 +5,8 @@
 
 <section class="px-[7.94rem] w-full mt-[6.19rem] mb-[3.75rem]">
     <div class="flex text-center justify-center items-center">
-        <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Welcome Back to <span class="text-[#A3FF00]">{{segmentType}}</span></p>
+        <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Welcome Back to <span
+                class="text-[#A3FF00]">{{segmentType}}</span></p>
     </div>
 
     <div class="w-full flex flex-col justify-center items-center gap-y-3">
@@ -16,29 +17,33 @@
                     <p class="font-semibold">{{indexOneData.title}}</p>
                     <p class="text-[0.75rem]">{{indexOneData.description}}</p>
                     <div class="grow"></div>
-                    <p class="text-[0.7rem]">{{indexOneData.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</p>
+                    <p class="text-[0.7rem]">{{indexOneData.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media
+                    </p>
                 </div>
             </div>
         </div>
-        <div *ngIf="videos"  class="grid grid-cols-4 gap-3">
+        <div *ngIf="videos" class="grid grid-cols-4 gap-3">
             <div *ngFor="let item of videos | async" class="h-[42.8vh] bg-[#252323] flex flex-col">
                 <div class="h-1/2 w-full">
                     <img class="w-full object-cover" src="{{item.thumbnails.medium.url}}">
                 </div>
-                <div class="p-[15px] text-white">
-                    <div style="font-weight: bold;">#REWIND with Coki Pardede: Drugs & Dark Comedy (Part 1)
-                        Mengaku Filsuf #TRICKROOM</div>
-                    <br />
+                <div class="p-[15px] h-full flex flex-col justify-between text-white">
+                    <p class="text-[14px] line-clamp-3" style="font-weight: bold;">{{item.title}}</p>
+
                     <div style="font-size: 8pt;">23/12/2022 • The Maple Media</div>
                 </div>
             </div>
         </div>
 
-        <div *ngIf="showMoreContentLoading" class="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">Showing More Content For You...</div>
+        <div *ngIf="showMoreContentLoading"
+            class="px-3 py-1 text-xs font-medium leading-none text-center text-blue-800 bg-blue-200 rounded-full animate-pulse dark:bg-blue-900 dark:text-blue-200">
+            Showing More Content For You...</div>
 
-        <button *ngIf="showMoreButton()" type="button" (click)="onShowMoreClick()" class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] p-[0.5rem] text-[#A3FF00] font-medium">Show More
+        <button *ngIf="showMoreButton()" type="button" (click)="onShowMoreClick()"
+            class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium">Show
+            More
             Videos</button>
     </div>
 
-    
+
 </section>

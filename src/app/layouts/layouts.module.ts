@@ -8,6 +8,7 @@ import {allIcons} from "angular-feather/icons";
 import { FooterComponent } from './footer/footer.component';
 import {NgbDropdown, NgbDropdownItem, NgbDropdownMenu, NgbDropdownToggle} from "@ng-bootstrap/ng-bootstrap";
 import { UserComponent } from '../shared/components/user/user.component';
+import { MatIconModule } from '@angular/material/icon';
 
 
 
@@ -17,6 +18,7 @@ import { UserComponent } from '../shared/components/user/user.component';
     CommonModule,
     RouterModule,
     FeatherModule.pick(allIcons),
+    MatIconModule,
     NgbDropdown,
     NgbDropdownItem,
     NgbDropdownMenu,
