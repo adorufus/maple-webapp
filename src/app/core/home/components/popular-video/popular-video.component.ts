@@ -23,11 +23,19 @@ export class PopularVideoComponent implements OnInit{
 
   ngOnInit(): void {
       this.popularVideoData = this.getVideoData()
-      
+
       this.popularVideoData.subscribe((data) => {
         console.log(data);
       }, error => console.log(error))
   }
 
-  
+  onShowMore() {
+    this.router.navigate(['/segment'], {
+      queryParams: {
+        type: 'Rewind'
+      }
+    })
+  }
+
+
 }

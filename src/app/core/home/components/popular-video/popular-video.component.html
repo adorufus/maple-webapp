@@ -1,44 +1,47 @@
 <!--what client says -->
-<section class="section" id="review">
-    <div class="container">
+<section class="section flex flex-col justify-center items-center" id="review">
+  <div class="container ">
 
-        <app-scroller-menu-title title="Popular Videos"></app-scroller-menu-title>
-        <!-- end row -->
-        <div class="row">
-            <div class="col-lg-12 col-md-12 col-sm-12 mt-4 pt-2">
-                <div class="row gx-3 gy-3">
-                    <div *ngFor="let item of (popularVideoData | async).slice(0, 2)" class="col-lg-6 col-md-6 col-sm-6">
-                        <div class="big-container d-flex flex-column">
-                            <div class="image-container">
-                                <img class="w-full h-full object-cover" src="{{item.thumbnails.standard.url}}" alt="">
-                            </div>
-                            <div class="content-container">
-                                <div style="font-weight: bold;">#REWIND with Coki Pardede: Drugs & Dark Comedy (Part 1)
-                                    Mengaku Filsuf #TRICKROOM</div>
-                                <br />
-                                <div style="font-size: 8pt;">23/12/2022 • The Maple Media</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="row gx-3 gy-3 pt-3">
-                    <div *ngFor="let item of (popularVideoData | async).slice(2, 6)" class="col-lg-3 col-md-6">
-                        <div class="small-container d-flex flex-column">
-                            <div class="small-image-container">
-                                <img class="w-full object-cover" src="{{item.thumbnails.high.url}}" alt="">
-                            </div>
-                            <div class="content-container">
-                                <div style="font-weight: bold;">#REWIND with Coki Pardede: Drugs & Dark Comedy (Part 1)
-                                    Mengaku Filsuf #TRICKROOM</div>
-                                <br />
-                                <div style="font-size: 8pt;">23/12/2022 • The Maple Media</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+    <app-scroller-menu-title title="Popular Videos"></app-scroller-menu-title>
+    <!-- end row -->
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 mt-4 pt-2">
+        <div class="row gx-3 gy-3">
+          <div *ngFor="let item of (popularVideoData | async).slice(0, 2)" class="col-lg-6 col-md-6 col-sm-6">
+            <div class="big-container d-flex flex-column">
+              <div class="image-container">
+                <img class="w-full h-full object-cover" src="{{item.thumbnails.standard.url}}" alt="">
+              </div>
+              <div class="content-container">
+                <div style="font-weight: bold;">{{item.title}}</div>
+                <br/>
+                <div style="font-size: 8pt;">{{item.upload_date.toDate() | date: 'dd/mm/yyyy'}} • The Maple Media</div>
+              </div>
             </div>
+          </div>
         </div>
+        <div class="row gx-3 gy-3 pt-3">
+          <div *ngFor="let item of (popularVideoData | async).slice(2, 6)" class="col-lg-3 col-md-6">
+            <div class="h-[277px] text-white bg-[#252323] flex flex-col">
+              <div class="small-image-container">
+                <img class="w-full h-full object-cover" src="{{item.thumbnails.high.url}}" alt="">
+              </div>
+              <div class="h-1/2 p-2 flex flex-col">
+                <div style="font-weight: bold;">{{item.title}}</div>
+                <div class="grow"></div>
+                <div style="font-size: 8pt;">{{item.upload_date.toDate() | date: 'dd/mm/yyyy'}} • The Maple Media</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- end container -->
+  </div>
+  <button (click)="onShowMore()" type="button"
+          class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium">
+    Show
+    All
+    Videos
+  </button>
+  <!-- end container -->
 </section>
-<!-- end what client says -->

@@ -25,4 +25,8 @@ export class VideosComponent implements OnInit{
       })
     }
   }
+
+  onShowMore() {
+
+  }
 }

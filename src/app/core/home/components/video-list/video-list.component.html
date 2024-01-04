@@ -1,7 +1,6 @@
 <!--what client says -->
-<section class="section" id="review">
+<section class="section flex flex-col justify-center items-center" id="review">
   <div class="container">
-
     <app-scroller-menu-title [title]="title"></app-scroller-menu-title>
     <app-see-videos [segmentId]="title"> </app-see-videos>
     <!-- end row -->
@@ -30,6 +29,12 @@
       </div>
     </div>
   </div>
+  <button (click)="onShowMore()" type="button"
+          class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium">
+    Show
+    All
+    Videos
+  </button>
   <!-- end container -->
 </section>
-<!-- end what client says -->
+

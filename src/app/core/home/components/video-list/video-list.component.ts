@@ -46,6 +46,14 @@ export class VideoListComponent implements OnInit {
     }
   }
 
+  onShowMore() {
+    this.router.navigate(['/segment'], {
+      queryParams: {
+        type: 'Rewind'
+      }
+    })
+  }
+
   onVideo(vidID: String, uid: string) {
     this.router.navigate(['/play-video'], {
       queryParams: { id: vidID,uid:uid },
@@ -61,7 +69,7 @@ export class VideoListComponent implements OnInit {
     dots: false,
     center: false,
     autoWidth: true,
-    
+
     navText: [
       "<div class='nav-button owl-prev' style='top: 33% !important;'><img  src='assets/images/arrow_back_ios_new.svg'></div>",
       "<div class='nav-button owl-next' style='top: 33% !important;'><img  src='assets/images/arrow_forward_ios.svg'></div>",
