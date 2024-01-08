@@ -59,6 +59,13 @@ export class SegmentPageComponent {
     this.getVideos()
   }
 
+  onVideo(vidID: String, uid: string) {
+    this.router.navigate(['/play-video'], {
+      queryParams: { id: vidID,uid:uid },
+    });
+    window.scroll(0, 0);
+  }
+
   showMoreButton(): boolean {
     if (this.limit > this.dataLength) {
       return false
