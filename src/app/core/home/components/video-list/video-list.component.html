@@ -10,7 +10,10 @@
           <owl-carousel-o [options]="customOptions" class="carousel slide text-center home-carousel">
             <ng-template carouselSlide *ngFor='let value of videos | async'>
               <div class="client-box hover:cursor-pointer" style="overflow: hidden">
-                <div style="height: 54%;">
+                <div class="relative" style="height: 54%;">
+                  <div class="absolute flex items-center p-2 justify-center right-2 bottom-1 h-5 w-12 text-[10px] bg-black">
+                    {{value.duration}}
+                  </div>
                   <img (click)="onVideo(value.vidID,value.id)" class="h-full object-cover"
                     src="{{value.thumbnails.standard.url}}" alt="">
                 </div>
@@ -18,7 +21,7 @@
                   <p class="px-3 mt-2 text-[14px]" style="font-family: 'Figtree' !important; font-weight: 800;">{{value.title}}</p>
                   <div class="d-flex px-3 pb-3"
                     style="font-size: 0.5rem; bottom: 0; color: #D3D3D3; position: absolute">
-                    {{value.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</div>
+                    {{value.publishedAt | date: 'dd/MM/yyyy' : 'UTC'}} • The Maple Media</div>
                 </div>
               </div>
 
@@ -30,7 +33,7 @@
     </div>
   </div>
   <button (click)="onShowMore()" type="button"
-          class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium">
+          class="bg-[#6123B5] mb-4 hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium">
     Show
     All
     Videos

@@ -1,0 +1,19 @@
+.isHidden {
+    visibility: visible;
+    display: block;
+}
+
+.resp-width {
+    width: 50%;
+}
+
+@media screen and (max-width: 768) {
+    .isHidden {
+        visibility: hidden;
+        margin: 1rem;
+    }
+
+    .resp-width {
+        width: 100%;
+    }
+}

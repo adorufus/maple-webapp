@@ -40,4 +40,8 @@ export class NewsHomeComponent implements OnInit {
       })
     }
   }
+
+  onShowMore() {
+    this.router.navigate(['/articles'])
+  }
 }

@@ -39,17 +39,15 @@
 
 
 .btn-primary12:active, .btn-primary12:hover, .btn-1:hover {
-  color: #6123B5;
+  color: #A3FF00;
   border: none;
 }
 
 .dropdown-item {
-  text-decoration: underline 1.5px;
-  text-underline-offset: 2px;
   font-family: 'Sequel Sans Roman Disp', sans-serif;
   font-weight: 410;
-  color: black;
-  background-color: white;
+  color: white;
+  background-color: black;
 }
 
 
@@ -59,18 +57,48 @@
 }
 
 .show:hover {
-  color: #6123B5;
+  // text-decoration: underline 1.5px;
+  // text-underline-offset: 2px;
+  color: #A3FF00;
 }
 
 .dropdown-menu.show {
   // border: 2.781px solid #000;
   border-radius: 0px;
   box-shadow: none;
+  // background-color: black;
   // box-shadow: -5px 5px black, -7px 7px white !important;
+}
+
+.dropdown-menu {
+  top: 80%;
+  background: black;
 }
 
 .btn-signin{
   font-family: 'Sequel Sans Medium Head', sans-serif;
   font-size: 14px;
+}
+
+@media screen and (max-width: 1000px) {
+
+  .collapse {
+    background: black;
+  }
+
+  .dropdown-menu {
+    top: 80%;
+    background: transparent
+  }
+
+  .container {
+    background: black
+  }
+
+  .mobile-margin {
+    margin-left: 14px;
+  }
+
+  
 }
 

@@ -28,6 +28,22 @@ p {
   }
 }
 
+@media screen and (max-width: 800px) {
+  .short_content {
+    ::ng-deep {
+      p {
+        font-family: "arvo" !important;
+        // color: black;
+        font-size: 8px !important;
+      }
+      span {
+        font-family: "arvo" !important;
+        font-size: 8px;
+      }
+    }
+  }
+}
+
 .col {
   flex: 0 0 50%;
   max-width: 50%;

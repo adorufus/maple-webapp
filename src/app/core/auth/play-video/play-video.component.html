@@ -4,11 +4,11 @@
     [playerVars]="playerConfig">
   </youtube-player>
   <div class="p-10">
-    <table class="text-white">
+    <div class="text-white">
       <h2>{{(indexZeroVideo | async)?.title}}</h2>
       <p class="text-[12px]">{{(indexZeroVideo | async)?.upload_date.toDate() | date:'dd/mm/yyyy'}} • The Maple Media</p>
       <p>{{(indexZeroVideo | async)?.description}}</p>
-    </table>
+    </div>
   </div>
 </div>
 

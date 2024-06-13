@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container flex flex-col items-center justify-center">
   <!-- <div *ngIf="indexZeroArticle" class="row no-gutters">
     <div class="col-lg-6 col-md-6 col-sm-12">
       <img class="image" src="{{indexZeroArticle.content_image}}" alt="Image">
@@ -12,18 +12,19 @@
     </div>
   </div> -->
 
-  <div *ngFor="let article of articles | async; let i = index" class="pt-3">
-    <div class="flex h-[255px] text-white w-full bg-[#252323]">
+  <div *ngFor="let article of articles | async; let i = index" class="pt-3 lg:block phone:hidden">
+    <div class="flex h-[270px] text-white w-full bg-[#252323]">
       <div class="flex w-full flex-col px-3 py-3">
         <p class="text-[0.75rem] text-[#D3D3D3]">{{article.created_time.toDate() | date:'EEEE, dd MMMM yyyy'}}</p>
-        <div style="font-family: Figtree, sans-serif; font-size: 1.25rem; font-weight: bold;">
+        <div class="text-[1.25rem]" style="font-family: Figtree, sans-serif; font-weight: bold;">
           {{article.title}}</div><br>
         <div class="short_content font-serif h-[20%]" [innerHTML]="article.short_content"></div> <br> <br>
         <!-- <p class="p1">Author: Author Name 1</p> -->
-<!--        <a (click)="readClick(article.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read-->
-<!--          more</a><br><br><br>-->
+        <!--        <a (click)="readClick(article.id)" style="font-family: 'Sequel Sans Roman Disp', sans-serif;">Read-->
+        <!--          more</a><br><br><br>-->
+        <div class="grow"></div>
         <div class="text-sm md:text-[0.75rem] flex z-20">4 min read • <div
-          class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
+            class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
         </div>
       </div>
       <div class="h-full w-[30%]">
@@ -40,4 +41,34 @@
       </div>
     </div> -->
   </div>
+
+  <div class="phone:flex flex-col lg:hidden justify-center items-center mb-4">
+    <div class="w-full gap-x-5 gap-y-5 justify-center grid lg:grid-cols-3">
+      <div *ngFor="let article of articles | async"
+        class="h-[654px] min-w-[332px] w-full flex flex-col gap-y-3 bg-[#222222]" (click)="readClick(article.id)">
+        <div class="h-[50%] w-full">
+          <img class="w-full h-full object-cover" [src]="article.content_image">
+        </div>
+        <div class="h-[50%] px-3 flex flex-col gap-y-3">
+          <p class="text-sm md:text-[0.75rem] text-[#D3D3D3] z-20">{{article.created_time.toDate() | date:'MMMM, EE
+            yyyy'}}</p>
+          <p class="text-sm md:text-[20px] text-white z-20 font-bold leading-[150%]">{{article.title}}</p>
+          <p id="content"
+            class="text-sm z-20 h-[70%] pt-3 overflow-hidden md:text-[12px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
+            [innerHTML]="article.short_content"></p>
+          <div class="grow"></div>
+          <div class="text-sm md:text-[0.75rem] text-white pb-4 flex z-20">4 min read • <div
+              class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <button (click)="onShowMore()" type="button"
+          class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-5 p-[0.5rem] text-[#A3FF00] font-medium">
+    Show
+    All
+    Articles
+  </button>
 </div>

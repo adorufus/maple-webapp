@@ -4,8 +4,9 @@
   <p class="text-[#A3FF00] text-[1.25rem] text-left">Recent Updates</p>
 
   <div class="grid grid-cols-1 lg:grid-cols-2 gap-3">
-    <div *ngFor="let article of articles | async"
-      class="relative z-20 aspect-square h-[550px] max-h-[550px] p-5 w-full flex flex-col text-white bg-gray-600" (click)="readClick(article.id)">
+    <div *ngFor="let article of articles | async | slice:0:6"
+      class="relative z-20 aspect-square h-[550px] max-h-[550px] p-5 w-full flex flex-col text-white bg-gray-600"
+      (click)="readClick(article.id)">
       <p class="text-sm md:text-[0.75rem] z-20">{{article.created_time.toDate() | date:'MMMM, EE yyyy'}}</p>
       <p class="text-sm md:text-[1.5rem] z-20 font-bold leading-[150%]">{{article.title}}</p>
       <p id="content"
@@ -16,8 +17,7 @@
           class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
       </div>
       <div class="absolute left-0 top-0 w-full h-full z-10 bg-gray-500 opacity-80"></div>
-      <img class="absolute left-0 top-0 w-full h-full object-cover z-0 filter blur"
-        [src]="article.content_image">
+      <img class="absolute left-0 top-0 w-full h-full object-cover z-0" [src]="article.content_image">
     </div>
   </div>
 
@@ -34,10 +34,39 @@
           <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
             d="m1 1 4 4 4-4" />
         </svg></button></div>
-    <div class="relative h-[2.875rem] w-[20rem]">
-      <img class="absolute -right-[-5%] -top-[-25%]" src="assets/images/search.svg">
-      <input class="border h-full w-full rounded-none placeholder:text-[#222222] py-[0.75rem] px-[1rem] border-black"
+    <div class="relative h-[2.875rem] w-[20rem] rounded-sm">
+      <i-feather class="mb-3 absolute -right-[-5%] -top-[-25%]" name="search" style="color: white;"></i-feather>
+      <input
+        class="border h-full w-full rounded-sm placeholder:text-[#222222] bg-[#111111] py-[0.75rem] px-[1rem] border-black"
         placeholder="Search article">
     </div>
+  </div>
+
+  <div class="flex flex-col justify-center items-center mb-4">
+    <div class="w-full gap-x-5 gap-y-5 justify-center grid lg:grid-cols-3">
+      <div *ngFor="let article of articles | async | slice:0:limit"
+        class="h-[654px] min-w-[332px] w-full flex flex-col gap-y-3 bg-[#222222]" (click)="readClick(article.id)">
+        <div class="h-[50%] w-full">
+          <img class="w-full h-full object-cover" [src]="article.content_image">
+        </div>
+        <div class="h-[50%] px-3 flex flex-col gap-y-3">
+          <p class="text-sm md:text-[0.75rem] text-[#D3D3D3] z-20">{{article.created_time.toDate() | date:'MMMM, EE
+            yyyy'}}</p>
+          <p class="text-sm md:text-[20px] text-white z-20 font-bold leading-[150%]">{{article.title}}</p>
+          <p id="content"
+            class="text-sm z-20 h-[70%] pt-3 overflow-hidden md:text-[12px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
+            [innerHTML]="article.short_content"></p>
+          <div class="grow"></div>
+          <div class="text-sm md:text-[0.75rem] text-white pb-4 flex z-20">4 min read • <div
+              class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <button *ngIf="checkForLimit()" type="button" (click)="onShowMore()"
+      class="bg-[#6123B5] hover:bg-[#A3FF00] hover:text-[#6123B5] hover:scale-110 active:scale-100 text-[0.8rem] w-[9.3rem] mt-6 p-[0.5rem] text-[#A3FF00] font-medium justify-self-center">Show
+      More
+      Articles</button>
   </div>
 </section>
