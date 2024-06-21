@@ -4,8 +4,36 @@
 
 <section class="px-[7.94rem] w-full mt-[6.19rem] mb-[3.75rem]">
     <div class="flex text-center justify-center items-center">
-        <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Welcome Back to <span
+        <div *ngIf="segmentType == 'Rewind'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Welcome Back to <span
                 class="text-[#A3FF00]">{{segmentType}}</span></p>
+        </div>
+        <div *ngIf="segmentType == 'Wander'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">It's <span
+                class="text-[#A3FF00]">{{segmentType}}</span>-ing time!</p>
+        </div>
+
+        <div *ngIf="segmentType == 'bbn'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;"><span
+                class="text-[#A3FF00]">Breaking</span>-Breaking, bad... <span
+                class="text-[#A3FF00]">Bad News!</span></p>
+        </div>
+
+        <div *ngIf="segmentType == 'CAN!'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">eeee, <span
+                class="text-[#A3FF00]">CAN!</span></p>
+        </div>
+
+        <div *ngIf="segmentType == 'trickroom'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Our playroom is <span
+                class="text-[#A3FF00]">TRICK ROOM</span></p>
+        </div>
+
+        <div *ngIf="segmentType == 'Dixi'">
+            <p class="text-white text-[2.5rem] font-bold" style="text-transform: uppercase;">Hi, <span
+                class="text-[#A3FF00]">DIXI</span>licious<span
+                class="text-[#A3FF00]">!</span></p>
+        </div>
     </div>
 
     <div class="w-full flex flex-col justify-center items-center gap-y-3">

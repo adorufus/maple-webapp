@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {Observable} from "rxjs";
 import {FirestoreService} from "../../../../services/firestore.service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-videos',
@@ -10,7 +11,7 @@ import {FirestoreService} from "../../../../services/firestore.service";
 export class VideosComponent implements OnInit{
   public segments?: Observable<any[]>
 
-  constructor(private firestoreService: FirestoreService) {
+  constructor(private firestoreService: FirestoreService, private router: Router) {
 
   }
 
@@ -27,6 +28,6 @@ export class VideosComponent implements OnInit{
   }
 
   onShowMore() {
-
+    this.router.navigate(['/articles'])
   }
 }

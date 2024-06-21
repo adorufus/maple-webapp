@@ -342,9 +342,11 @@
 
     </div>
   </section>
-  <section class="flex flex-column justify-center gap-5">
+  <section class="flex flex-column w-full justify-center align-middle gap-5">
     <app-scroller-menu-title title="Masterminds"></app-scroller-menu-title>
-    <img src="assets/images/Mastermind-content.svg">
+    <div class="flex flex-row flex-wrap gap-2 w-fit h-fit">
+      <img class="basis-3" *ngFor="let item of masterminds" src="{{item}}" />
+    </div>
   </section>
 </div>
 

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
@@ -7,6 +7,7 @@ import { AngularFireAnalytics } from "@angular/fire/compat/analytics";
 @Component({
   selector: 'app-articles',
   templateUrl: './articles.component.html',
+  encapsulation: ViewEncapsulation.None,
   styleUrls: ['./articles.component.scss']
 })
 export class ArticlesComponent implements OnInit {
@@ -48,7 +49,7 @@ export class ArticlesComponent implements OnInit {
       firebase_screen: "articles"
     })
 
-    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc"))
+    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(4))
 
     if (temp instanceof Observable<any>) {
       this.articles = temp

@@ -28,6 +28,10 @@ export class NewsHomeComponent implements OnInit {
 });
   }
 
+  onShowMore() {
+    this.router.navigate(['/articles'])
+  }
+
   ngOnInit() {
     let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(6))
 

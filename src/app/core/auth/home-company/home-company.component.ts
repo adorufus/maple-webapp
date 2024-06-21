@@ -10,6 +10,19 @@ export class HomeCompanyComponent implements OnInit {
 
   constructor(private router:Router, private renderer: Renderer2){}
 
+  masterminds = [
+    'assets/images/masterminds/tiara.png',
+    'assets/images/masterminds/desy.png',
+    'assets/images/masterminds/sita.png',
+    'assets/images/masterminds/febi.png',
+    'assets/images/masterminds/bastian.png',
+    'assets/images/masterminds/sindu.png',
+    'assets/images/masterminds/samuel.png',
+    'assets/images/masterminds/wicky.png',
+    'assets/images/masterminds/titan.png',
+    'assets/images/masterminds/ana.png',
+  ]
+
   ngOnInit(){
   //   const video = this.renderer.createElement('video');
   //   this.renderer.setStyle(video, 'width', '100%');
