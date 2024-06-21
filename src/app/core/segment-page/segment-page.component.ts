@@ -14,7 +14,7 @@ export class SegmentPageComponent {
   indexOneData: any
   title?: string
   tagline?: string
-  limit: number = 4
+  limit: number = 5
   dataLength = 0;
   showMoreContentLoading: boolean = true;
 
