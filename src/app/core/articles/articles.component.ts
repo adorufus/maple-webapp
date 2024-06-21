@@ -16,7 +16,7 @@ export class ArticlesComponent implements OnInit {
   public maxSize: number = 5;
   public directionLinks: boolean = true;
 
-  public limit: number = 6
+  public limit: number = 4
   dataLength: number = 0
 
   //page control
@@ -52,7 +52,7 @@ export class ArticlesComponent implements OnInit {
       firebase_screen: "articles"
     })
 
-    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc").limit(4))
+    let temp = this.firestoreService.getCollection("articles", (ref) => ref.orderBy("created_time", "desc"))
 
     if (temp instanceof Observable<any>) {
       this.articles = temp
