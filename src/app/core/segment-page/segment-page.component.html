@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        <p class="laptop:hidden phone:block text-[2rem] text-white font-bold">SIMILAR VIDEOS</p>
+        <p class="xl:hidden phone:block text-[2rem] text-white font-bold">SIMILAR VIDEOS</p>
         <div *ngIf="videos" class="grid lg:grid-cols-4 gap-3">
             <div *ngFor="let item of videos | async | slice:1" (click)="onVideo(item.vidID,item.id)" class="h-[42.8vh] bg-[#252323] hover:cursor-pointer flex flex-col">
                 <div class="h-1/2 w-full relative">
@@ -63,7 +63,7 @@
                       </div>
                     <img class="w-full object-cover" src="{{item.thumbnails.medium.url}}">
                 </div>
-                <div class="p-[15px] pt-[4rem] h-full flex flex-col justify-between text-white">
+                <div class="p-[15px] xl:pt-[1rem] 2xl:pt-[3rem] h-full flex flex-col justify-between text-white">
                     <p class="text-[14px] line-clamp-3" style="font-weight: bold;">{{item.title}}</p>
 
                     <div style="font-size: 8pt;">{{item.publishedAt | date: 'dd/MM/yyyy' : 'UTC'}} • The Maple Media</div>
