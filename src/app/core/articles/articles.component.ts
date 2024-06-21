@@ -16,6 +16,9 @@ export class ArticlesComponent implements OnInit {
   public maxSize: number = 5;
   public directionLinks: boolean = true;
 
+  public limit: number = 6
+  dataLength: number = 0
+
   //page control
   p: number = 1;
   item: number = 9;
@@ -56,8 +59,21 @@ export class ArticlesComponent implements OnInit {
 
       this.articles.subscribe(test => {
         console.log("test: ", test)
+        this.dataLength = test.length
         this.indexZeroArticle = test[0]
       })
     }
+  }
+
+  checkForLimit(): Boolean {
+    if (this.limit > this.dataLength) {
+      return false
+    } else {
+      return true
+    }
+  }
+
+  onShowMore() {
+    this.limit += 3
   }
 }

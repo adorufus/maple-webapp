@@ -1,11 +1,25 @@
-<ngb-carousel [showNavigationIndicators]="false"  [showNavigationArrows]="true" class="h-[661px] mt-12 mb-10">
+<ngb-carousel [showNavigationIndicators]="false"  [showNavigationArrows]="true" class=" md:h-[661px] mobile-height h-1 mt-12 mb-10">
   <!-- <div class="absolute top-[50%] left-0 z-10 flex justify-between">
     <mat-icon class="text-white" fontIcon="arrow_back_ios_new"></mat-icon>
     <mat-icon class="text-white" fontIcon="arrow_forward_ios_new"></mat-icon>
   </div> -->
-  <ng-template *ngFor="let item of bannersItems" ngbSlide>
-    <div class="">
+  <ng-template *ngFor="let item of bannersItems; index as i" ngbSlide>
+    <div class="relative">
       <img src="{{item.imageUrl}}" style="width: 100%;" alt="">
+      <button *ngIf="i == 0" class="absolute gap-x-4 flex justify-center items-center min-h-[36px] min-w-[150px] bg-[#A3FF00] text-[#6123B5] text-[14px] font-extrabold left-[3.3rem] bottom-[1.5rem] md:left-[10.5rem] md:bottom-40" (click)="onCollabClick()">
+        <span>Let`s Collab</span>
+        <i-feather class="" name="arrow-right" style="color: #6123B5;"></i-feather> 
+      </button>
+      
+      <div class="absolute flex gap-x-3 left-[3.3rem] bottom-[1.5rem] md:left-[10.5rem] md:bottom-40">
+        <button *ngIf="i != 0" class=" gap-x-4 flex justify-center items-center min-h-[36px] min-w-[150px] bg-[#6123B5] text-[#A3FF00] text-[14px] font-extrabold" (click)="onSeeLatest(i)">
+          <span>Watch Latest Videos</span> 
+        </button>
+        
+        <button *ngIf="i != 0" class=" gap-x-4 border-2 border-white flex justify-center items-center min-h-[36px] min-w-[150px] bg-transparent text-white text-[14px] font-extrabold" (click)="onSeeLatest(i)">
+          <span>See All Videos</span> 
+        </button>
+      </div>
     </div>
   </ng-template>
 </ngb-carousel>

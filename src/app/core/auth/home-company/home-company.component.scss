@@ -3,36 +3,39 @@
 }
 
 h1 {
-  font-family: 'Sequel Sans Heavy Disp', sans-serif;
+  font-family: "Sequel Sans Heavy Disp", sans-serif;
   font-size: 64px;
   color: black;
   padding-top: 57px;
   cursor: default;
 }
 
-.col-lg-8, .col-lg-4 {
+.col-lg-8,
+.col-lg-4 {
   padding-top: 143px;
 
   margin-bottom: 133px;
 }
 
-.btn, .btn:after {
+.btn,
+.btn:after {
   width: 80%;
-//   height: 20%;
+  //   height: 20%;
   border-radius: 20px;
-//   border: 2px;
+  //   border: 2px;
   margin-top: 44rem;
   margin-bottom: 8rem;
   color: white !important;
   border: 2px solid white !important;
   box-shadow: 0px 0px 10px 0px rgba(255, 255, 255, 0.75) !important;
-//   background-color: transparent !important;
+  //   background-color: transparent !important;
   font-size: 20px;
-  font-family: 'Sequel Sans Roman Disp', sans-serif;
+  font-family: "Sequel Sans Roman Disp", sans-serif;
 }
 
-.btn:hover, .btn:active {
-  background-color: #6123B5 !important;
+.btn:hover,
+.btn:active {
+  background-color: #6123b5 !important;
   color: white;
 }
 
@@ -58,7 +61,7 @@ h1 {
   display: block;
 }
 .content:after {
-  content: '';
+  content: "";
   position: absolute;
   border-radius: 0px;
   top: -1px;
@@ -67,42 +70,35 @@ h1 {
   left: 0;
 }
 
-
 @media (max-width: 1920px) {
-  .btn{
-    margin-top: 50rem ;
+  .btn {
+    margin-top: 50rem;
   }
 }
 @media (max-width: 1550px) {
-
-  .btn{
-    margin-top: 40rem ;
+  .btn {
+    margin-top: 40rem;
   }
-
 }
 
-
 @media (max-width: 1440px) {
-  .btn{
-    margin-top: 40rem ;
+  .btn {
+    margin-top: 40rem;
   }
-
 }
 
 @media (max-width: 1024px) {
-  .btn{
-    margin-top: 30rem ;
+  .btn {
+    margin-top: 30rem;
   }
-
 }
 
 @media (max-width: 769px) {
-
   .logo {
-    width: 40% ;
+    width: 40%;
   }
 
-  .col-md-6{
+  .col-md-6 {
     width: 100%;
   }
 
@@ -122,40 +118,69 @@ h1 {
     width: 30%;
     margin-top: 23rem;
     margin-bottom: 2rem;
-
   }
 
   .col-lg-4 {
     padding-top: 0px;
   }
-
 }
-@media  screen and (max-width: 425px) {
-.btn{ display: none;
-}
+@media screen and (max-width: 425px) {
+  .btn {
+    display: none;
+  }
 }
 @media screen and (max-width: 320px) {
+  .btn {
+    display: none;
+  }
 
-.btn{
-  display: none;
+  .logo {
+    width: 40%;
+  }
+
+  .trick {
+    width: 108%;
+  }
+
+  .content:after {
+    content: "";
+    position: absolute;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 0px;
+    top: -1px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
 }
 
-.logo {
-  width: 40%;
+.maple-gif {
+  height: 266px;
 }
 
-.trick{
-  width: 108%;
+.company-copy {
+  font-size: 1rem;
 }
 
-.content:after {
-  content: '';
+.learn-more {
   position: absolute;
-  background: rgba(0, 0, 0, 0.5);
-  border-radius: 0px;
-  top: -1px;
-  right: 0;
-  bottom: 0;
-  left: 0;
+  bottom: 1.25rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .maple-gif {
+    height: 133px;
+    left: 3%;
+    top: 25%
+  }
+
+  .company-copy {
+    font-size: 0.8rem;
+    width: 20rem;
+  }
+
+  .learn-more {
+    position: absolute;
+    bottom: 0.5rem;
+  }
 }

@@ -11,53 +11,61 @@
       </span>
     </a>
     <div class="collapse navbar-collapse pt-3" id="navbarNav">
-      <ul class="navbar-nav text-white mx-auto space-x-[14px] navbar-center mt-lg-0 mt-2">
+      <ul class="navbar-nav text-white mx-auto space-y-0 space-x-[14px] navbar-center mt-lg-0 mt-2">
 
-        <li class="nav-item mr-5">
-          <div ngbDropdown class="flex">
-            <button type="button" class="relative btn btn-12 text-[12px] font-extrabold" id="dropdownBasic1"
+        <li class="nav-item mobile-margin md:mr-5">
+          <div ngbDropdown class="d-inline-block">
+            <button type="button" class="relative btn btn-12 text-[12px] font-[800]" id="dropdownBasic1"
               ngbDropdownToggle>
               <div>About Us</div>
-              <!-- <i-feather name="arrow-down" style="color: white;"></i-feather> -->
               <mat-icon class="absolute -right-3 bottom-5" fontIcon="expand_more"></mat-icon>
             </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1 text-[12px] font-extrabold">
-              <button class="show text-[12px] font-extrabold" ngbDropdownItem
-                [ngClass]="{'active':currentSection === 'home'}" href="javascript: void(0);"
+            <div ngbDropdownMenu class="space-y-2" aria-labelledby="dropdownBasic1 text-[12px] font-extrabold">
+              <button class="show text-[12px] font-extrabold hover:underline hover:underline-offset-[2px]"
+                ngbDropdownItem [ngClass]="{'active':currentSection === 'home'}" href="javascript: void(0);"
                 (click)="onNavClick('company')">COMPANY</button>
-              <button class="show text-[12px] font-extrabold" ngbDropdownItem
-                [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
+              <button class="show text-[12px] font-extrabold hover:underline hover:underline-offset-[2px]"
+                ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
                 (click)="onNavClick('collaboration')">COLLABORATION</button>
-              <button class="show text-[12px] font-extrabold" ngbDropdownItem
-                [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+              <button class="show text-[12px] font-extrabold hover:underline hover:underline-offset-[2px]"
+                ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
                 (click)="onNavClick('contact')">CONTACT</button>
             </div>
           </div>
         </li>
 
-        <li class="nav-item pr-5">
+        <li class="nav-item md:pr-5">
           <div ngbDropdown class="d-inline-block">
-            <button type="button" class="relative btn btn-12 text-[12px] font-[800]" id="dropdownBasic1" ngbDropdownToggle>
+            <button type="button" class="relative btn btn-12 text-[12px] font-[800]" id="dropdownBasic1"
+              ngbDropdownToggle>
               <div>Program</div>
               <mat-icon class="absolute -right-3 bottom-5" fontIcon="expand_more"></mat-icon>
             </button>
-            <div ngbDropdownMenu aria-labelledby="dropdownBasic1 text-[12px] font-[800]">
-              <button class="show " ngbDropdownItem [ngClass]="{'active':currentSection === 'rewind'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Rewind')">REWIND</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'videos'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Wander')">WANDER</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'articles'}"
-                href="javascript: void(0);" (click)="onSegmentClick('bbn')">BREAKING BAD NEWS</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'store'}"
-                href="javascript: void(0);" (click)="onSegmentClick('CAN!')">CAN!</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('trickroom')">TRICK ROOM</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Dixi')">DIXI</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Unscene')">UNSCENE</button>
-              <button class="show" ngbDropdownItem [ngClass]="{'active':currentSection === 'activation'}"
-                href="javascript: void(0);" (click)="onSegmentClick('Playroom')">PLAY ROOM</button>
+            <div ngbDropdownMenu class="space-y-2" aria-labelledby="dropdownBasic1 text-[12px] font-[800]">
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'rewind'}" href="javascript: void(0);"
+                (click)="onSegmentClick('Rewind')">REWIND</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'videos'}" href="javascript: void(0);"
+                (click)="onSegmentClick('Wander')">WANDER</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'articles'}" href="javascript: void(0);"
+                (click)="onSegmentClick('bbn')">BREAKING BAD NEWS</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'store'}" href="javascript: void(0);"
+                (click)="onSegmentClick('CAN!')">CAN!</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
+                (click)="onSegmentClick('trickroom')">TRICK ROOM</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
+                (click)="onSegmentClick('Dixi')">DIXI</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
+                (click)="onSegmentClick('Unscene')">UNSCENE</button>
+              <button class="show text-[12px] hover:underline hover:underline-offset-[2px]" ngbDropdownItem
+                [ngClass]="{'active':currentSection === 'activation'}" href="javascript: void(0);"
+                (click)="onSegmentClick('Playroom')">PLAY ROOM</button>
             </div>
           </div>
         </li>
@@ -75,10 +83,10 @@
           <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('store')">Shop</button>
         </li>
-        <li class="nav-item text-[12px]">
+        <!-- <li class="nav-item text-[12px]">
           <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('app')">App</button>
-        </li>
+        </li> -->
         <li class="nav-item text-[12px] ">
           <button type="button" class="btn btn-12 font-[800]" [ngClass]="{'active':currentSection === 'store'}"
             href="javascript: void(0);" (click)="onNavClick('films')">Maple Films</button>

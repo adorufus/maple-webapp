@@ -68,7 +68,14 @@ padding-bottom: 6rem;
   }
 }
 
+@media screen and (max-width: 1200px) {
+  .carousel {
+    height: fit-content !important;
+  }
+}
+
 @media (max-width: 426px){
+
   .image-padding{
     padding: 5vh 12vw 17vh;
   }

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 import { FirestoreService } from 'src/app/services/firestore.service';
 
@@ -31,7 +32,7 @@ export class BannerComponent implements OnInit {
     },
   ]
 
-  constructor(private db: FirestoreService) {
+  constructor(private db: FirestoreService, private router: Router) {
 
   }
 
@@ -39,6 +40,48 @@ export class BannerComponent implements OnInit {
 
     this.banners = this.db.getCollection('banners')
 
+  }
+
+  onCollabClick() {
+    this.router.navigate(['/collaboration'])
+  }
+
+  onSeeLatest(bannerIndex: number) {
+    let segmentType = 'Rewind'
+
+    if(bannerIndex == 1) {
+      segmentType = 'Rewind'
+    }
+
+    if(bannerIndex == 2) {
+      segmentType = 'trickroom'
+    }
+
+    if(bannerIndex == 3) {
+      segmentType = 'Wander'
+    }
+
+    if(bannerIndex == 4) {
+      segmentType = 'CAN!'
+    }
+
+    if(bannerIndex == 5) {
+      segmentType = 'bbn'
+    }
+    
+    if(bannerIndex == 6) {
+      segmentType = 'Dixi'
+    }
+
+    if(bannerIndex == 7) {
+      segmentType = 'tempathumble'
+    }
+
+    this.router.navigate(['/segment'], {
+      queryParams: {
+        type: segmentType
+      }
+    })
   }
 
 }
