@@ -6,7 +6,7 @@ import { FirestoreService } from 'src/app/services/firestore.service';
 @Component({
   selector: 'app-read-articles',
   templateUrl: './read-articles.component.html',
-  encapsulation: ViewEncapsulation.None,
+  encapsulation: ViewEncapsulation.Emulated,
   styleUrls: ['./read-articles.component.scss']
 })
 export class ReadArticlesComponent implements OnInit {

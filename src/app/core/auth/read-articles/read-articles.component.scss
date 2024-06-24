@@ -12,12 +12,12 @@ border-radius: 100%;
     margin-bottom: 6rem;
 }
 
-h1{
-    font-family: 'Sequel Sans Heavy Disp',sans-serif;
-font-style: normal;
-font-size: 56px;
-color: black;
-}
+// h1{
+//     font-family: 'Sequel Sans Heavy Disp',sans-serif;
+// font-style: normal;
+// font-size: 56px;
+// color: black;
+// }
 
 h6{
     padding-top: 82px;
@@ -28,16 +28,16 @@ h5{
     font-size: 14px;
 }
 
-p{
-    font-family: 'Sequel Sans Roman Head',sans-serif;
-font-style: normal;
-font-weight: 360;
-font-size: 20px;
-line-height: 160%;
-}
+// p{
+//     font-family: 'Sequel Sans Roman Head',sans-serif;
+// font-style: normal;
+// font-weight: 360;
+// font-size: 20px;
+// line-height: 160%;
+// }
 
-.short_content{
-    font-family: 'Sequel Sans Roman Head',sans-serif;
+::ng-deep .short_content *{
+    font-family: 'Arvo', serif !important;
 }
 
 // .text-white{
