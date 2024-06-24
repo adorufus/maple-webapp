@@ -1,29 +1,83 @@
-<div class="container">
-    <div *ngIf="article" class="row">
-        <div class="col-lg-12 md-6 sm-12">
-          <a (click)="backClick()"> <h6 class="text-white"  style="text-decoration: underline 1.5px; cursor: pointer;">Back</h6> </a>
-        </div>
-        <div class="col-lg-9 md-6 sm-12">
-            <div class="card">
-                <h1>{{(article | async)?.title}}</h1>
-                <p class="short_content" [innerHTML]="(article | async)?.short_content"></p>
-                    <br><br>
-                <div class="lingkaran-left">
-                <p class="text-white text-center">A</p>
+<div class="container flex space-x-20">
+    <div *ngIf="article" class="flex flex-col pt-[115px] w-[70%]">
+        <div class="xs:text-[15px] sm:text-[20px] md:text-[24px] lg:text-[32px] 
+            xl:text-[40px] 2xl:text-[48px] 3xl:text-[60px] 4xl:text-[80px] md:w-[306px] 
+            lg:w-[408px] xl:w-[510px] 2xl:w-[612px] 3xl:w-[765px] 4xl:w-[1020px] 
+            font-extrabold text-white mb-[80px]">
+            {{(article | async)?.title}}</div>
+        <div class="flex justify-between items-center mb-[174px]">
+            <div class="flex flex-col text-white">
+                <p
+                    class="xs:text-[5px] sm:text-[6px] md:text-[7px] lg:text-[10px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[18px] 4xl:text-[24px] font-extralight">
+                    Words <span class="font-extrabold">Author</span></p>
+                <div class="h-[1px] w-[20px] bg-white mb-3"></div>
+                <p
+                    class="xs:text-[5px] sm:text-[6px] md:text-[7px] lg:text-[10px] xl:text-[12px] 2xl:text-[14px] 3xl:text-[18px] 4xl:text-[24px] font-extralight">
+                    {{(article | async)?.created_time.toDate() | date:'EEEE, MM
+                    yyyy'}}</p>
             </div>
-            <p class="text-right">by Author • {{(article | async)?.created_time.toDate() | date:'EEEE, MM yyyy'}}</p>
-            <hr>
-
-                <img style="object-fit: cover;" src="{{(article | async)?.content_image}}" alt="img">
-                <br> <br>
-               <table class="text-justify">
-                <p [innerHTML]="(article | async)?.content"></p>
-               </table>
+            <div class="grid grid-cols-3 gap-y-2">
+                <div class="bg-[#9747FF] text-center text-white text-xs font-medium me-2 px-2.5 py-0.5">Column</div>
+                <div class="bg-[#9747FF] text-center text-white text-xs font-medium me-2 px-2.5 py-0.5">Tren</div>
+                <div class="bg-[#9747FF] text-center text-white text-xs font-medium me-2 px-2.5 py-0.5">Fenomena</div>
+                <div class="bg-[#9747FF] text-center text-white text-xs font-medium me-2 px-2.5 py-0.5">Kultur</div>
+                <div class="bg-[#9747FF] text-center text-white text-xs font-medium me-2 px-2.5 py-0.5">Gen Z</div>
             </div>
-        </div>
 
-        <div class="col-lg-3 md-6 sm-12">
+        </div>
+        <div>
+            <p class="font-['Arvo'] text-white" [innerHTML]="(article | async)?.content"></p>
+        </div>
+    </div>
+    <div class="w-[30%] pt-[115px] flex flex-col gap-y-0">
+        <img style="object-fit: cover;" class="mb-[57px]" src="{{(article | async)?.content_image}}" alt="img">
+        <div class="ml-5">
+            <p class="text-[20px] text-white font-bold">The Latest</p>
+            <div class="flex flex-row">
+                <p class="text-[12px] mb-[57px] text-white">View more from</p>
+                <div class="grid grid-cols-3 gap-y-0">
+                    <div class="bg-[#9747FF] text-center text-white text-xs font-medium h-[19px] me-2 px-2.5 py-0.5">
+                        Column</div>
+                    <div class="bg-[#9747FF] text-center text-white text-xs font-medium h-[19px] me-2 px-2.5 py-0.5">
+                        Column</div>
+                    <div class="bg-[#9747FF] text-center text-white text-xs font-medium h-[19px] me-2 px-2.5 py-0.5">
+                        Column</div>
+                    <div class="bg-[#9747FF] text-center text-white text-xs font-medium h-[19px] me-2 px-2.5 py-0.5">
+                        Column</div>
+                </div>
+            </div>
+
             <app-small-articles></app-small-articles>
+        </div>
+    </div>
+</div>
+
+
+<div class="flex flex-col justify-center items-center">
+    <p class="font-extrabold text-[40px] text-white">Related Content</p>
+    <div class="flex flex-col justify-center items-center mb-4 ml-10 mr-10">
+        <div class="w-full gap-x-5 gap-y-5 justify-center grid lg:grid-cols-3">
+            <div *ngFor="let releated of relatedArticle | async | slice:0:limit"
+                class="transition duration-150 ease-in-out xl:h-[654px] 2xl:h-[785px] 3xl:h-[981px] 4xl:h-[1308px] hover:scale-105 cursor-pointer min-w-[332px] w-full flex flex-col gap-y-3 bg-[#222222]"
+                (click)="readClick(releated.id)">
+                <div class="h-[50%] w-full">
+                    <img class="w-full h-full object-cover" [src]="releated.content_image">
+                </div>
+                <div class="h-[50%] px-3 flex flex-col gap-y-3">
+                    <p class="text-sm md:text-[0.75rem] text-[#D3D3D3] z-20">{{releated.created_time.toDate() |
+                        date:'MMMM,
+                        EE
+                        yyyy'}}</p>
+                    <p class="text-sm md:text-[20px] text-white z-20 font-bold leading-[150%]">{{releated.title}}</p>
+                    <p id="content"
+                        class="text-sm z-20 h-[70%] pt-3 overflow-hidden md:text-[12px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
+                        [innerHTML]="releated.short_content"></p>
+                    <div class="grow"></div>
+                    <div class="text-sm md:text-[0.75rem] text-white pb-4 flex z-20">4 min read • <div
+                            class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </div>

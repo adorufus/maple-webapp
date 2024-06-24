@@ -19,6 +19,7 @@ export class HomeCompanyComponent implements OnInit {
     'assets/images/masterminds/sindu.png',
     'assets/images/masterminds/samuel.png',
     'assets/images/masterminds/wicky.png',
+    'assets/images/masterminds/wawan.png',
     'assets/images/masterminds/titan.png',
     'assets/images/masterminds/ana.png',
   ]
