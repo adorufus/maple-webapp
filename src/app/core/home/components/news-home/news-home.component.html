@@ -12,7 +12,7 @@
     </div>
   </div> -->
 
-  <div *ngFor="let article of articles | async; let i = index" class="pt-3 lg:block phone:hidden">
+  <div *ngFor="let article of articles | async; let i = index" class="pt-3 w-full lg:block phone:hidden">
     <div class="flex h-[270px] text-white w-full bg-[#252323]">
       <div class="flex w-full flex-col px-3 py-3">
         <p class="text-[0.75rem] text-[#D3D3D3]">{{article.created_time.toDate() | date:'EEEE, dd MMMM yyyy'}}</p>

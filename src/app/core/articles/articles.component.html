@@ -7,14 +7,14 @@
     <div *ngFor="let article of articles | async | slice:0:6"
       class="relative z-20 aspect-square h-[550px] max-h-[550px] p-5 w-full flex flex-col text-white bg-gray-600"
       (click)="readClick(article.id)">
-      <p class="text-sm md:text-[0.75rem] z-20">{{article.created_time.toDate() | date:'MMMM, EE yyyy'}}</p>
+      <p class="text-sm md:text-[0.75rem] z-20">{{article.created_time.toDate() | date:'MMMM, dd yyyy'}}</p>
       <p class="text-sm md:text-[1.5rem] z-20 font-bold leading-[150%]">{{article.title}}</p>
       <p id="content"
         class="text-sm z-20 h-[70%] overflow-hidden md:text-[15px] leading-[150%] text-white font-[arvo] font-[400] overflow-ellipsis"
         [innerHTML]="article.short_content"></p>
       <div class="grow"></div>
       <div class="text-sm md:text-[0.75rem] flex z-20">4 min read • <div
-          class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">Issue</div>
+          class="bg-white text-black ml-1 text-center z-20 py-[0.125rem] px-[0.375rem]">{{article.category}}</div>
       </div>
       <div class="absolute left-0 top-0 w-full h-full z-10 bg-gray-500 opacity-80"></div>
       <img class="absolute left-0 top-0 w-full h-full object-cover z-0" [src]="article.content_image">
@@ -50,7 +50,7 @@
           <img class="w-full h-full object-cover" [src]="article.content_image">
         </div>
         <div class="h-[50%] px-3 flex flex-col gap-y-3">
-          <p class="text-sm md:text-[0.75rem] text-[#D3D3D3] z-20">{{article.created_time.toDate() | date:'MMMM, EE
+          <p class="text-sm md:text-[0.75rem] text-[#D3D3D3] z-20">{{article.created_time.toDate() | date:'MMMM, dd
             yyyy'}}</p>
           <p class="text-sm md:text-[20px] text-white z-20 font-bold leading-[150%]">{{article.title}}</p>
           <p id="content"
